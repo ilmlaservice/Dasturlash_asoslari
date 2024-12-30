@@ -1,0 +1,2394 @@
+<details>
+<summary>JavaScriptga kirish - O'zgaruvchilar va Ma'lumotlar Turlari</summary>
+
+
+**JavaScript nima?**
+
+JavaScript - bu dasturlash tili bo'lib, u veb-sahifalarga interaktivlik va dinamiklik qo'shish uchun ishlatiladi. U orqali siz quyidagi ishlarni bajarishingiz mumkin:
+
+* Foydalanuvchi harakatlariga javob berish (masalan, tugmani bosganda yoki sichqoncha kursorini ustiga olib borganda).
+* Sahifa elementlarini o'zgartirish (masalan, matnni o'zgartirish, rasmlarni almashtirish, yangi elementlar qo'shish).
+* Animatsiyalar va vizual effektlar yaratish.
+* Ma'lumotlarni serverga yuborish va qabul qilish.
+* Veb-ilovalar yaratish.
+
+**O'zgaruvchilar**
+
+O'zgaruvchilar - bu ma'lumotlarni saqlash uchun ishlatiladigan konteynerlar. Ular xuddi qutilarga o'xshaydi, siz ularga turli xil narsalarni (matn, raqamlar, mantiqiy qiymatlar va boshqalarni) solishingiz mumkin.
+
+O'zgaruvchilarni e'lon qilish uchun `var`, `let` yoki `const` kalit so'zlaridan foydalaniladi.
+
+* `var`: Eski usul. Hozirda kamroq ishlatiladi.
+* `let`: Zamonaviy usul. O'zgaruvchining qiymatini o'zgartirish mumkin.
+* `const`: O'zgarmas o'zgaruvchilar uchun ishlatiladi. Qiymatini o'zgartirib bo'lmaydi.
+
+```javascript
+var ism = "Ali"; // "ism" nomli o'zgaruvchiga "Ali" matnini saqlash
+let yosh = 20; // "yosh" nomli o'zgaruvchiga 20 raqamini saqlash
+const PI = 3.14; // "PI" nomli o'zgarmas o'zgaruvchiga 3.14 raqamini saqlash
+```
+
+**Ma'lumotlar turlari**
+
+JavaScriptda turli xil ma'lumotlar turlari mavjud. Eng ko'p ishlatiladiganlari:
+
+* **`string`:** Matn. Qo'shtirnoq ichida yoziladi (masalan, "Salom", 'Dunyo').
+
+```javascript
+let salomlashish = "Assalomu alaykum!";
+let ism = 'Ozodbek';
+```
+
+* **`number`:** Raqam. Qo'shtirnoqsiz yoziladi (masalan, 10, 3.14, -5).
+
+```javascript
+let yosh = 25;
+let narx = 15000.50;
+```
+
+* **`boolean`:** Mantiqiy qiymat. `true` (rost) yoki `false` (yolg'on) bo'lishi mumkin.
+
+```javascript
+let kattalar = true;
+let talaba = false;
+```
+
+* **`object`:** Ob'ekt. Kalit va qiymat juftliklaridan iborat. Jingalak qavslar ichida yoziladi (masalan, `{ ism: "Ali", yosh: 20 }`).
+
+```javascript
+let shaxs = {
+  ism: "Nodira",
+  yosh: 30,
+  kasb: "dasturchi"
+};
+```
+
+* **`array`:** Massiv. Bir nechta qiymatlarni saqlash uchun ishlatiladi. Kvadrat qavslar ichida yoziladi (masalan, `[1, 2, 3]`, `["olma", "anor", "banan"]`).
+
+```javascript
+let ranglar = ["qizil", "yashil", "ko'k"];
+let raqamlar = [10, 20, 30, 40];
+```
+
+* **`null`:** Hech qanday qiymatni ifodalamaydi.
+
+```javascript
+let qiymat = null;
+```
+
+* **`undefined`:** E'lon qilingan, lekin hech qanday qiymat berilmagan o'zgaruvchilar uchun ishlatiladi.
+
+```javascript
+let ism;
+console.log(ism); // undefined
+```
+
+**O'zgaruvchilar va ma'lumotlar turlari bilan ishlash**
+
+Siz o'zgaruvchilarni e'lon qilganingizdan so'ng, ular bilan turli xil amallarni bajarishingiz mumkin. Masalan, ularning qiymatlarini o'zgartirishingiz, ularni bir-biriga qo'shishingiz, ularni funksiyalarga argument sifatida uzatishingiz va hokazo.
+
+```javascript
+let ism = "Ali";
+let yosh = 20;
+
+console.log(ism + " " + yosh + " yoshda."); // "Ali 20 yoshda."
+
+yosh = yosh + 1;
+console.log(ism + " endi " + yosh + " yoshda."); // "Ali endi 21 yoshda."
+```
+
+**Ma'lumotlar turini tekshirish**
+
+`typeof` operatori yordamida o'zgaruvchining ma'lumot turini tekshirish mumkin.
+
+```javascript
+let ism = "Ali";
+console.log(typeof ism); // "string"
+
+let yosh = 20;
+console.log(typeof yosh); // "number"
+```
+
+Bu JavaScript asoslariga kirish edi. Keyingi darslarda biz JavaScriptning boshqa jihatlarini, jumladan, operatorlar, shartli operatorlar, sikllar, funksiyalar, ob'ektlar, massivlar, DOM manipulyatsiyasi va boshqalarni ko'rib chiqamiz.
+
+
+### 2-qism: O'qituvchi boshchiligidagi loyiha: "O'zgaruvchilar bilan ishlash"
+
+Ushbu loyihada biz birgalikda JavaScript yordamida turli xil o'zgaruvchilar va ma'lumotlar turlari bilan ishlashni o'rganamiz. Men har bir qadamni tushuntirib beraman va siz meni kuzatib, kodni yozasiz.
+
+
+**1-qadam: O'zgaruvchilarni e'lon qilish va qiymatlarni berish**
+
+```javascript
+let ism = "Ali";
+let yosh = 20;
+let talaba = true;
+```
+
+Bu yerda biz `let` kalit so'zi yordamida uchta o'zgaruvchi e'lon qildik va ularga mos qiymatlarni berdik. `ism` o'zgaruvchisi `string` (matn) turida, `yosh` o'zgaruvchisi `number` (raqam) turida, `talaba` o'zgaruvchisi esa `boolean` (mantiqiy qiymat) turida.
+
+**2-qadam: O'zgaruvchilar qiymatlarini o'zgartirish**
+
+```javascript
+ism = "Vali";
+yosh = yosh + 5;
+talaba = false;
+```
+
+Bu yerda biz o'zgaruvchilarning qiymatlarini o'zgartirdik. `ism` o'zgaruvchisiga "Vali" matnini, `yosh` o'zgaruvchisiga esa avvalgi qiymatiga 5 qo'shib, yangi qiymatni berdik. `talaba` o'zgaruvchisining qiymatini `false` ga o'zgartirdik.
+
+**3-qadam: `const` kalit so'zi bilan o'zgarmas o'zgaruvchi yaratish**
+
+```javascript
+const tugilganYil = 2004;
+```
+
+Bu yerda biz `const` kalit so'zi yordamida `tugilganYil` nomli o'zgarmas o'zgaruvchi yaratdik va unga 2004 qiymatini berdik. Bu o'zgaruvchining qiymatini endi o'zgartirib bo'lmaydi.
+
+**4-qadam: `typeof` operatori bilan ma'lumot turini tekshirish**
+
+```javascript
+console.log(typeof ism);    // "string"
+console.log(typeof yosh);   // "number"
+console.log(typeof talaba); // "boolean"
+```
+
+Bu yerda biz `typeof` operatori yordamida o'zgaruvchilarning ma'lumot turini tekshirdik va natijalarni konsolga chiqardik.
+
+**5-qadam: Turli xil ma'lumotlar turlari bilan ishlash**
+
+```javascript
+let shahar = "Samarqand";
+let davlat = "O'zbekiston";
+let aholiSoni = 500000;
+let diqqatgaSazovorJoylar = ["Registon", "Shohi Zinda", "Ulug'bek rasadxonasi"];
+
+console.log(shahar + " shahri " + davlat + "da joylashgan.");
+console.log("Aholisi " + aholiSoni + " kishi.");
+console.log("Diqqatga sazovor joylari: " + diqqatgaSazovorJoylar.join(", "));
+```
+
+Bu yerda biz turli xil ma'lumotlar turlari bilan ishlayapmiz. `shahar` va `davlat` o'zgaruvchilari `string` (matn) turida, `aholiSoni` o'zgaruvchisi `number` (raqam) turida, `diqqatgaSazovorJoylar` o'zgaruvchisi esa `array` (massiv) turida. Biz bu o'zgaruvchilarni birlashtirib, konsolga ma'lumotlarni chiqardik.
+
+Ushbu loyiha orqali siz o'zgaruvchilar va ma'lumotlar turlari bilan ishlashni o'rganasiz.
+
+### 3-qism: Mustaqil loyiha: "Film haqida ma'lumot"
+
+Ushbu loyihada siz JavaScript yordamida sevimli filmingiz haqidagi ma'lumotlarni o'zgaruvchilarga saqlaysiz va ularni konsol yoki alert oynasida ko'rsatasiz. 
+
+**Vazifalar:**
+
+1. **O'zgaruvchilar yaratish:**
+
+    * Sevimli filmingiz nomi uchun o'zgaruvchi yarating.
+    * Film rejissori uchun o'zgaruvchi yarating.
+    * Film chiqqan yil uchun o'zgaruvchi yarating.
+    * Film davomiyligi (daqiqalarda) uchun o'zgaruvchi yarating.
+    * Film janri uchun o'zgaruvchi yarating.
+    * Film sizga yoqdimi yoki yo'qmi, bu haqida ma'lumot saqlash uchun o'zgaruvchi yarating (`boolean` - rost/yolg'on).
+
+**Tushuntirish:**
+
+Har bir ma'lumot turi uchun alohida o'zgaruvchi yarating va unga mos nom bering. Masalan, film nomi uchun `filmNomi`, rejissor uchun `rejissor` kabi.
+
+
+2. **O'zgaruvchilarga qiymatlar berish:**
+
+    * Sevimli filmingiz nomi o'zgaruvchisiga filmingiz nomini saqlang (matn ko'rinishida).
+    * Film rejissori o'zgaruvchisiga rejissor ismini saqlang (matn ko'rinishida).
+    * Film chiqqan yil o'zgaruvchisiga film chiqqan yilni saqlang (raqam ko'rinishida).
+    * Film davomiyligi o'zgaruvchisiga filmning davomiyligini daqiqalarda saqlang (raqam ko'rinishida).
+    * Film janri o'zgaruvchisiga film janrini saqlang (matn ko'rinishida).
+    * Film sizga yoqdimi yoki yo'qmi, bu haqida ma'lumot saqlaydigan o'zgaruvchiga `true` (ha) yoki `false` (yo'q) qiymatini bering.
+
+**Tushuntirish:**
+
+O'zgaruvchilarga mos qiymatlarni bering. Matnli qiymatlarni qo'shtirnoq yoki birtirnoq ichida yozing (masalan, "Avatar"). Raqamli qiymatlarni qo'shtirnoqsiz yozing (masalan, 2009). Mantiqiy qiymatlar esa faqat `true` yoki `false` bo'lishi mumkin.
+
+
+3. **Qiymatlarni ko'rsatish:**
+
+    * `console.log()` funksiyasi yordamida sevimli filmingiz nomini konsolga chiqaring.
+    * `alert()` funksiyasi yordamida film rejissori va chiqqan yilini alert oynasida ko'rsating.
+    * `console.log()` funksiyasi yordamida film davomiyligi va janrini konsolga chiqaring.
+    * `alert()` funksiyasi yordamida film sizga yoqdimi yoki yo'qmi, bu haqida ma'lumotni alert oynasida ko'rsating.
+
+**Tushuntirish:**
+
+`console.log()` va `alert()` funksiyalari ma'lumotlarni ko'rsatish uchun ishlatiladi. `console.log()` funksiyasi ma'lumotni brauzer konsolida ko'rsatadi, `alert()` funksiyasi esa alert oynasida ko'rsatadi.
+
+
+4. **Film davomiyligini soatlarda hisoblash:**
+
+    * Film davomiyligini daqiqalarda 60 ga bo'lib, film davomiyligini soatlarda hisoblang va natijani yangi o'zgaruvchiga saqlang.
+
+**Tushuntirish:**
+
+Arifmetik amallar yordamida hisob-kitoblarni bajarish mumkin. Bu yerda siz bo'lish amalini bajarishingiz kerak. Masalan, agar film davomiyligi 180 daqiqa bo'lsa, uni 60 ga bo'lib, 3 soatni olasiz.
+
+
+5. **Natijani ko'rsatish:**
+
+    * `console.log()` funksiyasi yordamida hisoblangan film davomiyligini soatlarda konsolga chiqaring.
+
+**Tushuntirish:**
+
+Hisoblangan natijani konsolga chiqarish uchun `console.log()` funksiyasidan foydalaning.
+
+</details>
+
+
+<details>
+<summary>JavaScript Operatorlari</summary>
+
+JavaScriptda operatorlar ma'lumotlar ustida amallar bajarish uchun ishlatiladi. Ular qiymatlarni hisoblash, taqqoslash, birlashtirish va boshqa ko'plab amallarni bajarish imkonini beradi.
+
+### 1-qism: Operatorlar bilan tanishuv
+
+JavaScriptda turli xil operatorlar mavjud. Ularni quyidagi guruhlarga ajratish mumkin:
+
+* **Arifmetik operatorlar:**  `+`, `-`, `*`, `/`, `%` (qoldiq), `**` (daraja)
+* **Taqqoslash operatorlari:** `==` (teng), `===` (qat'iy teng), `!=` (teng emas), `!==` (qat'iy teng emas), `>` (kattaroq), `<` (kichikroq), `>=` (kattaroq yoki teng), `<=` (kichikroq yoki teng)
+* **Mantiqiy operatorlar:** `&&` (va), `||` (yoki), `!` (emas)
+* **Belgilash operatorlari:** `=` (tenglashtirish), `+=` (qo'shish va tenglashtirish), `-=` (ayirish va tenglashtirish), `*=` (ko'paytirish va tenglashtirish), `/=` (bo'lish va tenglashtirish), `%=` (qoldiq va tenglashtirish)
+* **Boshqa operatorlar:** `typeof` (ma'lumot turini aniqlash), `instanceof` (ob'ekt turini aniqlash), `?:` (shartli operator)
+
+**Arifmetik operatorlar**
+
+Arifmetik operatorlar matematik amallarni bajarish uchun ishlatiladi.
+
+* **`+` (qo'shish):** Ikkita qiymatni qo'shadi.
+
+```javascript
+let a = 10;
+let b = 5;
+let c = a + b; // c = 15
+```
+
+* **`-` (ayirish):** Birinchi qiymatdan ikkinchi qiymatni ayiradi.
+
+```javascript
+let a = 10;
+let b = 5;
+let c = a - b; // c = 5
+```
+
+* **`*` (ko'paytirish):** Ikkita qiymatni ko'paytiradi.
+
+```javascript
+let a = 10;
+let b = 5;
+let c = a * b; // c = 50
+```
+
+* **`/` (bo'lish):** Birinchi qiymatni ikkinchi qiymatga bo'ladi.
+
+```javascript
+let a = 10;
+let b = 5;
+let c = a / b; // c = 2
+```
+
+* **`%` (qoldiq):** Birinchi qiymatni ikkinchi qiymatga bo'lgandagi qoldiqni qaytaradi.
+
+```javascript
+let a = 10;
+let b = 3;
+let c = a % b; // c = 1
+```
+
+* **`**` (daraja):** Birinchi qiymatni ikkinchi qiymat darajasiga ko'taradi.
+
+```javascript
+let a = 2;
+let b = 3;
+let c = a ** b; // c = 8
+```
+
+**Taqqoslash operatorlari**
+
+Taqqoslash operatorlari ikkita qiymatni taqqoslaydi va mantiqiy qiymat (`true` yoki `false`) qaytaradi.
+
+* **`==` (teng):** Ikkita qiymat tengligini tekshiradi. Ma'lumot turlarini hisobga olmaydi.
+
+```javascript
+let a = 10;
+let b = "10";
+console.log(a == b); // true
+```
+
+* **`===` (qat'iy teng):** Ikkita qiymat tengligini va ma'lumot turlari bir xilligini tekshiradi.
+
+```javascript
+let a = 10;
+let b = "10";
+console.log(a === b); // false
+```
+
+* **`!=` (teng emas):** Ikkita qiymat teng emasligini tekshiradi. Ma'lumot turlarini hisobga olmaydi.
+
+```javascript
+let a = 10;
+let b = 5;
+console.log(a != b); // true
+```
+
+* **`!==` (qat'iy teng emas):** Ikkita qiymat teng emasligini yoki ma'lumot turlari bir xil emasligini tekshiradi.
+
+```javascript
+let a = 10;
+let b = "10";
+console.log(a !== b); // true
+```
+
+* **`>` (kattaroq), `<` (kichikroq), `>=` (kattaroq yoki teng), `<=` (kichikroq yoki teng):** Raqamli qiymatlarni taqqoslash uchun ishlatiladi.
+
+```javascript
+let a = 10;
+let b = 5;
+console.log(a > b); // true
+console.log(a < b); // false
+console.log(a >= b); // true
+console.log(a <= b); // false
+```
+
+**Mantiqiy operatorlar**
+
+Mantiqiy operatorlar mantiqiy ifodalarni birlashtirish uchun ishlatiladi.
+
+* **`&&` (va):** Ikkala ifoda ham rost bo'lgandagina `true` qaytaradi.
+
+```javascript
+let a = 10;
+let b = 5;
+console.log(a > 5 && b < 10); // true
+```
+
+* **`||` (yoki):** Ikkala ifodadan kamida bittasi rost bo'lsa `true` qaytaradi.
+
+```javascript
+let a = 10;
+let b = 5;
+console.log(a > 15 || b < 10); // true
+```
+
+* **`!` (emas):** Ifodaning mantiqiy qiymatini teskari qiladi.
+
+```javascript
+let a = true;
+console.log(!a); // false
+```
+
+**Belgilash operatorlari**
+
+Belgilash operatorlari o'zgaruvchilarga qiymatlarni berish uchun ishlatiladi.
+
+* **`=` (tenglashtirish):** O'zgaruvchiga qiymat beradi.
+
+```javascript
+let a = 10;
+```
+
+* **`+=` (qo'shish va tenglashtirish):** O'zgaruvchining qiymatiga berilgan qiymatni qo'shadi va natijani o'zgaruvchiga qayta beradi.
+
+```javascript
+let a = 10;
+a += 5; // a = a + 5; a = 15
+```
+
+Xuddi shunday, `-=`, `*=`, `/=` va `%=` operatorlari ham mavjud.
+
+**Boshqa operatorlar**
+
+* **`typeof`:** O'zgaruvchining ma'lumot turini qaytaradi.
+
+```javascript
+let a = 10;
+console.log(typeof a); // "number"
+```
+
+* **`instanceof`:** Ob'ektning ma'lum bir klassga tegishli ekanligini tekshiradi.
+
+* **`?:` (shartli operator):** Shartga qarab turli xil qiymatlarni qaytaradi.
+
+```javascript
+let a = 10;
+let b = 5;
+let c = a > b ? a : b; // c = 10
+```
+
+Bu JavaScript operatorlariga kirish edi. Keyingi darslarda biz operatorlarni amalda qanday ishlatishni ko'rib chiqamiz.
+
+### 2-qism: O'qituvchi boshchiligidagi loyiha: "Onlayn do'kon savatchasi"
+
+Ushbu loyihada biz birgalikda JavaScript operatorlaridan foydalanib, oddiy onlayn do'kon savatchasini simulyatsiya qilamiz. Savatchada mahsulotlarning narxi, soni va chegirmalar hisoblanadi. Men har bir qadamni tushuntirib beraman va siz meni kuzatib, kodni yozasiz.
+
+**1-qadam: O'zgaruvchilarni e'lon qilish va qiymatlarni berish**
+
+```javascript
+let mahsulotNarxi = 15000; // Mahsulotning narxi (so'mda)
+let mahsulotSoni = 3; // Sotib olinadigan mahsulotlar soni
+let chegirmaFoizi = 10; // Chegirma foizi
+```
+
+Bu yerda biz `let` kalit so'zi yordamida uchta o'zgaruvchi e'lon qildik: `mahsulotNarxi`, `mahsulotSoni` va `chegirmaFoizi`. Ularga mos ravishda 15000, 3 va 10 qiymatlarini berdik.
+
+**2-qadam: Umumiy narxni hisoblash**
+
+```javascript
+let umumiyNarx = mahsulotNarxi * mahsulotSoni;
+console.log("Umumiy narx: " + umumiyNarx + " so'm");
+```
+
+Bu yerda biz `*` (ko'paytirish) operatoridan foydalanib, mahsulotning umumiy narxini hisobladik va uni `umumiyNarx` o'zgaruvchisiga saqladik. Keyin, `console.log()` funksiyasi yordamida umumiy narxni konsolga chiqardik.
+
+**3-qadam: Chegirma summasini hisoblash**
+
+```javascript
+let chegirmaSummasi = umumiyNarx * (chegirmaFoizi / 100);
+console.log("Chegirma summasi: " + chegirmaSummasi + " so'm");
+```
+
+Bu yerda biz `/` (bo'lish) va `*` (ko'paytirish) operatorlaridan foydalanib, chegirma summasini hisobladik va uni `chegirmaSummasi` o'zgaruvchisiga saqladik. Keyin, `console.log()` funksiyasi yordamida chegirma summasini konsolga chiqardik.
+
+**4-qadam: Chegirma bilan sotilgan narxini hisoblash**
+
+```javascript
+let chegirmaBilanNarx = umumiyNarx - chegirmaSummasi;
+console.log("Chegirma bilan narx: " + chegirmaBilanNarx + " so'm");
+```
+
+Bu yerda biz `-` (ayirish) operatoridan foydalanib, chegirma bilan sotilgan narxini hisobladik va uni `chegirmaBilanNarx` o'zgaruvchisiga saqladik. Keyin, `console.log()` funksiyasi yordamida chegirma bilan narxni konsolga chiqardik.
+
+**5-qadam: Yetarli pul bormi?**
+
+```javascript
+let mavjudPul = 50000; // Foydalanuvchida mavjud bo'lgan pul miqdori
+let yetarliPul = mavjudPul >= umumiyNarx; // Yetarli pul bormi?
+console.log("Yetarli pul bormi? " + yetarliPul);
+```
+
+Bu yerda biz `>=` (kattaroq yoki teng) operatoridan foydalanib, foydalanuvchida yetarli pul bor-yo'qligini tekshirdik va natijani `yetarliPul` o'zgaruvchisiga saqladik. Bu o'zgaruvchi `boolean` (mantiqiy qiymat) turida bo'ladi. Keyin, `console.log()` funksiyasi yordamida natijani konsolga chiqardik.
+
+**6-qadam: Qancha pul qoldi yoki yetishmaydi?**
+
+```javascript
+let qolganPul = mavjudPul - umumiyNarx; // Qolgan pul miqdori
+let yetishmaydiganPul = umumiyNarx - mavjudPul; // Yetishmaydigan pul miqdori
+
+if (yetarliPul) {
+  console.log("Qolgan pul: " + qolganPul + " so'm");
+} else {
+  console.log("Yetishmaydigan pul: " + yetishmaydiganPul + " so'm");
+}
+```
+
+Bu yerda biz `if` shart operatoridan foydalanib, foydalanuvchida yetarli pul bo'lsa, qolgan pul miqdorini, aks holda yetishmaydigan pul miqdorini hisobladik va konsolga chiqardik.
+
+**7-qadam: Mahsulot sonini oshirish**
+
+```javascript
+mahsulotSoni += 2; // Mahsulot sonini 2 taga oshirish
+console.log("Yangi mahsulot soni: " + mahsulotSoni);
+```
+
+Bu yerda biz `+=` (qo'shish va tenglashtirish) operatoridan foydalanib, `mahsulotSoni` o'zgaruvchisining qiymatini 2 ga oshirdik.
+
+**8-qadam: Chegirma foizini kamaytirish**
+
+```javascript
+chegirmaFoizi -= 5; // Chegirma foizini 5% ga kamaytirish
+console.log("Yangi chegirma foizi: " + chegirmaFoizi + "%");
+```
+
+Bu yerda biz `-=` (ayirish va tenglashtirish) operatoridan foydalanib, `chegirmaFoizi` o'zgaruvchisining qiymatini 5 ga kamaytirdik.
+
+Bu loyihada biz arifmetik operatorlar, taqqoslash operatorlari, mantiqiy operatorlar va belgilash operatorlaridan foydalandik.
+
+### 3-qism: Mustaqil loyiha: "Restoran hisob-kitobi" (Soddalashtirilgan)
+
+
+Ushbu loyihada siz JavaScript operatorlaridan foydalanib, restorandagi hisob-kitobni amalga oshirasiz. Siz mijozning buyurtmasi, narxlar, chegirmalar va yetkazib berish narxini hisoblash uchun o'zgaruvchilar va operatorlardan foydalanasiz.
+
+**Vazifalar:**
+
+1. **O'zgaruvchilarni e'lon qiling va qiymatlarni bering:**
+
+    * Ovqatlar narxlari uchun alohida o'zgaruvchilar yarating (masalan, `osh`, `shashlik`, `lag'mon`, `salat`).
+    * Ichimliklar narxlari uchun alohida o'zgaruvchilar yarating (masalan, `choy`, `kofe`, `sharbat`).
+    * Chegirma foizi uchun o'zgaruvchi yarating (masalan, `chegirma`).
+    * Yetkazib berish narxi uchun o'zgaruvchi yarating (masalan, `yetkazibBerish`).
+
+**Tushuntirish:**
+
+O'zgaruvchilarga nom berishda ularning maqsadini aniq aks ettiruvchi nomlarni tanlang (masalan, `oshNarxi`, `choyNarxi`). Har bir mahsulot yoki xizmat uchun alohida o'zgaruvchi yarating.
+
+
+2. **Buyurtma qiymatini hisoblang:**
+
+    * Mijozning buyurtmasidagi har bir mahsulot va xizmat uchun alohida o'zgaruvchilar yarating va ularga buyurtma qilingan miqdorni saqlang (masalan, `oshSoni`, `choySoni`).
+    * Har bir mahsulot va xizmatning umumiy narxini hisoblang (masalan, `oshNarxi * oshSoni`).
+    * Barcha mahsulot va xizmatlarning umumiy narxini hisoblang.
+
+**Tushuntirish:**
+
+Arifmetik operatorlar (`+`, `-`, `*`, `/`) yordamida hisob-kitoblarni bajaring. Masalan, agar oshning narxi 15000 so'm bo'lsa va mijoz 2 ta osh buyurtma qilgan bo'lsa, umumiy narx `15000 * 2 = 30000` so'm bo'ladi.
+
+
+3. **Mijozning to'lov qobiliyatini tekshiring:**
+
+    * Mijozda mavjud bo'lgan pul miqdori uchun o'zgaruvchi yarating.
+    * Taqqoslash operatorlaridan foydalanib, mijozda buyurtma uchun yetarli pul bor-yo'qligini tekshiring.
+    * Agar pul yetarli bo'lmasa, mijozga qancha pul yetishmasligini hisoblang va `alert()` funksiyasi orqali xabar bering.
+
+**Tushuntirish:**
+
+Taqqoslash operatorlari (`>`, `<`, `>=`, `<=`, `==`, `===`) yordamida qiymatlarni solishtiring. Masalan, agar mijozda 50000 so'm pul bo'lsa va buyurtma qiymati 60000 so'm bo'lsa, `50000 < 60000` sharti `true` qiymatini qaytaradi va siz mijozga "Sizga 10000 so'm pul yetishmaydi" degan xabarni ko'rsatishingiz mumkin.
+
+
+4. **Chegirma va yetkazib berish narxini hisoblang:**
+
+    * Umumiy buyurtma qiymatidan chegirmani ayiring.
+    * Agar mijoz yetkazib berish xizmatidan foydalansa, yetkazib berish narxini yakuniy hisobga qo'shing.
+
+**Tushuntirish:**
+
+*   Chegirma summasini hisoblang. Buning uchun umumiy buyurtma qiymatini (`umumiyNarx`) chegirma foiziga (`chegirma`) ko'paytirib, 100 ga bo'ling. Natijani yangi o'zgaruvchiga saqlang (masalan, `chegirmaSummasi`).
+*   Chegirma summasini umumiy buyurtma qiymatidan ayiring va natijani yangi o'zgaruvchiga saqlang (masalan, `chegirmaBilanNarx`).
+*   Yetkazib berish xizmatidan foydalanishni tekshirish uchun `boolean` (mantiqiy qiymat) turidagi o'zgaruvchidan foydalaning (masalan, `yetkazibBerishKerakmi`).
+*   Agar `yetkazibBerishKerakmi` o'zgaruvchisi `true` qiymatiga ega bo'lsa, yetkazib berish narxini (`yetkazibBerish`) `chegirmaBilanNarx` o'zgaruvchisiga qo'shing va natijani yangi o'zgaruvchiga saqlang (masalan, `yakuniyNarx`).
+*   Agar `yetkazibBerishKerakmi` o'zgaruvchisi `false` qiymatiga ega bo'lsa, `chegirmaBilanNarx` o'zgaruvchisini `yakuniyNarx` o'zgaruvchisiga o'zlashtiring.
+
+
+5. **Yakuniy hisobni chiqaring:**
+
+    * Yakuniy hisobni yangi o'zgaruvchiga saqlang.
+    * `alert()` funksiyasi yordamida yakuniy hisobni ko'rsating.
+
+**Tushuntirish:**
+
+Yakuniy hisobni chiqarish uchun oldingi bosqichlarda hisoblangan qiymatlardan foydalaning. `alert()` funksiyasi yordamida natijani foydalanuvchiga ko'rsating.
+
+
+**Qo'shimcha vazifalar:**
+
+* Mijozga chegirma berish shartlarini qo'shing (masalan, ma'lum miqdordan ko'p buyurtma qilganda yoki ma'lum mahsulotlarni buyurtma qilganda).
+* Turli xil to'lov usullarini qo'shing (masalan, naqd pul, karta) va har bir to'lov usuli uchun alohida hisob-kitob qiling.
+* Hisob-kitob natijalarini konsolga chiqaring.
+
+
+### 3-qism: Mustaqil loyiha: "Restoran hisob-kitobi" (Soddalashtirilgan)
+
+Ushbu loyihada siz JavaScript operatorlaridan foydalanib, restorandagi hisob-kitobni amalga oshirasiz. Siz mijozning buyurtmasi, narxlar, chegirmalar va yetkazib berish narxini hisoblash uchun o'zgaruvchilar va operatorlardan foydalanasiz. Yetkazib berish har doim amalga oshiriladi.
+
+**Vazifalar:**
+
+1. **O'zgaruvchilarni e'lon qiling va qiymatlarni bering:**
+
+    * Ovqatlar narxlari uchun alohida o'zgaruvchilar yarating (masalan, `osh`, `shashlik`, `lag'mon`, `salat`).
+    * Ichimliklar narxlari uchun alohida o'zgaruvchilar yarating (masalan, `choy`, `kofe`, `sharbat`).
+    * Chegirma foizi uchun o'zgaruvchi yarating (masalan, `chegirma`).
+    * Yetkazib berish narxi uchun o'zgaruvchi yarating (masalan, `yetkazibBerish`).
+
+**Tushuntirish:**
+
+O'zgaruvchilarga nom berishda ularning maqsadini aniq aks ettiruvchi nomlarni tanlang (masalan, `oshNarxi`, `choyNarxi`). Har bir mahsulot yoki xizmat uchun alohida o'zgaruvchi yarating.
+
+
+2. **Buyurtma qiymatini hisoblang:**
+
+    * Mijozning buyurtmasidagi har bir mahsulot va xizmat uchun alohida o'zgaruvchilar yarating va ularga buyurtma qilingan miqdorni saqlang (masalan, `oshSoni`, `choySoni`).
+    * Har bir mahsulot va xizmatning umumiy narxini hisoblang (masalan, `oshNarxi * oshSoni`).
+    * Barcha mahsulot va xizmatlarning umumiy narxini hisoblang.
+
+**Tushuntirish:**
+
+Arifmetik operatorlar (`+`, `-`, `*`, `/`) yordamida hisob-kitoblarni bajaring. Masalan, agar oshning narxi 15000 so'm bo'lsa va mijoz 2 ta osh buyurtma qilgan bo'lsa, umumiy narx `15000 * 2 = 30000` so'm bo'ladi.
+
+
+3. **Chegirma va yetkazib berish narxini hisoblang:**
+
+    * Umumiy buyurtma qiymatidan chegirmani ayiring.
+    * Yetkazib berish narxini yakuniy hisobga qo'shing.
+
+**Tushuntirish:**
+
+*   Avval chegirma summasini hisoblang. Buning uchun umumiy buyurtma qiymatini (`umumiyNarx`) chegirma foiziga (`chegirma`) ko'paytirib, 100 ga bo'ling. Masalan, agar umumiy buyurtma qiymati 80000 so'm bo'lsa va chegirma 10% bo'lsa, chegirma summasi 8000 so'm bo'ladi (80000 * 10 / 100 = 8000). Natijani `chegirmaSummasi` o'zgaruvchisiga saqlang.
+*   Chegirma summasini umumiy buyurtma qiymatidan ayiring va natijani `chegirmaBilanNarx` o'zgaruvchisiga saqlang. Bizning misolimizda, 80000 - 8000 = 72000 so'm bo'ladi.
+*   Yetkazib berish narxini (`yetkazibBerish`) `chegirmaBilanNarx` o'zgaruvchisiga qo'shing. Masalan, agar yetkazib berish narxi 5000 so'm bo'lsa, 72000 + 5000 = 77000 so'm bo'ladi. Natijani `yakuniyNarx` o'zgaruvchisiga saqlang.
+
+
+4. **Yakuniy hisobni chiqaring:**
+
+    * `alert()` funksiyasi yordamida yakuniy hisobni ko'rsating.
+
+**Tushuntirish:**
+
+`alert()` funksiyasi yordamida `yakuniyNarx` o'zgaruvchisini foydalanuvchiga ko'rsating.
+
+
+**Qo'shimcha vazifalar:**
+
+* Mijozga chegirma berish shartlarini qo'shing (masalan, ma'lum miqdordan ko'p buyurtma qilganda yoki ma'lum mahsulotlarni buyurtma qilganda).
+* Turli xil to'lov usullarini qo'shing (masalan, naqd pul, karta) va har bir to'lov usuli uchun alohida hisob-kitob qiling.
+* Hisob-kitob natijalarini konsolga chiqaring.
+</details>
+
+
+
+<details>
+<summary>
+JavaScript Shartli Operatorlari va Tarmoqlanish
+</summary>
+
+Dasturlashda ko'pincha ma'lum bir shartlarga qarab turli xil amallarni bajarish kerak bo'ladi. Masalan, foydalanuvchi login formasiga to'g'ri parolni kiritsa, uni saytga kirishga ruxsat berish, aks holda xato xabari ko'rsatish kerak. Bunday vaziyatlarda **shartli operatorlar** yordamga keladi.
+
+### 1-qism: Shartli Operatorlar va Tarmoqlanish bilan tanishuv
+
+Shartli operatorlar kodning bajarilish oqimini boshqarish uchun ishlatiladi. Ular ma'lum bir shartni tekshiradi va shartga qarab turli xil kod bloklarini bajaradi.
+
+JavaScriptda quyidagi shartli operatorlar mavjud:
+
+* **`if`:** Agar shart rost (`true`) bo'lsa, kod blokini bajaradi.
+* **`else`:** Agar `if` sharti yolg'on (`false`) bo'lsa, kod blokini bajaradi.
+* **`else if`:** Agar `if` sharti yolg'on bo'lsa va `else if` sharti rost bo'lsa, kod blokini bajaradi.
+* **`switch`:** Bir nechta shartlarni tekshirish uchun ishlatiladi.
+
+**`if` operatori**
+
+`if` operatori eng oddiy shartli operatordir. U quyidagi sintaksisga ega:
+
+```javascript
+if (shart) {
+  // shart rost bo'lsa, bu kod bloki bajariladi
+}
+```
+
+**Misol:**
+
+```javascript
+let yosh = 20;
+
+if (yosh >= 18) {
+  console.log("Siz voyaga yetgansiz.");
+}
+```
+
+Bu misolda, agar `yosh` o'zgaruvchisi 18 dan katta yoki teng bo'lsa, "Siz voyaga yetgansiz." xabari konsolga chiqariladi.
+
+**`else` operatori**
+
+`else` operatori `if` operatori bilan birgalikda ishlatiladi. Agar `if` sharti yolg'on bo'lsa, `else` bloki bajariladi.
+
+```javascript
+if (shart) {
+  // shart rost bo'lsa, bu kod bloki bajariladi
+} else {
+  // shart yolg'on bo'lsa, bu kod bloki bajariladi
+}
+```
+
+**Misol:**
+
+```javascript
+let yosh = 15;
+
+if (yosh >= 18) {
+  console.log("Siz voyaga yetgansiz.");
+} else {
+  console.log("Siz voyaga yetmagansiz.");
+}
+```
+
+Bu misolda, `yosh` o'zgaruvchisi 18 dan kichik bo'lgani uchun `else` bloki bajariladi va "Siz voyaga yetmagansiz." xabari konsolga chiqariladi.
+
+**`else if` operatori**
+
+`else if` operatori bir nechta shartlarni tekshirish uchun ishlatiladi.
+
+```javascript
+if (shart1) {
+  // shart1 rost bo'lsa, bu kod bloki bajariladi
+} else if (shart2) {
+  // shart1 yolg'on va shart2 rost bo'lsa, bu kod bloki bajariladi
+} else {
+  // barcha shartlar yolg'on bo'lsa, bu kod bloki bajariladi
+}
+```
+
+**Misol:**
+
+```javascript
+let baho = 75;
+
+if (baho >= 90) {
+  console.log("Sizning bahongiz a'lo.");
+} else if (baho >= 70) {
+  console.log("Sizning bahongiz yaxshi.");
+} else {
+  console.log("Sizning bahongiz qoniqarsiz.");
+}
+```
+
+Bu misolda, `baho` o'zgaruvchisi 75 ga teng bo'lgani uchun ikkinchi shart (`baho >= 70`) rost bo'ladi va "Sizning bahongiz yaxshi." xabari konsolga chiqariladi.
+
+**`switch` operatori**
+
+`switch` operatori bir nechta shartlarni tekshirish uchun ishlatiladi. U quyidagi sintaksisga ega:
+
+```javascript
+switch (ifoda) {
+  case qiymat1:
+    // ifoda qiymat1 ga teng bo'lsa, bu kod bloki bajariladi
+    break;
+  case qiymat2:
+    // ifoda qiymat2 ga teng bo'lsa, bu kod bloki bajariladi
+    break;
+  // ...
+  default:
+    // hech qaysi case bajarilmasa, bu kod bloki bajariladi
+}
+```
+
+**Misol:**
+
+```javascript
+let kun = "dushanba";
+
+switch (kun) {
+  case "dushanba":
+    console.log("Bugun dushanba.");
+    break;
+  case "seshanba":
+    console.log("Bugun seshanba.");
+    break;
+  default:
+    console.log("Bugun boshqa kun.");
+}
+```
+
+Bu misolda, `kun` o'zgaruvchisi "dushanba" ga teng bo'lgani uchun birinchi `case` bloki bajariladi va "Bugun dushanba." xabari konsolga chiqariladi.
+
+Shartli operatorlar va tarmoqlanish yordamida siz dasturlaringizni yanada aqlli va moslashuvchan qilishingiz mumkin.
+
+### 2-qism: O'qituvchi boshchiligidagi loyiha: "Ob-havo ma'lumotlari"
+
+Ushbu loyihada biz birgalikda JavaScript shartli operatorlaridan foydalanib, ob-havo ma'lumotlarini tahlil qilamiz va foydalanuvchiga tavsiyalar beramiz. Men har bir qadamni tushuntirib beraman va siz meni kuzatib, kodni yozasiz.
+
+**1-qadam: O'zgaruvchilarni e'lon qilish va qiymatlarni berish**
+
+```javascript
+let harorat = 25; // Harorat (Selsiyda)
+let yogingarchilik = false; // Yog'ingarchilik bormi? (true/false)
+let shamolTezligi = 10; // Shamol tezligi (km/soat)
+```
+
+Bu yerda biz `let` kalit so'zi yordamida uchta o'zgaruvchi e'lon qildik: `harorat`, `yogingarchilik` va `shamolTezligi`. Ularga mos ravishda 25, `false` va 10 qiymatlarini berdik.
+
+**2-qadam: Haroratga qarab tavsiyalar berish**
+
+```javascript
+if (harorat > 30) {
+  console.log("Issiq havo. Ko'p suv iching va soyada turing.");
+} else if (harorat > 20) {
+  console.log("Yaxshi havo. Sayr qilish uchun ajoyib kun.");
+} else if (harorat > 10) {
+  console.log("Salqin havo. Yengil kurtka kiying.");
+} else {
+  console.log("Sovuq havo. Issiq kiyimlar kiying.");
+}
+```
+
+Bu yerda biz `if`, `else if` va `else` operatorlaridan foydalanib, haroratga qarab foydalanuvchiga tavsiyalar beramiz. Agar harorat 30 dan yuqori bo'lsa, "Issiq havo..." xabari chiqadi. Agar harorat 20 dan yuqori bo'lsa, "Yaxshi havo..." xabari chiqadi va hokazo.
+
+**3-qadam: Yog'ingarchilikni hisobga olish**
+
+```javascript
+if (yogingarchilik) {
+  console.log("Yomg'ir yog'yapti. Soyabon olishni unutmang.");
+}
+```
+
+Bu yerda biz `if` operatoridan foydalanib, agar yog'ingarchilik bo'lsa (`yogingarchilik` o'zgaruvchisi `true` ga teng bo'lsa), "Yomg'ir yog'yapti..." xabarini konsolga chiqaramiz.
+
+**4-qadam: Shamol tezligini hisobga olish**
+
+```javascript
+if (shamolTezligi > 20) {
+  console.log("Kuchli shamol. Ehtiyot bo'ling.");
+}
+```
+
+Bu yerda biz `if` operatoridan foydalanib, agar shamol tezligi 20 km/soat dan yuqori bo'lsa, "Kuchli shamol..." xabarini konsolga chiqaramiz.
+
+**5-qadam: `switch` operatoridan foydalanish**
+
+```javascript
+let obHavo = "bulutli";
+
+switch (obHavo) {
+  case "quyoshli":
+    console.log("Quyoshli kun. Sayrga chiqing!");
+    break;
+  case "bulutli":
+    console.log("Bulutli kun. Yomg'ir yog'ishi mumkin.");
+    break;
+  case "qorli":
+    console.log("Qorli kun. Issiq kiyimlar kiying.");
+    break;
+  default:
+    console.log("Ob-havo noma'lum.");
+}
+```
+
+Bu yerda biz `switch` operatoridan foydalanib, `obHavo` o'zgaruvchisining qiymatiga qarab turli xil xabarlarni konsolga chiqaramiz.
+
+Bu loyihada biz `if`, `else if`, `else` va `switch` shartli operatorlaridan foydalandik.
+
+### 3-qism: Mustaqil loyiha: "Kinoteatrga borish"
+
+Ushbu loyihada siz JavaScript shartli operatorlaridan foydalanib, kinoteatrga borish uchun qaror qabul qilish jarayonini simulyatsiya qilasiz. Siz ob-havo, vaqt, film janri va boshqa omillarni hisobga olishingiz kerak.
+
+**Vazifalar:**
+
+1. **O'zgaruvchilarni e'lon qiling va qiymatlarni bering:**
+
+    * Ob-havo uchun o'zgaruvchi yarating (masalan, `obHavo`). Mumkin bo'lgan qiymatlar: "quyoshli", "bulutli", "yomg'irli".
+    * Harorat uchun o'zgaruvchi yarating (masalan, `harorat`).
+    * Kun vaqti uchun o'zgaruvchi yarating (masalan, `kunVaqti`). Mumkin bo'lgan qiymatlar: "ertalab", "kunduzi", "kechqurun".
+    * Film janri uchun o'zgaruvchi yarating (masalan, `filmJanri`). Mumkin bo'lgan qiymatlar: "komediya", "drama", "jangari".
+    * Sizda pul bormi yoki yo'qmi, bu haqida ma'lumot saqlash uchun o'zgaruvchi yarating (`boolean` - rost/yolg'on).
+
+**Tushuntirish:**
+
+*   Har bir omil uchun alohida o'zgaruvchi yarating va ularga mos nomlar bering.
+*   O'zgaruvchilarga realistik qiymatlarni bering. Masalan, `harorat` uchun 25, `kunVaqti` uchun "kechqurun", `filmJanri` uchun "jangari".
+
+
+2. **Ob-havoga qarab qaror qabul qiling:**
+
+    * Agar ob-havo yomg'irli bo'lsa, `alert()` funksiyasi orqali "Yomg'ir yog'yapti, kinoteatrga bormaymiz" xabarini ko'rsating.
+    * Aks holda, keyingi bosqichga o'ting.
+
+**Tushuntirish:**
+
+*   `if` operatoridan foydalanib, ob-havo shartini tekshiring.
+*   Agar shart rost bo'lsa (`obHavo === "yomg'irli"`), `alert()` funksiyasi orqali xabar ko'rsating.
+
+
+3. **Kun vaqtiga qarab qaror qabul qiling:**
+
+    * Agar kun vaqti ertalab bo'lsa, `alert()` funksiyasi orqali "Ertalab kinoteatrga bormaymiz" xabarini ko'rsating.
+    * Aks holda, keyingi bosqichga o'ting.
+
+**Tushuntirish:**
+
+*   `if` operatoridan foydalanib, kun vaqti shartini tekshiring.
+*   Agar shart rost bo'lsa (`kunVaqti === "ertalab"`), `alert()` funksiyasi orqali xabar ko'rsating.
+
+
+4. **Film janriga qarab qaror qabul qiling:**
+
+    * `switch` operatoridan foydalanib, film janriga qarab turli xil xabarlarni `alert()` funksiyasi orqali ko'rsating. Masalan:
+        * Komediya: "Komediya filmi ko'ramiz!"
+        * Drama: "Drama filmi ko'ramiz."
+        * Jangari: "Jangari film ko'ramiz!"
+        * Boshqa janrlar uchun: "Qiziqarli film ko'ramiz."
+
+**Tushuntirish:**
+
+*   `switch` operatoridan foydalanib, film janri bo'yicha turli xil amallarni bajaring.
+*   `case` kalit so'zi yordamida har bir janr uchun alohida kod blokini yarating.
+*   `default` kalit so'zi yordamida boshqa barcha janrlar uchun kod blokini yarating.
+
+
+5. **Pulni tekshiring:**
+
+    * Agar pulingiz bo'lsa, `alert()` funksiyasi orqali "Kinoteatrga boramiz!" xabarini ko'rsating.
+    * Aks holda, `alert()` funksiyasi orqali "Pulingiz yo'q, kinoteatrga borolmaymiz" xabarini ko'rsating.
+
+**Tushuntirish:**
+
+*   `if` operatoridan foydalanib, pulingiz bor-yo'qligini tekshiring.
+*   Agar shart rost bo'lsa (pul bo'lsa), "Kinoteatrga boramiz!" xabarini ko'rsating.
+*   Aks holda, "Pulingiz yo'q..." xabarini ko'rsating.
+</details>
+
+
+
+<details>
+<summary>JavaScript Sikllari</summary>
+
+## JavaScript Sikllari
+
+Ko'pincha dasturlashda biror amalni bir necha marta takrorlashga to'g'ri keladi. Masalan, ro'yxatdagi barcha elementlarni ko'rsatish yoki ma'lumotlar bazasidan ma'lumotlarni olish. Bunday hollarda sikllardan foydalanish juda qulay. 
+
+### 1-qism: Sikllar bilan tanishuv
+Sikllar bilan ishlashdan oldin, **massivlar** haqida tushunchaga ega bo'lish muhim.
+
+**Massivlar (Arrays)**
+
+Massiv - bu bir nechta qiymatlarni o'z ichiga olgan o'zgaruvchi. Massivlar kvadrat qavslar (`[]`) ichida e'lon qilinadi va elementlari vergul (`,`) bilan ajratiladi. Massiv elementlari har qanday ma'lumot turida bo'lishi mumkin: raqamlar, matnlar, mantiqiy qiymatlar, hatto boshqa massivlar ham.
+
+**Misol:**
+
+```javascript
+let ranglar = ["qizil", "yashil", "ko'k"]; // Matnlar massivi
+let raqamlar = [1, 2, 3, 4, 5]; // Raqamlar massivi
+let aralash = ["olma", 10, true, { ism: "Ali" }]; // Turli xil ma'lumotlar turlari
+```
+
+**Massiv elementlariga kirish**
+
+Massiv elementlariga ularning indekslari orqali kirish mumkin. Indekslar 0 dan boshlanadi.
+
+```javascript
+let ranglar = ["qizil", "yashil", "ko'k"];
+console.log(ranglar[0]); // "qizil"
+console.log(ranglar[1]); // "yashil"
+console.log(ranglar[2]); // "ko'k"
+```
+
+**Massiv uzunligi**
+
+Massivning uzunligini (elementlar sonini) olish uchun `length` xossasidan foydalaniladi.
+
+```javascript
+let ranglar = ["qizil", "yashil", "ko'k"];
+console.log(ranglar.length); // 3
+```
+
+Endi esa sikllar haqida batafsilroq gaplashamiz.
+
+Ko'pincha dasturlashda biror amalni bir necha marta takrorlashga to'g'ri keladi. Masalan, ro'yxatdagi barcha elementlarni ko'rsatish yoki ma'lumotlar bazasidan ma'lumotlarni olish. Bunday hollarda sikllardan foydalanish juda qulay.
+
+Sikllar - bu ma'lum bir shart bajarilguncha yoki ma'lum bir marta kod blokini takrorlaydigan dasturlash konstruktsiyasi. JavaScriptda quyidagi sikllar mavjud:
+
+* **`for`:** Ma'lum bir marta takrorlanadigan sikl.
+* **`while`:** Shart rost bo'lguncha takrorlanadigan sikl.
+* **`do...while`:** Kod bloki kamida bir marta bajariladigan sikl.
+
+**`for` sikli**
+
+`for` sikli uchta qismdan iborat:
+
+* **Boshlang'ich qiymat:** Sikl boshlanishidan oldin bajariladigan ifoda. Odatda o'zgaruvchiga boshlang'ich qiymat beriladi.
+* **Shart:** Har bir iteratsiyadan oldin tekshiriladigan ifoda. Agar shart rost bo'lsa, sikl davom etadi.
+* **Increment/decrement:** Har bir iteratsiyadan keyin bajariladigan ifoda. Odatda o'zgaruvchining qiymatini oshirish yoki kamaytirish uchun ishlatiladi.
+
+`for` siklining sintaksisi:
+
+```javascript
+for (boshlang'ich qiymat; shart; increment/decrement) {
+  // takrorlanadigan kod bloki
+}
+```
+
+**Misol:**
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  console.log(i); // 0, 1, 2, 3, 4
+}
+```
+
+Bu misolda `i` o'zgaruvchisi 0 dan boshlanadi va har bir iteratsiyada 1 ga oshiriladi. Sikl `i` o'zgaruvchisi 5 dan kichik bo'lguncha davom etadi. Har bir iteratsiyada `console.log(i)` kodi bajariladi va `i` o'zgaruvchisining qiymati konsolga chiqariladi.
+
+
+**`while` sikli**
+
+`while` sikli shart rost bo'lguncha takrorlanadi.
+
+`while` siklining sintaksisi:
+
+```javascript
+while (shart) {
+  // takrorlanadigan kod bloki
+}
+```
+
+**Misol:**
+
+```javascript
+let i = 0;
+
+while (i < 5) {
+  console.log(i); // 0, 1, 2, 3, 4
+  i++;
+}
+```
+
+Bu misolda `i` o'zgaruvchisi 0 dan boshlanadi. Sikl `i` o'zgaruvchisi 5 dan kichik bo'lguncha davom etadi. Har bir iteratsiyada `console.log(i)` kodi bajariladi va `i` o'zgaruvchisining qiymati konsolga chiqariladi. Keyin `i++` kodi bajarilib, `i` o'zgaruvchisining qiymati 1 ga oshiriladi.
+
+
+**`do...while` sikli**
+
+`do...while` sikli `while` sikliga o'xshash, lekin kod bloki kamida bir marta bajariladi.
+
+`do...while` siklining sintaksisi:
+
+```javascript
+do {
+  // takrorlanadigan kod bloki
+} while (shart);
+```
+
+**Misol:**
+
+```javascript
+let i = 0;
+
+do {
+  console.log(i); // 0, 1, 2, 3, 4
+  i++;
+} while (i < 5);
+```
+
+Bu misolda ham `i` o'zgaruvchisi 0 dan boshlanadi. `do...while` siklida avval kod bloki bajariladi, keyin shart tekshiriladi. Shuning uchun `console.log(i)` kodi birinchi marta bajarilganda `i` o'zgaruvchisi 0 ga teng bo'ladi va konsolga 0 chiqariladi. Keyin `i++` kodi bajarilib, `i` o'zgaruvchisining qiymati 1 ga oshiriladi. Sikl `i` o'zgaruvchisi 5 dan kichik bo'lguncha davom etadi.
+
+**Massivlarni sikllarda ishlatish**
+
+Massivlar sikllar bilan birgalikda juda qulay. Masalan, `for` sikli yordamida massivning barcha elementlarini ko'rsatish mumkin.
+
+```javascript
+let ranglar = ["qizil", "yashil", "ko'k"];
+
+for (let i = 0; i < ranglar.length; i++) {
+  console.log(ranglar[i]);
+}
+```
+
+Bu kod `ranglar` massividagi barcha ranglarni konsolga chiqaradi.
+
+**Sikllarni to'xtatish**
+
+Ba'zan siklni shart bajarilmasdan oldin to'xtatish kerak bo'ladi. Buning uchun `break` kalit so'zidan foydalanish mumkin.
+
+**Misol:**
+
+```javascript
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    break; // Siklni to'xtatish
+  }
+  console.log(i); // 0, 1, 2, 3, 4
+}
+```
+
+Bu misolda sikl `i` o'zgaruvchisi 5 ga teng bo'lganda to'xtatiladi.
+
+**Siklni davom ettirish**
+
+Ba'zan siklning joriy iteratsiyasini to'xtatib, keyingi iteratsiyaga o'tish kerak bo'ladi. Buning uchun `continue` kalit so'zidan foydalanish mumkin.
+
+**Misol:**
+
+```javascript
+for (let i = 0; i < 10; i++) {
+  if (i % 2 === 0) {
+    continue; // Juft raqamlarni tashlab o'tish
+  }
+  console.log(i); // 1, 3, 5, 7, 9
+}
+```
+
+Bu misolda juft raqamlar tashlab o'tiladi va faqat toq raqamlar konsolga chiqariladi.
+
+Sikllar yordamida siz kodni takrorlashni kamaytirishingiz va dasturlaringizni yanada samarali qilishingiz mumkin.
+
+Oh, you are absolutely correct! My apologies, I seem to be mixing up the tutorials again. It appears I need more training on keeping track of the curriculum. 
+
+Let me try this again, this time providing the 2nd part of the "JavaScript Sikllari" tutorial with a realistic project, divided into smaller steps, with clear task instructions and explanations of what the code does in each step. I will also try to cover all the loop types mentioned in the theory part.
+
+### 2-qism: O'qituvchi boshchiligidagi loyiha: "Raqamlarni tahlil qilish"
+
+Ushbu loyihada biz birgalikda JavaScript sikllaridan foydalanib, foydalanuvchi kiritgan raqamlarni tahlil qilamiz. Men har bir qadamni tushuntirib beraman va siz meni kuzatib, kodni yozasiz.
+
+**1-qadam: Foydalanuvchidan raqamlarni olish**
+
+```javascript
+let raqamlar = []; // Bo'sh massiv yaratish
+let raqam;
+
+while (true) {
+  raqam = prompt("Raqam kiriting (yoki 'stop' deb yozing):");
+  if (raqam === "stop" || raqam === null) {
+    break; // Siklni to'xtatish
+  }
+  raqamlar.push(Number(raqam)); // Raqamni massivga qo'shish
+}
+```
+
+Bu yerda biz avval bo'sh massiv (`raqamlar`) yaratdik. Keyin, `while` sikli yordamida foydalanuvchidan raqamlarni so'raymiz. Foydalanuvchi "stop" deb yozganda yoki "Bekor qilish" tugmasini bosganda sikl to'xtatiladi. `prompt()` funksiyasi yordamida olingan qiymat `Number()` funksiyasi yordamida raqamga aylantiriladi va `push()` metodi yordamida massivga qo'shiladi.
+
+**2-qadam: `for` sikli yordamida raqamlarni ko'rsatish**
+
+```javascript
+for (let i = 0; i < raqamlar.length; i++) {
+  console.log(raqamlar[i]);
+}
+```
+
+Bu yerda biz `for` sikli yordamida `raqamlar` massividagi barcha raqamlarni konsolga chiqaramiz. `raqamlar.length` xossasi massiv uzunligini qaytaradi.
+
+**3-qadam: `while` sikli yordamida raqamlar yig'indisini hisoblash**
+
+```javascript
+let yigindi = 0;
+let i = 0;
+
+while (i < raqamlar.length) {
+  yigindi += raqamlar[i];
+  i++;
+}
+
+console.log("Raqamlar yig'indisi: " + yigindi);
+```
+
+Bu yerda biz `while` sikli yordamida `raqamlar` massividagi barcha raqamlarning yig'indisini hisoblaymiz.
+
+**4-qadam: `do...while` sikli yordamida eng katta raqamni topish**
+
+```javascript
+let engKatta = raqamlar[0]; // Birinchi raqamni eng katta deb olamiz
+let j = 1;
+
+do {
+  if (raqamlar[j] > engKatta) {
+    engKatta = raqamlar[j];
+  }
+  j++;
+} while (j < raqamlar.length);
+
+console.log("Eng katta raqam: " + engKatta);
+```
+
+Bu yerda biz `do...while` sikli yordamida `raqamlar` massividagi eng katta raqamni topamiz.
+
+**5-qadam: `for` sikli va `continue` operatoridan foydalanish**
+
+```javascript
+for (let i = 0; i < raqamlar.length; i++) {
+  if (raqamlar[i] < 0) {
+    continue; // Manfiy raqamlarni tashlab o'tish
+  }
+  console.log(raqamlar[i]);
+}
+```
+
+Bu yerda biz `for` sikli va `continue` operatoridan foydalanib, faqat manfiy bo'lmagan raqamlarni konsolga chiqaramiz.
+
+Bu loyihada biz `for`, `while` va `do...while` sikllaridan, shuningdek, `break` va `continue` operatorlaridan foydalandik.
+
+
+### 3-qism: Mustaqil loyiha: "Hafta kunlari"
+
+Ushbu loyihada siz JavaScript sikllari va massivlaridan foydalanib, hafta kunlarini konsolga chiqarasiz va ular bilan oddiy amallarni bajarasiz. Bu sizga sikllarni amalda qo'llash va massivlar bilan ishlash ko'nikmalarini mustahkamlashga yordam beradi.
+
+**Vazifalar:**
+
+1. **Hafta kunlari massivini yarating:**
+
+    * `haftaKunlari` nomli massiv yarating va unga hafta kunlarining nomlarini kiriting (yakshanbadan shanbagacha).
+
+**Tushuntirish:**
+
+*   Avval `let` kalit so'zi yordamida `haftaKunlari` nomli o'zgaruvchi yarating.
+*   O'zgaruvchiga massiv qiymatini berish uchun kvadrat qavslar (`[]`) dan foydalaning.
+*   Massiv elementlarini vergul (`,`) bilan ajrating.
+*   Har bir hafta kunining nomini qo'shtirnoq yoki birtirnoq ichida yozing, chunki ular matnli qiymatlar (`string`).
+
+
+2. **Hafta kunlarini konsolga chiqaring:**
+
+    * `for` sikli yordamida `haftaKunlari` massividagi barcha kunlarni konsolga chiqaring.
+
+**Tushuntirish:**
+
+*   `for` sikli yaratish uchun `for` kalit so'zidan foydalaning.
+*   `for` sikli uch qismdan iborat: boshlang'ich qiymat, shart va increment.
+*   Boshlang'ich qiymat sifatida `let i = 0;` deb yozing. Bu `i` nomli o'zgaruvchi yaratadi va unga 0 qiymatini beradi.
+*   Shart sifatida `i < haftaKunlari.length;` deb yozing. Bu siklni `i` o'zgaruvchisi `haftaKunlari` massividagi elementlar sonidan kichik bo'lguncha davom ettiradi.
+*   Increment sifatida `i++` deb yozing. Bu har bir iteratsiyadan keyin `i` o'zgaruvchisining qiymatini 1 ga oshiradi.
+*   `for` sikli ichida `console.log()` funksiyasi yordamida `haftaKunlari` massividagi `i`-chi elementni konsolga chiqaring.
+
+
+3. **Hafta o'rtasidagi kunlarni konsolga chiqaring:**
+
+    * `for` sikli va `if` shartidan foydalanib, `haftaKunlari` massividan faqat hafta o'rtasidagi kunlarni (seshanbadan jumagacha) konsolga chiqaring.
+
+**Tushuntirish:**
+
+*   Oldingi bosqichdagi kabi `for` siklini yarating.
+*   Sikl ichida `if` shartidan foydalaning.
+*   `if` shartida `i` o'zgaruvchisining qiymati 1 dan katta yoki teng va 5 dan kichik yoki tengligini tekshiring.
+*   Agar shart rost bo'lsa, `console.log()` funksiyasi yordamida `haftaKunlari` massividagi `i`-chi elementni konsolga chiqaring.
+
+
+4. **Dam olish kunlarini alert oynasida ko'rsating:**
+
+    * `while` sikli yordamida `haftaKunlari` massividan dam olish kunlarini (yakshanba va shanba) `alert()` funksiyasi orqali ko'rsating.
+
+**Tushuntirish:**
+
+*   `while` sikli yaratish uchun `while` kalit so'zidan foydalaning.
+*   `while` sikli shart rost bo'lguncha takrorlanadi.
+*   Shart sifatida `i` o'zgaruvchisining qiymati 0 ga yoki 6 ga tengligini tekshiring (yakshanba va shanba indekslari).
+*   Sikl ichida `alert()` funksiyasi yordamida `haftaKunlari` massividagi `i`-chi elementni ko'rsating.
+*   Har bir iteratsiyadan keyin `i` o'zgaruvchisining qiymatini 1 ga oshiring.
+
+
+5. **Har uch kunda bir takrorlanadigan kunlarni konsolga chiqaring:**
+
+    * `for` sikli va `continue` operatoridan foydalanib, `haftaKunlari` massividan har uch kunda bir takrorlanadigan kunlarni (yakshanba, chorshanba, shanba) konsolga chiqaring.
+
+**Tushuntirish:**
+
+*   Oldingi bosqichdagi kabi `for` siklini yarating.
+*   Sikl ichida `if` shartidan foydalaning.
+*   `if` shartida `i` o'zgaruvchisining qiymati 1 ga yoki 4 ga tengligini tekshiring (dushanba va payshanba indekslari).
+*   Agar shart rost bo'lsa, `continue` operatoridan foydalanib, keyingi iteratsiyaga o'ting.
+*   Aks holda, `console.log()` funksiyasi yordamida `haftaKunlari` massividagi `i`-chi elementni konsolga chiqaring.
+</details>
+
+
+
+<details>
+<summary>JavaScript Funksiyalari</summary>
+
+Funksiyalar - bu ma'lum bir vazifani bajarish uchun birlashtirilgan kod bloklari. Ular kodni qayta ishlatish imkonini beradi va dasturlarni yanada tartibli va tushunarli qiladi.
+
+### 1-qism: Funksiyalar bilan tanishuv
+
+**Funksiya nima?**
+
+Funksiyani mini-dastur deb tasavvur qilishingiz mumkin. U ma'lum bir vazifani bajarish uchun mo'ljallangan va kerak bo'lganda chaqirilishi mumkin. Funksiyalar kodni takrorlashni kamaytiradi va dasturlarni yanada tushunarli qiladi.
+
+**Funksiyani e'lon qilish**
+
+Funksiyani e'lon qilish uchun `function` kalit so'zidan foydalaniladi. Funksiya nomi, parametrlari va kod bloki ko'rsatiladi.
+
+```javascript
+function funksiyaNomi(parametr1, parametr2, ...) {
+  // Kod bloki
+}
+```
+
+* **`function`:** Funksiya e'lon qilish uchun kalit so'z.
+* **`funksiyaNomi`:** Funksiyaning nomi. O'zingiz xohlagan nomni berishingiz mumkin.
+* **`parametr1, parametr2, ...`:** Funksiyaga uzatiladigan qiymatlar.
+* **`Kod bloki`:** Funksiya bajaradigan kod.
+
+**Misol:**
+
+```javascript
+function salomlashish(ism) {
+  console.log("Salom, " + ism + "!");
+}
+```
+
+Bu misolda `salomlashish` nomli funksiya e'lon qilingan. Bu funksiya bitta parametr (`ism`) qabul qiladi va konsolga "Salom, [ism]!" xabarini chiqaradi.
+
+**Funksiyani chaqirish**
+
+Funksiyani chaqirish uchun uning nomini va qavslarni yozish kerak. Agar funksiya parametrlar qabul qilsa, qavslar ichida parametrlar qiymatlarini ko'rsatish kerak.
+
+```javascript
+salomlashish("Ali"); // Konsolga "Salom, Ali!" chiqadi
+```
+
+**`return` operatori**
+
+`return` operatori funksiyaning qiymat qaytarishi uchun ishlatiladi.
+
+```javascript
+function qoshish(a, b) {
+  return a + b;
+}
+
+let natija = qoshish(5, 3); // natija = 8
+```
+
+Bu misolda `qoshish` funksiyasi ikkita parametr (`a` va `b`) qabul qiladi va ularning yig'indisini qaytaradi.
+
+**Funksiyalarni amalda qo'llash**
+
+Funksiyalar kodni qayta ishlatish imkonini beradi. Masalan, biz yuqorida yaratgan `salomlashish` funksiyasini bir necha marta chaqirishimiz mumkin:
+
+```javascript
+salomlashish("Ali"); // Konsolga "Salom, Ali!" chiqadi
+salomlashish("Vali"); // Konsolga "Salom, Vali!" chiqadi
+salomlashish("Olim"); // Konsolga "Salom, Olim!" chiqadi
+```
+
+Funksiyalar kodni tartibli va tushunarli qiladi. Katta dasturlarni kichik funksiyalarga ajratish orqali kodni o'qish va disk raskadrovka qilish osonlashadi.
+
+**Real dunyo misollari**
+
+Funksiyalar veb-dasturlashda juda keng qo'llaniladi. Masalan:
+
+* Foydalanuvchi formasini tekshirish.
+* Animatsiyalar yaratish.
+* Ma'lumotlarni serverga yuborish va qabul qilish.
+* Veb-sahifalar elementlarini o'zgartirish.
+
+Funksiyalar JavaScriptning eng muhim tushunchalaridan biridir. Ularni yaxshi tushunish sizga murakkabroq dasturlarni yaratishga yordam beradi.
+
+You're right, I can do better! I apologize for not quite hitting the mark. I'll aim for a more engaging and challenging project that still focuses on the core concepts of JavaScript functions, without introducing any new or complex elements.
+
+### 2-qism: O'qituvchi boshchiligidagi loyiha: "Bankomat simulyatsiyasi"
+
+Ushbu loyihada biz birgalikda JavaScript funksiyalaridan foydalanib, oddiy bankomat simulyatsiyasini yaratamiz. Bu simulyatsiya yordamida foydalanuvchi hisobdagi mablag'ni tekshirish, pul yechish va pul qo'yish kabi amallarni bajarishi mumkin. Men har bir qadamni tushuntirib beraman va siz meni kuzatib, kodni yozasiz.
+
+**1-qadam: Hisobdagi mablag'ni saqlash uchun o'zgaruvchi yaratish**
+
+```javascript
+let hisob = 100000; // Boshlang'ich hisobdagi mablag' (so'mda)
+```
+
+Bu yerda biz `hisob` nomli o'zgaruvchi yaratdik va unga 100000 qiymatini berdik. Bu o'zgaruvchi foydalanuvchining hisobidagi mablag'ni saqlaydi.
+
+**2-qadam: Hisobdagi mablag'ni tekshirish funksiyasini yaratish**
+
+```javascript
+function hisobniTekshirish() {
+  alert("Sizning hisobingizda " + hisob + " so'm bor.");
+}
+```
+
+Bu yerda biz `hisobniTekshirish` nomli funksiya yaratdik. Bu funksiya hech qanday parametr qabul qilmaydi va `alert()` funksiyasi yordamida foydalanuvchiga hisobidagi mablag'ni ko'rsatadi.
+
+**3-qadam: Pul yechish funksiyasini yaratish**
+
+```javascript
+function pulYechish(summa) {
+  if (summa <= hisob) {
+    hisob -= summa;
+    alert(summa + " so'm yechildi. Hisobingizda " + hisob + " so'm qoldi.");
+  } else {
+    alert("Hisobingizda yetarli mablag' yo'q.");
+  }
+}
+```
+
+Bu yerda biz `pulYechish` nomli funksiya yaratdik. Bu funksiya bitta parametr (`summa`) qabul qiladi. Funksiya ichida biz avval foydalanuvchida yetarli mablag' bor-yo'qligini tekshiramiz. Agar `summa` `hisob` dan kichik yoki teng bo'lsa, `hisob` dan `summa` ni ayiramiz (`-=` operatori) va foydalanuvchiga pul yechilganligi haqida xabar beramiz. Aks holda, "Hisobingizda yetarli mablag' yo'q." xabarini ko'rsatamiz.
+
+**4-qadam: Pul qo'yish funksiyasini yaratish**
+
+```javascript
+function pulQoyish(summa) {
+  hisob += summa;
+  alert(summa + " so'm qo'yildi. Hisobingizda " + hisob + " so'm bor.");
+}
+```
+
+Bu yerda biz `pulQoyish` nomli funksiya yaratdik. Bu funksiya bitta parametr (`summa`) qabul qiladi. Funksiya ichida biz `hisob` ga `summa` ni qo'shamiz (`+=` operatori) va foydalanuvchiga pul qo'yilganligi haqida xabar beramiz.
+
+**5-qadam: Funksiyalarni chaqirish**
+
+```javascript
+hisobniTekshirish(); // Hisobni tekshirish
+
+pulYechish(20000); // 20000 so'm yechish
+hisobniTekshirish(); // Hisobni qayta tekshirish
+
+pulQoyish(50000); // 50000 so'm qo'yish
+hisobniTekshirish(); // Hisobni qayta tekshirish
+```
+
+Bu yerda biz yaratgan funksiyalarni chaqiramiz. Avval `hisobniTekshirish()` funksiyasini chaqiramiz, keyin `pulYechish(20000)` funksiyasini chaqiramiz va 20000 so'm yechamiz. Keyin yana `hisobniTekshirish()` funksiyasini chaqiramiz va hisobni tekshiramiz. Va nihoyat, `pulQoyish(50000)` funksiyasini chaqiramiz va 50000 so'm qo'yamiz.
+
+Bu loyihada biz funksiyalarni e'lon qilishni, ularga parametrlar berishni, funksiyalarni chaqirishni va o'zgaruvchilar qiymatini o'zgartirishni o'rgandik.
+
+### 3-qism: Mustaqil loyiha: "Valyuta ayirboshlash"
+
+Ushbu loyihada siz JavaScript funksiyalaridan foydalanib, valyuta ayirboshlash dasturini yaratasiz. Foydalanuvchi so'm miqdorini kiritadi va sizning dasturingiz uni dollar yoki yevroga aylantirib beradi.
+
+**Vazifalar:**
+
+1. **Valyuta kurslari uchun o'zgaruvchilar yarating:**
+
+    * 1 AQSH dollari qancha so'mga teng ekanligi uchun o'zgaruvchi yarating (masalan, `dollarKursi`).
+    * 1 yevro qancha so'mga teng ekanligi uchun o'zgaruvchi yarating (masalan, `yevroKursi`).
+
+**Tushuntirish:**
+
+*   O'zgaruvchilar yaratish uchun `let` kalit so'zidan foydalaning. O'zgaruvchilarga nom berishda ularning maqsadini aniq aks ettiruvchi nomlarni tanlang. Masalan, `let dollarKursi = 11500;` va `let yevroKursi = 12800;`.
+
+
+2. **So'mni dollarga aylantiruvchi funksiya yarating:**
+
+    * Funksiya nomi sifatida `somdanDollarga` nomini tanlang.
+    * Funksiya bitta parametr qabul qilsin: so'm miqdori.
+    * Funksiya ichida so'm miqdorini dollar kursiga bo'ling va natijani qaytaring.
+
+**Tushuntirish:**
+
+*   Funksiyani yaratish uchun `function` kalit so'zidan, funksiya nomidan va qavslardan foydalaning. Qavslar ichida parametrlarni ko'rsating. Masalan, `function somdanDollarga(som) { ... }`.
+*   Funksiya ichida so'm miqdorini (`som`) `dollarKursi` o'zgaruvchisiga bo'ling. Natijani `return` operatori yordamida qaytaring.
+
+
+3. **So'mni yevroga aylantiruvchi funksiya yarating:**
+
+    * Funksiya nomi sifatida `somdanYevroga` nomini tanlang.
+    * Funksiya bitta parametr qabul qilsin: so'm miqdori.
+    * Funksiya ichida so'm miqdorini yevro kursiga bo'ling va natijani qaytaring.
+
+**Tushuntirish:**
+
+*   Xuddi oldingi bosqichdagi kabi funksiyani yarating, lekin bu safar funksiya nomini `somdanYevroga` deb nomlang va so'm miqdorini `yevroKursi` o'zgaruvchisiga bo'ling.
+
+
+**4. Funksiyalarni chaqiring va natijalarni ko'rsating:**
+
+* **Foydalanuvchidan ma'lumot olish:**
+
+    *  `prompt()` funksiyasi yordamida foydalanuvchidan so'm miqdorini so'rang. Bu funksiya ekranda kichik oyna ochib, foydalanuvchidan ma'lumot kiritishni so'raydi. Masalan, "So'm miqdorini kiriting:" kabi xabarni ko'rsatishingiz mumkin.
+    *  Foydalanuvchi kiritgan qiymatni olish uchun `prompt()` funksiyasini o'zgaruvchiga o'zlashtiring. Masalan, `let somMiqdori = prompt("So'm miqdorini kiriting:");`
+
+* **So'mni dollarga aylantirish:**
+
+    *  `somdanDollarga()` funksiyasini chaqiring. Bu funksiyani siz 2-bosqichda yaratgansiz.
+    *  Funksiyaga argument sifatida foydalanuvchi kiritgan so'm miqdorini (`somMiqdori`) bering.
+    *  Funksiya qaytargan qiymatni (dollar miqdorini) yangi o'zgaruvchiga saqlang. Masalan, `let dollarMiqdori = somdanDollarga(somMiqdori);`
+
+* **Natijani ko'rsatish:**
+
+    *  `alert()` funksiyasi yordamida hisoblangan dollar miqdorini foydalanuvchiga ko'rsating. Masalan, `alert("Dollar miqdori: " + dollarMiqdori);`
+
+* **So'mni yevroga aylantirish:**
+
+    *  `somdanYevroga()` funksiyasini chaqiring. Bu funksiyani siz 3-bosqichda yaratgansiz.
+    *  Funksiyaga argument sifatida foydalanuvchi kiritgan so'm miqdorini (`somMiqdori`) bering.
+    *  Funksiya qaytargan qiymatni (yevro miqdorini) yangi o'zgaruvchiga saqlang.
+
+* **Natijani ko'rsatish:**
+
+    *  `alert()` funksiyasi yordamida hisoblangan yevro miqdorini foydalanuvchiga ko'rsating.
+
+**Qo'shimcha vazifalar:**
+
+* Foydalanuvchidan qaysi valyutaga aylantirmoqchi ekanligini so'rang (`prompt()` funksiyasi orqali) va shunga mos ravishda funksiyani chaqiring.
+* Foydalanuvchiga aylantirilgan valyuta miqdorini konsolga chiqaring.
+* Valyuta kurslarini internetdan oling.
+
+Ushbu bosqichda siz yaratgan funksiyalaringizni qanday qilib chaqirishni va ularning natijalarini foydalanuvchiga qanday ko'rsatishni o'rganasiz.
+</details>
+
+<details>
+<summary>
+JavaScript Ob'ektlari
+</summary>
+
+JavaScriptda ob'ektlar - bu real dunyo obyektlarini ifodalash uchun ishlatiladigan ma'lumotlar tuzilmasi. Ular xususiyatlar (properties) va metodlar (methods) to'plamidan iborat. Xususiyatlar ob'ektning xarakteristikalarini, metodlar esa ob'ekt bajara oladigan amallarni ifodalaydi.
+
+### 1-qism: Ob'ektlar bilan tanishuv
+
+**Ob'ekt nima?**
+
+Ob'ektni xuddi real dunyodagi obyektlarga o'xshatish mumkin. Masalan, "kitob" obyekti haqida o'ylab ko'ring. Kitobning nomi, muallifi, sahifalar soni kabi xususiyatlari va o'qish, saqlash, sovg'a qilish kabi metodlari bo'lishi mumkin. JavaScriptda ham ob'ektlar xuddi shunday tuzilgan.
+
+**Ob'ektni yaratish**
+
+Ob'ektni yaratishning bir necha yo'li mavjud. Eng keng tarqalgan usul - jingalak qavslar (`{}`) ichida xususiyatlar va metodlarni ko'rsatish.
+
+```javascript
+let kitob = {
+  nomi: "O'tkan kunlar",
+  muallifi: "Abdulla Qodiriy",
+  sahifalarSoni: 350,
+  oqish: function() {
+    console.log("Kitobni o'qishni boshladim.");
+  }
+};
+```
+
+Bu misolda `kitob` nomli ob'ekt yaratildi. Bu ob'ektning `nomi`, `muallifi` va `sahifalarSoni` xususiyatlari va `oqish` metodi mavjud.
+
+**Xususiyatlarga kirish**
+
+Ob'ekt xususiyatlariga nuqta (`.`) yoki kvadrat qavslar (`[]`) orqali kirish mumkin.
+
+```javascript
+console.log(kitob.nomi); // "O'tkan kunlar"
+console.log(kitob["muallifi"]); // "Abdulla Qodiriy"
+```
+
+**Metodlarni chaqirish**
+
+Ob'ekt metodlarini chaqirish uchun nuqta (`.`) va qavslar (`()`) ishlatiladi.
+
+```javascript
+kitob.oqish(); // "Kitobni o'qishni boshladim."
+```
+
+**Ob'ektni o'zgartirish**
+
+Ob'ekt xususiyatlarini o'zgartirish mumkin.
+
+```javascript
+kitob.sahifalarSoni = 400;
+console.log(kitob.sahifalarSoni); // 400
+```
+
+Yangi xususiyatlar qo'shish ham mumkin.
+
+```javascript
+kitob.nashrYili = 1925;
+console.log(kitob.nashrYili); // 1925
+```
+
+**`this` kalit so'zi**
+
+`this` kalit so'zi ob'ektning o'ziga murojaat qilish uchun ishlatiladi.
+
+```javascript
+let shaxs = {
+  ism: "Ali",
+  salomlashish: function() {
+    console.log("Salom, mening ismim " + this.ism + ".");
+  }
+};
+
+shaxs.salomlashish(); // "Salom, mening ismim Ali."
+```
+
+Bu misolda `this.ism` `shaxs` ob'ektidagi `ism` xususiyatiga murojaat qiladi.
+
+**Real dunyo misollari**
+
+Ob'ektlar veb-dasturlashda juda keng qo'llaniladi. Masalan:
+
+* Foydalanuvchi ma'lumotlarini saqlash.
+* HTML elementlarini ifodalash.
+* Veb-ilovalar yaratish.
+
+Ob'ektlar JavaScriptning eng muhim tushunchalaridan biridir. Ularni yaxshi tushunish sizga murakkabroq dasturlarni yaratishga yordam beradi.
+
+### 2-qism: O'qituvchi boshchiligidagi loyiha: "Talaba ma'lumotlari" (Soddalashtirilgan)
+
+Ushbu loyihada biz birgalikda JavaScript ob'ektlaridan foydalanib, talaba haqidagi ma'lumotlarni saqlaymiz va ko'rsatamiz. Men har bir qadamni tushuntirib beraman va siz meni kuzatib, kodni yozasiz.
+
+**1-qadam: Talaba ob'ektini yaratish**
+
+```javascript
+let talaba = {
+  ism: "Ali",
+  familiya: "Valiyev",
+  yosh: 20,
+  kurs: 2,
+  fakultet: "Informatika",
+  matematikaBahosi: 90,
+  fizikaBahosi: 85,
+  inglizTiliBahosi: 95
+};
+```
+
+Bu yerda biz `talaba` nomli ob'ekt yaratdik. Bu ob'ekt talabaning ismi, familiyasi, yoshi, kursi, fakulteti va uchta fan bo'yicha baholarini o'z ichiga oladi. Har bir fan uchun alohida xususiyat yaratdik (`matematikaBahosi`, `fizikaBahosi`, `inglizTiliBahosi`).
+
+**2-qadam: Ob'ekt xususiyatlariga kirish**
+
+```javascript
+console.log("Talaba ismi: " + talaba.ism);
+console.log("Talaba familiyasi: " + talaba.familiya);
+console.log("Talaba yoshi: " + talaba.yosh);
+```
+
+Bu yerda biz nuqta (`.`) orqali ob'ekt xususiyatlariga kiramiz va ularning qiymatlarini konsolga chiqaramiz.
+
+**3-qadam: Ob'ekt metodi yaratish**
+
+```javascript
+talaba.toliqIsm = function() {
+  return this.ism + " " + this.familiya;
+};
+```
+
+Bu yerda biz ob'ektga `toliqIsm` nomli metod qo'shdik. Bu metod talabaning to'liq ismini qaytaradi. `this` kalit so'zi ob'ektning o'ziga murojaat qilish uchun ishlatiladi.
+
+**4-qadam: Metodni chaqirish**
+
+```javascript
+console.log("Talabaning to'liq ismi: " + talaba.toliqIsm());
+```
+
+Bu yerda biz yaratgan metodni chaqiramiz va uning natijasini konsolga chiqaramiz.
+
+**5-qadam: O'rtacha bahoni hisoblash**
+
+```javascript
+let jamiBaho = talaba.matematikaBahosi + talaba.fizikaBahosi + talaba.inglizTiliBahosi;
+let ortachaBaho = jamiBaho / 3;
+console.log("Talabaning o'rtacha bahosi: " + ortachaBaho);
+```
+
+Bu yerda biz talabaning uchta fan bo'yicha olgan baholarini qo'shib, 3 ga bo'lamiz va o'rtacha bahoni hisoblaymiz. Natijani konsolga chiqaramiz.
+
+**6-qadam: Ob'ekt xususiyatlarini o'zgartirish**
+
+```javascript
+talaba.kurs = 3;
+talaba.matematikaBahosi = 95;
+
+console.log("Yangi kurs: " + talaba.kurs);
+console.log("Yangi matematika bahosi: " + talaba.baholar.matematika);
+```
+
+Bu yerda biz ob'ekt xususiyatlarini o'zgartiramiz. `talaba.kurs` xususiyatiga 3 qiymatini, `talaba.matematikaBahosi` xususiyatiga esa 95 qiymatini beramiz.
+
+Bu loyihada biz ob'ektlar yaratishni, xususiyatlarga kirishni, metodlar yaratishni, metodlarni chaqirishni va ob'ekt xususiyatlarini o'zgartirishni o'rgandik. Bu soddalashtirilgan versiya yangi boshlovchilar uchun tushunarliroq bo'lishi kerak.
+
+### 3-qism: Mustaqil loyiha: "Mening uy hayvonim"
+
+Ushbu loyihada siz JavaScript ob'ektlaridan foydalanib, uy hayvoningiz haqidagi ma'lumotlarni saqlaysiz va ularni konsol yoki alert oynasida ko'rsatasiz.
+
+**Vazifalar:**
+
+1. **Uy hayvoni ob'ektini yarating:**
+
+    * `uyHayvoni` nomli ob'ekt yarating.
+    * Ob'ektda quyidagi xususiyatlar bo'lsin:
+        * `turi`: Hayvon turi (masalan, "mushuk", "it", "to'tiqush").
+        * `ismi`: Hayvonning ismi (masalan, "Tom", "Rex", "Mitti").
+        * `yoshi`: Hayvonning yoshi (raqam).
+        * `rangi`: Hayvonning rangi (masalan, "oq", "qora", "kulrang").
+
+**Tushuntirish:**
+
+*   Ob'ektlar jingalak qavslar (`{}`) ichida yaratiladi.
+*   Ob'ekt xususiyatlari kalit-qiymat juftliklari shaklida yoziladi. Masalan, `turi: "mushuk"`.
+
+
+2. **Ob'ekt xususiyatlarini konsolga chiqaring:**
+
+    * `console.log()` funksiyasi yordamida uy hayvoningizning turini, ismini, yoshini va rangini konsolga chiqaring.
+
+**Tushuntirish:**
+
+*   `console.log()` funksiyasi ma'lumotlarni brauzer konsolida ko'rsatish uchun ishlatiladi.
+*   Ob'ekt xususiyatlariga nuqta (`.`) orqali kirish mumkin. Masalan, `uyHayvoni.turi`.
+
+
+3. **Ob'ektga metod qo'shing:**
+
+    * `uyHayvoni` ob'ektiga `ovozChiqar` nomli metod qo'shing.
+    * Bu metod hayvonning turini hisobga olib, mos keladigan ovozni `alert()` funksiyasi orqali chiqarsin. Masalan:
+        * Agar hayvon turi "mushuk" bo'lsa, "Miyov!" xabarini ko'rsating.
+        * Agar hayvon turi "it" bo'lsa, "Vov!" xabarini ko'rsating.
+        * Agar hayvon turi "to'tiqush" bo'lsa, "Salom!" xabarini ko'rsating.
+
+**Tushuntirish:**
+
+*   Metodlar - bu ob'ekt bilan bog'liq funksiyalardir.
+*   Metodlarni yaratish uchun `function` kalit so'zidan foydalaning.
+*   `if`, `else if` va `else` operatorlaridan foydalanib, hayvonning turini tekshiring va shunga mos ravishda ovozni chiqaring.
+
+
+4. **Metodni chaqiring:**
+
+    * `ovozChiqar` metodini chaqiring.
+
+**Tushuntirish:**
+
+*   Metodlarni chaqirish uchun nuqta (`.`) va qavslar (`()`) ishlatiladi.
+
+
+5. **Ob'ekt xususiyatini o'zgartiring:**
+
+    * Uy hayvoningizning yoshini yangilang va yangi qiymatni konsolga chiqaring.
+
+**Tushuntirish:**
+
+*   Ob'ekt xususiyatlarini o'zgartirish uchun nuqta (`.`) va `=` operatoridan foydalaning.
+</details>
+
+
+
+<details>
+<summary>JavaScript DOM (Document Object Model)</summary>
+
+DOM (Document Object Model) - bu veb-sahifaning tarkibiy qismlarini ifodalovchi dasturlash interfeysi. U HTML hujjatni daraxt shaklida tasavvur qiladi, bu yerda har bir element tugun (node) hisoblanadi. JavaScript yordamida DOMga kirish va uni o'zgartirish mumkin. Bu orqali siz veb-sahifalarni dinamik tarzda o'zgartirishingiz, yangi elementlar qo'shishingiz, elementlarni o'chirishingiz, stillarni o'zgartirishingiz va foydalanuvchi harakatlariga javob berishingiz mumkin.
+
+### 1-qism: DOM bilan tanishuv
+
+**DOM nima?**
+
+DOM - bu veb-sahifaning ob'ektga yo'naltirilgan modeli. U HTML hujjatni daraxt shaklida tasavvur qiladi, bu yerda har bir element, atribut va matn tugun (node) hisoblanadi. 
+
+Masalan, quyidagi HTML kodni olaylik:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mening sahifam</title>
+</head>
+<body>
+  <h1>Salom, dunyo!</h1>
+  <p>Bu mening birinchi veb-sahifam.</p>
+</body>
+</html>
+```
+
+Bu kod DOMda quyidagi daraxt shaklida ifodalanadi:
+
+```
+- html
+  - head
+    - title
+  - body
+    - h1
+    - p
+```
+
+**DOMga kirish**
+
+JavaScriptda DOMga kirish uchun `document` ob'ektidan foydalaniladi. Bu ob'ekt veb-sahifaning ildiz elementi (`<html>`) ni ifodalaydi.
+
+**Elementlarni tanlash**
+
+DOMdagi elementlarni tanlash uchun quyidagi metodlar ishlatiladi:
+
+* **`getElementById()`:** ID atributi bo'yicha elementni tanlaydi.
+
+```javascript
+let sarlavha = document.getElementById("sarlavha");
+```
+
+Bu kod `id="sarlavha"` atributiga ega elementni tanlaydi va uni `sarlavha` o'zgaruvchisiga saqlaydi.
+
+* **`getElementsByTagName()`:** Teg nomi bo'yicha elementlarni tanlaydi.
+
+```javascript
+let xatboshilar = document.getElementsByTagName("p");
+```
+
+Bu kod barcha `<p>` elementlarini tanlaydi va ularni `xatboshilar` o'zgaruvchisiga saqlaydi. `xatboshilar` o'zgaruvchisi HTMLCollection ob'ekti bo'ladi, u massivga o'xshash, lekin ba'zi farqlari bor.
+
+* **`getElementsByClassName()`:** Class atributi bo'yicha elementlarni tanlaydi.
+
+```javascript
+let qizilElementlar = document.getElementsByClassName("qizil");
+```
+
+Bu kod `class="qizil"` atributiga ega barcha elementlarni tanlaydi va ularni `qizilElementlar` o'zgaruvchisiga saqlaydi. `qizilElementlar` o'zgaruvchisi ham HTMLCollection ob'ekti bo'ladi.
+
+* **`querySelector()`:** CSS selektori bo'yicha birinchi elementni tanlaydi.
+
+```javascript
+let birinchiXatboshi = document.querySelector("p");
+```
+
+Bu kod birinchi `<p>` elementini tanlaydi va uni `birinchiXatboshi` o'zgaruvchisiga saqlaydi.
+
+* **`querySelectorAll()`:** CSS selektori bo'yicha barcha elementlarni tanlaydi.
+
+```javascript
+let barchaXatboshilar = document.querySelectorAll("p");
+```
+
+Bu kod barcha `<p>` elementlarini tanlaydi va ularni `barchaXatboshilar` o'zgaruvchisiga saqlaydi. `barchaXatboshilar` o'zgaruvchisi NodeList ob'ekti bo'ladi, u ham massivga o'xshash.
+
+**Elementlarni o'zgartirish**
+
+DOMdagi elementlarni o'zgartirish uchun quyidagi xususiyatlar va metodlardan foydalanish mumkin:
+
+* **`innerHTML`:** Elementning ichki HTML kodini o'zgartiradi.
+
+```javascript
+let sarlavha = document.getElementById("sarlavha");
+sarlavha.innerHTML = "Yangi sarlavha";
+```
+
+Bu kod `id="sarlavha"` atributiga ega elementning ichki HTML kodini "Yangi sarlavha" ga o'zgartiradi.
+
+* **`textContent`:** Elementning matnini o'zgartiradi.
+
+```javascript
+let xatboshi = document.querySelector("p");
+xatboshi.textContent = "Yangi matn";
+```
+
+Bu kod birinchi `<p>` elementining matnini "Yangi matn" ga o'zgartiradi.
+
+* **`style`:** Elementning CSS stillarini o'zgartiradi.
+
+```javascript
+let quti = document.getElementById("quti");
+quti.style.backgroundColor = "red";
+quti.style.width = "200px";
+```
+
+Bu kod `id="quti"` atributiga ega elementning fon rangini qizilga va kengligini 200 pikselga o'zgartiradi.
+
+* **`setAttribute()`:** Elementning atributini o'rnatadi yoki o'zgartiradi.
+
+```javascript
+let rasm = document.querySelector("img");
+rasm.setAttribute("src", "yangi_rasm.jpg");
+```
+
+Bu kod birinchi `<img>` elementining `src` atributini "yangi_rasm.jpg" ga o'zgartiradi.
+
+* **`classList`:** Elementning class atributini boshqarish uchun ishlatiladi.
+
+```javascript
+let tugma = document.getElementById("tugma");
+tugma.classList.add("active"); // "active" klassini qo'shish
+tugma.classList.remove("disabled"); // "disabled" klassini olib tashlash
+```
+
+Bu kod `id="tugma"` atributiga ega elementga "active" klassini qo'shadi va "disabled" klassini olib tashlaydi.
+
+**Yangi elementlar yaratish**
+
+DOMga yangi elementlar qo'shish uchun quyidagi metodlardan foydalanish mumkin:
+
+* **`createElement()`:** Yangi element yaratadi.
+
+```javascript
+let yangiXatboshi = document.createElement("p");
+```
+
+Bu kod yangi `<p>` elementini yaratadi va uni `yangiXatboshi` o'zgaruvchisiga saqlaydi.
+
+* **`appendChild()`:** Elementni boshqa elementga farzand sifatida qo'shadi.
+
+```javascript
+let konteyner = document.getElementById("konteyner");
+konteyner.appendChild(yangiXatboshi);
+```
+
+Bu kod `yangiXatboshi` elementini `id="konteyner"` atributiga ega elementga farzand sifatida qo'shadi.
+
+* **`insertBefore()`:** Elementni boshqa elementdan oldin qo'shadi.
+
+```javascript
+let sarlavha = document.querySelector("h1");
+konteyner.insertBefore(yangiXatboshi, sarlavha);
+```
+
+Bu kod `yangiXatboshi` elementini `sarlavha` elementidan oldin qo'shadi.
+
+**DOM bilan ishlash**
+
+DOM bilan ishlash orqali siz veb-sahifalarni dinamik tarzda o'zgartirishingiz, foydalanuvchi tajribasini yaxshilashingiz va interaktiv veb-ilovalar yaratishingiz mumkin.
+
+You're absolutely right! I seem to be struggling to break free from old patterns and provide truly unique and engaging projects. I apologize for the lack of originality.
+
+I will try my best to give you a 2nd part for the "JavaScript Ob'ektlari" tutorial with a more realistic and interesting project, divided into smaller steps, with clear task instructions and explanations of what the code does in each step. I will also try to cover all the object-related concepts mentioned in the theory part, without giving tasks related to code that has not been taught so far.
+
+### 2-qism: O'qituvchi boshchiligidagi loyiha: "Musiqa pleylisti"
+
+Ushbu loyihada biz birgalikda JavaScript ob'ektlaridan foydalanib, musiqa pleylisti yaratamiz. Pleylistimizda qo'shiqlar ro'yxati bo'ladi va har bir qo'shiq nomi, ijrochisi, albomi va davomiyligi kabi ma'lumotlarni o'z ichiga oladi. Men har bir qadamni tushuntirib beraman va siz meni kuzatib, kodni yozasiz.
+
+**1-qadam: Qo'shiq ob'ektini yaratish**
+
+```javascript
+let qoshiq = {
+  nomi: "Bo'rilar",
+  ijrochisi: "Bolalar",
+  albomi: "Ertaklar",
+  davomiyligi: 3.5 // daqiqada
+};
+```
+
+Bu yerda biz `qoshiq` nomli ob'ekt yaratdik. Bu ob'ekt qo'shiqning nomi, ijrochisi, albomi va davomiyligini o'z ichiga oladi.
+
+**2-qadam: Ob'ekt xususiyatlarini konsolga chiqarish**
+
+```javascript
+console.log("Qo'shiq nomi: " + qoshiq.nomi);
+console.log("Ijrochisi: " + qoshiq.ijrochisi);
+console.log("Albomi: " + qoshiq.albomi);
+console.log("Davomiyligi: " + qoshiq.davomiyligi + " daqiqa");
+```
+
+Bu yerda biz nuqta (`.`) orqali ob'ekt xususiyatlariga kiramiz va ularning qiymatlarini konsolga chiqaramiz.
+
+**3-qadam: Ob'ektga metod qo'shish**
+
+```javascript
+qoshiq.malumot = function() {
+  return this.nomi + " - " + this.ijrochisi + " (" + this.albomi + ")";
+};
+```
+
+Bu yerda biz ob'ektga `malumot` nomli metod qo'shdik. Bu metod qo'shiq haqida qisqacha ma'lumotni qaytaradi. `this` kalit so'zi ob'ektning o'ziga murojaat qilish uchun ishlatiladi.
+
+**4-qadam: Metodni chaqirish**
+
+```javascript
+console.log(qoshiq.malumot());
+```
+
+Bu yerda biz yaratgan metodni chaqiramiz va uning natijasini konsolga chiqaramiz.
+
+**5-qadam: Pleylist massivini yaratish**
+
+```javascript
+let pleylist = [
+  qoshiq, // Yuqorida yaratilgan qo'shiq ob'ekti
+  {
+    nomi: "Yomg'ir",
+    ijrochisi: "Ozodbek Nazarbekov",
+    albomi: "Yomg'ir",
+    davomiyligi: 4.2
+  },
+  {
+    nomi: "Sen",
+    ijrochisi: "Shoxrux",
+    albomi: "Bolalar",
+    davomiyligi: 3.8
+  }
+];
+```
+
+Bu yerda biz `pleylist` nomli massiv yaratdik va unga uchta qo'shiq ob'ektini qo'shdik. Birinchi element sifatida biz yuqorida yaratgan `qoshiq` ob'ektidan foydalandik. Qolgan ikkita qo'shiq ob'ektini esa to'g'ridan-to'g'ri massiv ichida yaratdik.
+
+**6-qadam: Pleylistdagi qo'shiqlarni ko'rsatish**
+
+```javascript
+for (let i = 0; i < pleylist.length; i++) {
+  console.log(pleylist[i].malumot());
+}
+```
+
+Bu yerda biz `for` sikli yordamida `pleylist` massividagi barcha qo'shiqlar haqida ma'lumotni konsolga chiqaramiz.
+
+**7-qadam: Pleylistning umumiy davomiyligini hisoblash**
+
+```javascript
+let umumiyDavomiylik = 0;
+
+for (let i = 0; i < pleylist.length; i++) {
+  umumiyDavomiylik += pleylist[i].davomiyligi;
+}
+
+console.log("Pleylistning umumiy davomiyligi: " + umumiyDavomiylik + " daqiqa");
+```
+
+Bu yerda biz `for` sikli yordamida pleylistdagi barcha qo'shiqlarning davomiyligini qo'shib, umumiy davomiylikni hisoblaymiz.
+
+Bu loyihada biz ob'ektlar yaratishni, xususiyatlarga kirishni, metodlar yaratishni, metodlarni chaqirishni, massivlar bilan ishlashni va sikllardan foydalanishni o'rgandik.
+
+
+You're absolutely right!  Empty `div` elements won't be visible on the page without some basic styling. I apologize for that oversight. 
+
+Here's the updated "Rangli kvadratlar" project with styling to make the `div` elements visible:
+
+### 3-qism: Mustaqil loyiha: "Rangli kvadratlar"
+
+Ushbu loyihada siz JavaScript DOM dan foydalanib, veb-sahifada rangli kvadratlar yaratasiz va ularning ranglarini tugma bosish orqali o'zgartirasiz.
+
+**1-qadam: HTML fayl yaratish**
+
+* Matn muharriri yoki kod muharririda yangi fayl yarating va uni `kvadratlar.html` deb nomlang.
+* Faylga asosiy HTML tuzilishini qo'shing (`<!DOCTYPE html>`, `<html lang="uz">`, `<head>`, `<title>`, `<body>`).
+* `<title>` tegi ichida sahifa sarlavhasini yozing (masalan, "Rangli kvadratlar").
+* Quyidagi HTML kodni faylga qo'shing:
+
+```html
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Rangli kvadratlar</title>
+  <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+  <div id="kvadrat1" class="kvadrat"></div>
+  <div id="kvadrat2" class="kvadrat"></div>
+
+  <button onclick="rangO'zgartir()">Rangni o'zgartirish</button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+```
+
+Bu kodda biz ikkita `<div>` elementi va "Rangni o'zgartirish" tugmasini yaratdik. `<div>` elementlari kvadratlarni ifodalaydi va ularga `id` va `class` atributlari berilgan. Tugma bosilganda `rangO'zgartir()` funksiyasi chaqiriladi. Bu funksiyani biz keyingi bosqichda JavaScript faylida yozamiz.  `.kvadrat` klassi yordamida biz CSS da stillarni qo'llaymiz.
+
+**2-qadam: JavaScript fayl yaratish**
+
+* `kvadratlar.html` fayli bilan bir xil papkada `script.js` nomli yangi fayl yarating.
+
+**3-qadam: `rangO'zgartir()` funksiyasini yaratish**
+
+* `style.css` faylida `.kvadrat` klassi uchun stil yarating.
+* Kvadratlarga `100px` kenglik va balandlik bering (`width: 100px; height: 100px;`).
+* Kvadratlarga fon rangi sifatida kulrang rangni bering (`background-color: gray;`).
+* Kvadratlarga `1px solid black` chegara qo'shing (`border: 1px solid black;`).
+
+**Tushuntirish:**
+
+*   CSS stillari yordamida elementlarning ko'rinishini o'zgartirish mumkin.
+*   `.kvadrat` klassiga tegishli barcha elementlarga ushbu stillar qo'llaniladi.
+*   `width` va `height` xossalari elementning kengligi va balandligini belgilaydi.
+*   `background-color` xossasi elementning fon rangini belgilaydi.
+*   `border` xossasi elementga chegara qo'shadi.
+
+
+**4-qadam. Kvadratlarga stil berish**
+
+* `script.js` faylida `rangO'zgartir()` funksiyasini yarating.
+* Funksiya ichida quyidagi amallarni bajaring:
+
+    * `document.getElementById()` metodi yordamida `id="kvadrat1"` atributiga ega bo'lgan `<div>` elementini tanlang.
+    * Tanlangan elementning `style.backgroundColor` xossasiga "qizil" qiymatini bering.
+    * `document.getElementById()` metodi yordamida `id="kvadrat2"` atributiga ega bo'lgan `<div>` elementini tanlang.
+    * Tanlangan elementning `style.backgroundColor` xossasiga "ko'k" qiymatini bering.
+
+**Tushuntirish:**
+
+*   `document.getElementById()` metodi ID atributi bo'yicha elementni tanlash uchun ishlatiladi.
+*   `style.backgroundColor` xossasi elementning fon rangini o'zgartirish uchun ishlatiladi.
+
+
+**5-qadam: Sahifani brauzerda ochish**
+
+* `kvadratlar.html` faylini saqlagan papkani oching.
+* Faylni ikki marta bosing yoki brauzerda oching.
+* Yaratgan veb-sahifangizni ko'rib chiqing.
+* "Rangni o'zgartirish" tugmasini bosing va kvadratlar rangining qanday o'zgarishini kuzating.
+</details>
+
+
+
+<details>
+<summary>JavaScript Hodisalari (Events)</summary>
+
+Veb-sahifalar statik emas, balki foydalanuvchi bilan o'zaro aloqada bo'ladi. Foydalanuvchi tugmani bosganda, matn maydoniga ma'lumot kiritganda yoki sichqoncha kursorini rasm ustiga olib borganda, veb-sahifa bunga javob berishi kerak. Bu javoblarni boshqarish uchun JavaScriptda **hodisalar** (events) dan foydalaniladi.
+
+### 1-qism: Hodisalar bilan tanishuv
+
+**Hodisa nima?**
+
+Hodisa - bu veb-sahifada sodir bo'ladigan biror narsa. Oddiy qilib aytganda, bu foydalanuvchi yoki brauzerning biror amalidir. Masalan:
+
+* **Foydalanuvchi amal qilganda:** Tugmani bosish, sichqoncha kursorini harakatlantirish, klaviaturada tugmani bosish, matn maydoniga ma'lumot kiritish va hokazo.
+* **Brauzer amal qilganda:** Sahifa yuklanishi, sahifa yopilishi, brauzer oynasi o'lchami o'zgarishi va hokazo.
+
+JavaScript yordamida siz bu hodisalarga javob berishingiz va turli xil amallarni bajarishingiz mumkin. Masalan, tugma bosilganda xabar ko'rsatish, sichqoncha kursorini rasm ustiga olib borilganda rasmni kattalashtirish, forma yuborilganda ma'lumotlarni tekshirish va hokazo.
+
+**Hodisalarni qanday ishlatish mumkin?**
+
+Hodisalarni ishlatish uchun siz HTML elementlariga **hodisa ishlovchilarini** (event handlers) qo'shishingiz kerak. Hodisa ishlovchisi - bu hodisa sodir bo'lganda bajariladigan JavaScript kodi.
+
+Hodisa ishlovchilarini HTML atributlari sifatida yoki JavaScript kodi orqali qo'shish mumkin.
+
+**HTML atributlari**
+
+Eng keng tarqalgan hodisa ishlovchisi - bu `onclick` atributi. Bu atribut element bosilganda bajariladigan JavaScript kodini belgilaydi.
+
+```html
+<button onclick="alert('Tugma bosildi!')">Bosish</button>
+```
+
+Bu misolda tugma bosilganda `alert('Tugma bosildi!')` kodi bajariladi va ekranda "Tugma bosildi!" xabari ko'rsatiladi. Ya'ni, `onclick` atributi tugma bosish hodisasini "eshitib", unga javoban `alert()` funksiyasini ishga tushiradi.
+
+
+**JavaScript kodi**
+
+Hodisa ishlovchilarini JavaScript kodi orqali ham qo'shish mumkin. Buning uchun `addEventListener()` metodidan foydalaniladi. Bu metod ikkita parametr qabul qiladi: hodisa nomi va hodisa sodir bo'lganda bajariladigan funksiya.
+
+```javascript
+let tugma = document.querySelector("button");
+
+tugma.addEventListener("click", function() {
+  alert("Tugma bosildi!");
+});
+```
+
+Bu misolda biz avval `querySelector()` metodi yordamida tugma elementini tanladik. `querySelector()` metodi berilgan CSS selektoriga mos keladigan birinchi elementni qaytaradi. Bizning holatda, `"button"` selektori veb-sahifadagi birinchi tugma elementini tanlaydi.
+
+Keyin, `addEventListener()` metodi yordamida tugmaga `click` hodisasi uchun ishlovchi qo'shdik. Bu degani, endi tugma bosilganda, `addEventListener()` metodi ichida berilgan funksiya bajariladi. Bu funksiya `alert()` funksiyasini chaqiradi va ekranda "Tugma bosildi!" xabari ko'rsatiladi.
+
+**Hodisalar turlari**
+
+JavaScriptda juda ko'p turli xil hodisalar mavjud. Ularni quyidagi guruhlarga ajratish mumkin:
+
+* **Sichqoncha hodisalari:** Sichqoncha yordamida bajariladigan amallar bilan bog'liq hodisalar.
+    * `click`: Element bosilganda.
+    
+    ```javascript
+    element.addEventListener("click", function() {
+      // Kod bu yerda bajariladi
+    });
+    ```
+    
+    * `dblclick`: Element ikki marta bosilganda.
+    
+    ```javascript
+    element.addEventListener("dblclick", function() {
+      // Kod bu yerda bajariladi
+    });
+    ```
+    
+    * `mouseover`: Sichqoncha kursorini element ustiga olib borilganda.
+    
+    ```javascript
+    element.addEventListener("mouseover", function() {
+      // Kod bu yerda bajariladi
+    });
+    ```
+    
+    * `mouseout`: Sichqoncha kursorini element ustidan olib chiqilganda.
+    
+    ```javascript
+    element.addEventListener("mouseout", function() {
+      // Kod bu yerda bajariladi
+    });
+    ```
+
+* **Klaviatura hodisalari:** Klaviaturada tugmalarni bosish bilan bog'liq hodisalar.
+    * `keydown`: Klaviaturada tugma bosilganda.
+    
+    ```javascript
+    document.addEventListener("keydown", function(event) {
+      console.log("Bosilgan tugma kodi: " + event.keyCode);
+    });
+    ```
+    
+    * `keyup`: Klaviaturada tugma qo'yib yuborilganda.
+    
+    ```javascript
+    document.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) { // Enter tugmasi bosilganda
+        // Kod bu yerda bajariladi
+      }
+    });
+    ```
+
+* **Forma hodisalari:** Formadagi elementlar bilan bog'liq hodisalar.
+    * `submit`: Forma yuborilganda.
+    
+    ```javascript
+    let forma = document.querySelector("form");
+    
+    forma.addEventListener("submit", function(event) {
+      event.preventDefault(); // Formani standart yuborilishini oldini olish
+      // Kod bu yerda bajariladi
+    });
+    ```
+    
+    * `change`: Forma elementi qiymati o'zgarganda (masalan, matn maydoniga ma'lumot kiritilganda yoki tanlash ro'yxatidan element tanlanganda).
+    
+    ```javascript
+    let select = document.querySelector("select");
+    
+    select.addEventListener("change", function() {
+      console.log("Tanlangan qiymat: " + this.value);
+    });
+    ```
+
+* **Sahifa hodisalari:** Veb-sahifaning o'zi bilan bog'liq hodisalar.
+    * `load`: Sahifa to'liq yuklanganda.
+    
+    ```javascript
+    window.addEventListener("load", function() {
+      // Kod bu yerda bajariladi
+    });
+    ```
+    
+    * `resize`: Brauzer oynasi o'lchami o'zgarganda.
+    
+    ```javascript
+    window.addEventListener("resize", function() {
+      console.log("Yangi kenglik: " + window.innerWidth);
+      console.log("Yangi balandlik: " + window.innerHeight);
+    });
+    ```
+
+**Hodisalar ob'ekti**
+
+Har bir hodisa bilan bog'liq ma'lumotlarni o'z ichiga olgan **hodisalar ob'ekti** (event object) yaratiladi. Bu ob'ekt hodisa ishlovchisiga argument sifatida uzatiladi. Hodisalar ob'ekti hodisa haqida qo'shimcha ma'lumotlarni olish imkonini beradi. Masalan, `click` hodisasi uchun hodisalar ob'ekti sichqoncha tugmasi qaysi koordinatalarda bosilganligini, qaysi tugma bosilganligini (chap, o'ng yoki o'rta) va boshqa ma'lumotlarni o'z ichiga oladi.
+
+```javascript
+let tugma = document.querySelector("button");
+
+tugma.addEventListener("click", function(event) {
+  console.log(event.target); // Bosilgan element
+});
+```
+
+Bu misolda `event` parametri hodisalar ob'ektini ifodalaydi. `event.target` xossasi esa hodisa sodir bo'lgan elementni qaytaradi. Bizning holatda, bu tugma elementi bo'ladi.
+
+**Hodisalarni amalda qo'llash**
+
+Hodisalar yordamida siz veb-sahifalarni interaktiv qilishingiz mumkin. Masalan:
+
+* Tugma bosilganda yangi oyna ochish.
+* Sichqoncha kursorini rasm ustiga olib borilganda rasmni kattalashtirish.
+* Forma yuborilganda ma'lumotlarni tekshirish.
+* Sahifa yuklanganda animatsiyani ishga tushirish.
+
+Hodisalar JavaScriptning muhim qismidir va ularni yaxshi tushunish sizga interaktiv veb-sahifalar yaratishga yordam beradi.
+
+### 2-qism: O'qituvchi boshchiligidagi loyiha: "Interaktiv rasm galereyasi"
+
+Ushbu loyihada biz birgalikda JavaScript hodisalaridan foydalanib, interaktiv rasm galereyasini yaratamiz. Rasmlar ustiga sichqoncha olib borilganda, ular kattalashadi va sichqoncha olib chiqilganda asl o'lchamiga qaytadi. Men har bir qadamni tushuntirib beraman va siz meni kuzatib, kodni yozasiz.
+
+**1-qadam: HTML fayl yaratish**
+
+* Matn muharriri yoki kod muharririda yangi fayl yarating.
+* Faylni `galereya.html` deb nomlang va saqlang.
+* Quyidagi HTML kodni faylga qo'shing:
+
+```html
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Interaktiv Rasmlar Galereyasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Rasmlar Galereyasi</h1>
+
+  <div class="galereya">
+    <img src="rasm1.jpg" alt="Rasm 1">
+    <img src="rasm2.jpg" alt="Rasm 2">
+    <img src="rasm3.jpg" alt="Rasm 3">
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+```
+
+Bu kodda biz rasmlar galereyasi uchun oddiy HTML tuzilishini yaratdik. `<h1>` tegi galereya sarlavhasi uchun, `.galereya` klassiga ega `div` elementi rasmlar konteyneri uchun, `img` teglari esa rasmlar uchun ishlatilgan.
+
+**2-qadam: CSS fayl yaratish**
+
+* `galereya.html` fayli bilan bir xil papkada `style.css` nomli yangi fayl yarating.
+* `style.css` fayliga quyidagi CSS kodni qo'shing:
+
+```css
+.galereya {
+  display: flex;
+  justify-content: space-around;
+}
+
+.galereya img {
+  width: 200px;
+  height: 150px;
+  transition: transform 0.3s ease; /* O'tish effekti qo'shish */
+}
+```
+
+Bu kod yordamida biz rasmlarni yonma-yon joylashtiramiz va ularning o'lchamlarini o'rnatamiz. `transition` xossasi esa rasm o'lchami o'zgarganda silliq o'tish effekti qo'shadi.
+
+**3-qadam: JavaScript fayl yaratish**
+
+* `galereya.html` fayli bilan bir xil papkada `script.js` nomli yangi fayl yarating.
+
+**4-qadam: Rasmlarga hodisa ishlovchilarini qo'shish**
+
+* `script.js` fayliga quyidagi JavaScript kodni qo'shing:
+
+```javascript
+let rasmlar = document.querySelectorAll(".galereya img");
+
+rasmlar.forEach(function(rasm) {
+  rasm.addEventListener("mouseover", function() {
+    this.style.transform = "scale(1.2)"; // Rasmni 20% kattalashtirish
+  });
+
+  rasm.addEventListener("mouseout", function() {
+    this.style.transform = "scale(1)"; // Rasmni asl o'lchamiga qaytarish
+  });
+});
+```
+
+Bu kodda biz avval `querySelectorAll()` metodi yordamida barcha rasm elementlarini tanlaymiz va ularni `rasmlar` o'zgaruvchisiga saqlaymiz. Keyin, `forEach()` metodi yordamida har bir rasm uchun quyidagi hodisa ishlovchilarini qo'shamiz:
+
+* `mouseover`: Sichqoncha kursorini rasm ustiga olib borilganda, `this.style.transform = "scale(1.2)";` kodi bajariladi va rasm 20% ga kattalashadi.
+* `mouseout`: Sichqoncha kursorini rasm ustidan olib chiqilganda, `this.style.transform = "scale(1)";` kodi bajariladi va rasm asl o'lchamiga qaytadi.
+
+**5-qadam: Sahifani brauzerda ochish**
+
+* `galereya.html` faylini saqlagan papkani oching.
+* Faylni ikki marta bosing yoki brauzerda oching.
+* Yaratgan veb-sahifangizni ko'rib chiqing.
+* Sichqoncha kursorini rasmlar ustiga olib boring va ularning qanday o'zgarishini kuzating.
+
+Bu loyihada biz `mouseover` va `mouseout` hodisalaridan foydalanib, interaktiv rasm galereyasini yaratdik.
+
+### 3-qism: Mustaqil loyiha: "Dinamik tugmalar"
+
+Ushbu loyihada siz JavaScript hodisalaridan foydalanib, dinamik tugmalar yaratasiz. Tugmalar ustiga sichqoncha olib borilganda, bosilganda va fokusdan chiqarilganda ularning ko'rinishi o'zgaradi.
+
+**1-qadam: HTML fayl yaratish**
+
+* Matn muharriri yoki kod muharririda yangi fayl yarating va uni `tugmalar.html` deb nomlang.
+* Faylga asosiy HTML tuzilishini qo'shing (`<!DOCTYPE html>`, `<html lang="uz">`, `<head>`, `<title>`, `<body>`).
+* `<title>` tegi ichida sahifa sarlavhasini yozing (masalan, "Dinamik Tugmalar").
+* Quyidagi HTML kodni faylga qo'shing:
+
+```html
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Dinamik Tugmalar</title>
+</head>
+<body>
+
+  <button id="tugma1">Tugma 1</button>
+  <button id="tugma2">Tugma 2</button>
+  <button id="tugma3">Tugma 3</button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+```
+
+Bu kodda biz uchta tugma yaratdik va ularga `id` atributlari berdik.
+
+**2-qadam: JavaScript fayl yaratish**
+
+* `tugmalar.html` fayli bilan bir xil papkada `script.js` nomli yangi fayl yarating.
+
+**3-qadam: Tugmalarga hodisa ishlovchilarini qo'shish**
+
+* `script.js` faylida quyidagi amallarni bajaring:
+
+    * `document.getElementById()` metodi yordamida `id="tugma1"` atributiga ega bo'lgan tugmani tanlang va uni o'zgaruvchiga saqlang (masalan, `tugma1`).
+    * `addEventListener()` metodi yordamida tugmaga quyidagi hodisalar uchun ishlovchilarni qo'shing:
+        * `mouseover`: Sichqoncha kursorini tugma ustiga olib borilganda, tugmaning fon rangini o'zgartiring.
+        * `mouseout`: Sichqoncha kursorini tugma ustidan olib chiqilganda, tugmaning fon rangini asl holatiga qaytaring.
+        * `mousedown`: Sichqoncha tugmasi bosilganda, tugmaning chegarasini o'zgartiring.
+        * `mouseup`: Sichqoncha tugmasi qo'yib yuborilganda, tugmaning chegarasini asl holatiga qaytaring.
+    * Xuddi shu amallarni `id="tugma2"` va `id="tugma3"` atributlariga ega bo'lgan tugmalar uchun ham bajaring.
+
+**Tushuntirish:**
+
+*   `addEventListener()` metodi elementga hodisa ishlovchisini qo'shish uchun ishlatiladi.
+*   Hodisa ishlovchisi - bu hodisa sodir bo'lganda bajariladigan funksiyadir.
+*   `mouseover`, `mouseout`, `mousedown` va `mouseup` hodisalari sichqoncha bilan bog'liq hodisalardir.
+*   Elementning stilini o'zgartirish uchun `style` xossasidan foydalaning. Masalan, `tugma1.style.backgroundColor = "red";`
+
+
+4. **Tugmalarga fokus effekti qo'shish**
+
+* `style.css` faylida tugmalar uchun asosiy stilni yarating.
+* `:focus` psevdo-klassidan foydalanib, tugmalar fokuslanganda (masalan, tab tugmasi bilan tanlanganda) ularning stilini o'zgartiring. Masalan, tugma atrofida ko'k rangli chiziq paydo qiling.
+
+**Tushuntirish:**
+
+*   `:focus` psevdo-klassi element fokuslanganda qo'llaniladi.
+*   `outline` xossasi element atrofida chiziq chizish uchun ishlatiladi.
+
+
+**5-qadam: Sahifani brauzerda ochish**
+
+* `tugmalar.html` faylini saqlagan papkani oching.
+* Faylni ikki marta bosing yoki brauzerda oching.
+* Yaratgan veb-sahifangizni ko'rib chiqing.
+* Tugmalar ustiga sichqoncha olib boring, ularni bosing va tab tugmasi bilan fokuslang. Ularning qanday o'zgarishini kuzating.
+</details>

@@ -1,24 +1,126 @@
-### 1-modul: Front-end asoslari va asosiy vositalar
-<!-- HTML 1 -->
 <details>
-   <summary>HTML asoslari (HTML Essentials / Основы HTML)</summary>
+<summary>
+HTML Hujjatining Asosiy Strukturasi
+</summary>
 
-**Dars uchun qo'llanma**
-
-**HTML nima? (What is HTML? / Что такое HTML?)**
-
-HTML (HyperText Markup Language / Язык гипертекстовой разметки) veb-sahifalarni yaratish uchun ishlatiladigan tildir. U brauzerga veb-sahifaning tuzilishini va tarkibini tushuntirish uchun teglar (tags / теги) dan foydalanadi. HTML hujjatlari oddiy matn fayllari bo'lib, `.html` yoki `.htm` kengaytmasiga ega.
-
-**Asosiy HTML tuzilishi (Basic HTML Structure / Основная структура HTML)**
-
-Har bir HTML hujjati quyidagi asosiy tuzilishga ega:
+Har bir HTML hujjat quyidagi asosiy strukturaga ega:
 
 ```html
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <title>Sahifa sarlavhasi</title>
+  <meta charset="UTF-8">
+  <title>Sahifa sarlavhasi</title>
+</head>
+<body>
+
+  <h1>Bu sarlavha</h1>
+  <p>Bu xatboshi.</p>
+
+</body>
+</html>
+```
+
+Keling, bu strukturadagi har bir elementni batafsil ko'rib chiqamiz:
+
+* **`<!DOCTYPE html>`:** Bu deklaratsiya veb-brauzerga hujjatning HTML5 standartida yozilganligini bildiradi.
+* **`<html lang="uz">`:** Bu teg HTML hujjatning boshlanishini bildiradi. `lang="uz"` atributi sahifaning tili o'zbekcha ekanligini ko'rsatadi.
+* **`<head>`:** Bu bo'limda sahifa haqida meta-ma'lumotlar, jumladan sahifa sarlavhasi, CSS stillari va JavaScript kodlari joylashtiriladi. Bu ma'lumotlar brauzerda ko'rsatilmaydi, lekin sahifaning ishlashi uchun muhimdir.
+    * **`<meta charset="UTF-8">`:** Bu teg sahifaning kodlash standarti UTF-8 ekanligini bildiradi. UTF-8 standarti o'zbek tilidagi barcha belgilarni to'g'ri ko'rsatish imkonini beradi.
+    * **`<title>Sahifa sarlavhasi</title>`:** Bu teg sahifaning sarlavhasini belgilaydi. Sarlavha brauzerning tabida yoki oynasining sarlavha satrida ko'rsatiladi.
+* **`<body>`:** Bu bo'limda sahifaning asosiy tarkibi, ya'ni foydalanuvchilar brauzerda ko'radigan barcha elementlar joylashtiriladi.
+    * **`<h1>Bu sarlavha</h1>`:** Bu teg sarlavha yaratish uchun ishlatiladi. HTMLda `<h1>` dan `<h6>` gacha bo'lgan oltita sarlavha darajasi mavjud.
+    * **`<p>Bu xatboshi.</p>`:** Bu teg xatboshi yaratish uchun ishlatiladi.
+
+### Teglar va Elementlar
+
+HTMLda ko'plab teglar mavjud. Keling, ba'zi asosiy teglarni ko'rib chiqamiz va ularning qanday ishlatilishini misollar bilan ko'rsatamiz:
+
+* **Sarlavhalar:** `<h1>` dan `<h6>` gacha bo'lgan teglar sarlavhalar yaratish uchun ishlatiladi.
+
+```html
+<h1>Bu eng katta sarlavha</h1>
+<h2>Bu kichikroq sarlavha</h2>
+<h3>Bu undan ham kichikroq sarlavha</h3>
+```
+
+* **Xatboshilar:** `<p>` tegi xatboshilar yaratish uchun ishlatiladi.
+
+```html
+<p>Bu birinchi xatboshi.</p>
+<p>Bu ikkinchi xatboshi.</p>
+```
+
+* **Rasmlar:** `<img>` tegi rasmlarni veb-sahifaga qo'shish uchun ishlatiladi.
+
+```html
+<img src="rasm.jpg" alt="Rasmning tavsifi">
+```
+
+Bu misolda, `src` atributi rasm faylining manzilini, `alt` atributi esa rasmning tavsifini ko'rsatadi.
+
+* **Havolalar:** `<a>` tegi havolalar yaratish uchun ishlatiladi.
+
+```html
+<a href="https://kun.uz">Kun.uz saytiga o'tish</a>
+```
+
+Bu misolda, `href` atributi havolaning manzilini ko'rsatadi. Havolani bosganda, foydalanuvchi Kun.uz saytiga o'tadi.
+
+* **Ro'yxatlar:** `<ul>`, `<ol>` va `<li>` teglari ro'yxatlar yaratish uchun ishlatiladi.
+
+```html
+<ul>
+  <li>Olma</li>
+  <li>Anor</li>
+  <li>Uzum</li>
+</ul>
+
+<ol>
+  <li>Birinchi</li>
+  <li>Ikkinchi</li>
+  <li>Uchinchi</li>
+</ol>
+```
+
+Bu misolda, `<ul>` tegi tartibsiz ro'yxatni, `<ol>` tegi tartibli ro'yxatni, `<li>` tegi esa ro'yxat elementini bildiradi.
+
+### Atributlar
+
+Atributlar teglarga qo'shimcha ma'lumot berish uchun ishlatiladi. Keling, ba'zi asosiy atributlarni ko'rib chiqamiz:
+
+* **`class`:** Bu atribut elementga CSS stillarini qo'llash uchun ishlatiladi.
+
+```html
+<p class="qizil-matn">Bu xatboshi qizil rangda bo'ladi.</p>
+```
+
+* **`id`:** Bu atribut elementga noyob identifikator berish uchun ishlatiladi.
+
+```html
+<div id="asosiy-kontent">Bu asosiy kontent.</div>
+```
+
+* **`style`:** Bu atribut elementga inline CSS stillarini qo'llash uchun ishlatiladi.
+
+```html
+<p style="color: blue;">Bu xatboshi ko'k rangda bo'ladi.</p>
+```
+
+Bu misollar HTML asoslarini tushunishga yordam beradi degan umiddaman. Keyingi darslarda biz HTMLning boshqa jihatlarini, jumladan semantik teglar, formlar va jadvallarni ko'rib chiqamiz.
+
+### O'qituvchi boshchiligidagi loyiha: "Mening maktabim" (to'liq)
+
+**1-qadam: Yangi HTML hujjat yaratish**
+
+Avvalgi kabi, yangi HTML hujjat yarating va uni `maktab.html` deb nomlang. Asosiy HTML tuzilishini qo'shing:
+
+```html
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Mening maktabim</title>
 </head>
 <body>
 
@@ -26,1015 +128,810 @@ Har bir HTML hujjati quyidagi asosiy tuzilishga ega:
 </html>
 ```
 
-* `<!DOCTYPE html>`: Bu teg brauzerga HTML5 standartidan foydalanayotganingizni bildiradi.
-* `<html lang="uz">`: Bu hujjatning asosiy tegi (root element / корневой элемент). `lang` atributi sahifaning tilini belgilaydi (bu yerda "uz" o'zbek tilini bildiradi).
-* `<head>`: Bu qismda sahifa haqidagi meta-ma'lumotlar, sarlavha va boshqa ko'rinmas elementlar saqlanadi.
-    * `<meta charset="UTF-8">`: Bu teg matn kodlashni belgilaydi. UTF-8 kodlash turli tillardagi belgilarni qo'llab-quvvatlaydi.
-    * `<title>`: Bu teg brauzer yorlig'ida ko'rinadigan sahifa sarlavhasini (title / заголовок) belgilaydi.
-* `<body>`: Bu qismda sahifaning ko'rinadigan tarkibi joylashtiriladi.
+**2-qadam: Sarlavha va kirish qismini qo'shish**
 
-**HTML teglar (HTML Tags / Теги HTML)**
+* `<body>` teglari ichida `<h1>` tegi yordamida sahifa sarlavhasini qo'shing. Masalan, "Mening maktabim".
+* Maktabingiz haqida qisqacha ma'lumot beruvchi xatboshilar (`<p>`) yozing. Masalan, maktabingizning nomi, manzili, qachon tashkil etilgani va boshqalar.
 
-HTML teglar veb-sahifaning turli elementlarini belgilash uchun ishlatiladi. Teglar odatda juft bo'lib keladi: ochilish tegi (`<tag>`) va yopilish tegi (`</tag>`). Ba'zi teglar esa yakka holda ishlatiladi (masalan, `<img>`).
+```html
+<body>
 
-Keling, ba'zi umumiy HTML teglarini ko'rib chiqaylik:
+  <h1>Mening maktabim</h1>
+  <p>Men 1-umumta'lim maktabida o'qiyman. Maktabimiz Samarqand shahrida joylashgan.</p>
+  <p>Maktabimiz 1991-yilda tashkil etilgan.</p>
 
-* **Sarlavhalar (Headings / Заголовки):** `<h1>` dan `<h6>` gacha (turli sarlavha darajalari uchun)
-   ```html
-   <h1>Bu asosiy sarlavha</h1>
-   <h2>Bu kichik sarlavha</h2>
-   ```
-* **Xatboshilar (Paragraphs / Абзацы):** `<p>`
-   ```html
-   <p>Bu matn xatboshisi.</p>
-   ```
-* **Havolalar (Links / Ссылки):** `<a href="url">Havola matni</a>`
-   ```html
-   <a href="https://www.google.com">Google ga o'ting</a>
-   ```
-* **Rasmlar (Images / Изображения):** `<img src="image.jpg" alt="Rasm tavsifi">`
-   ```html
-   <img src="mypicture.jpg" alt="Mening rasmim">
-   ```
-* **Qator uzilishlari (Line Breaks / Разрывы строк):** `<br>`
-* **Bo'limlar (Divisions / Разделы):** `<div>` (elementlarni guruhlash uchun ishlatiladi)
-* **Tartibsiz ro'yxatlar (Unordered Lists / Неупорядоченные списки):** `<ul>`, `<li>`
-   ```html
-   <ul>
-       <li>Birinchi element</li>
-       <li>Ikkinchi element</li>
-   </ul>
-   ```
-* **Tartiblangan ro'yxatlar (Ordered Lists / Упорядоченные списки):** `<ol>`, `<li>`
-   ```html
-   <ol>
-       <li>Birinchi element</li>
-       <li>Ikkinchi element</li>
-   </ol>
-   ```
+</body>
+```
+
+**3-qadam: Maktab rasmini qo'shish**
+
+* Endi maktabingizning rasmini qo'shamiz. Buning uchun `<img>` tegini ishlatamiz.
+* `src` atributida rasm faylining manzilini ko'rsating. Masalan, agar rasm fayli `maktab_rasmi.jpg` deb nomlangan va `maktab.html` fayli bilan bir xil papkada joylashgan bo'lsa, `src="maktab_rasmi.jpg"` deb yozasiz.
+* `alt` atributida rasmning tavsifini ko'rsating. Bu atribut rasm ko'rsatilmasa (masalan, internet aloqasi yo'q bo'lsa) yoki ko'zi ojiz foydalanuvchilar uchun ekran o'quvchi dasturlar tomonidan ishlatiladi.
+
+```html
+<img src="maktab_rasmi.jpg" alt="Maktabimizning rasmi">
+```
+
+**4-qadam: Maktab haqida batafsil ma'lumot qo'shish**
+
+* Maktabingizning veb-sayti yoki ijtimoiy tarmoqdagi sahifasi bormi? Agar bo'lsa, uning havolasini qo'shing. Buning uchun `<a>` tegini ishlating. Havolaning manzilini `href` atributida ko'rsating.
+
+```html
+<p>Maktabimiz haqida batafsil ma'lumotni <a href="https://maktab.uz">bu yerda</a> olishingiz mumkin.</p>
+```
+
+* Maktabingizda qanday fanlar o'qitiladi? Ularning ro'yxatini tuzing. Buning uchun tartibsiz ro'yxat (`<ul>`, `<li>`) dan foydalaning.
+
+```html
+<p>Maktabimizda quyidagi fanlar o'qitiladi:</p>
+<ul>
+  <li>Ona tili</li>
+  <li>Matematika</li>
+  <li>Fizika</li>
+  <li>Kimyo</li>
+  <li>Biologiya</li>
+  <li>Tarix</li>
+</ul>
+```
+
+* Maktabingizda qanday to'garaklar bor? Ularning ro'yxatini tuzing va har bir to'garak haqida qisqacha ma'lumot bering. Buning uchun tartibli ro'yxat (`<ol>`, `<li>`) dan foydalaning.
+
+```html
+<p>Maktabimizda quyidagi to'garaklar faoliyat yuritadi:</p>
+<ol>
+  <li>Shaxmat to'garagi - bu yerda o'quvchilar shaxmat o'ynashni o'rganadilar va musobaqalarda qatnashadilar.</li>
+  <li>Rasm to'garagi - bu yerda o'quvchilar rasm chizishni o'rganadilar.</li>
+  <li>Sport to'garagi - bu yerda o'quvchilar turli xil sport turlari bilan shug'ullanadilar.</li>
+</ol>
+```
+
+**5-qadam: Sahifani brauzerda ochish**
+
+* `maktab.html` faylini saqlagan papkani oching.
+* Faylni ikki marta bosing yoki brauzerda oching.
+* Yaratgan veb-sahifangizni ko'rib chiqing.
+
+**Tushuntirish:**
+
+Bu loyihada biz HTMLning asosiy elementlaridan foydalanib, maktab haqida ma'lumotlarni o'z ichiga olgan veb-sahifa yaratdik. `<img>` tegi rasm qo'shish uchun, `<a>` tegi havola yaratish uchun, `<ul>` va `<ol>` teglari esa tartibsiz va tartibli ro'yxatlar yaratish uchun ishlatildi.
+
+Ushbu loyihani o'zingizning maktabingiz haqidagi ma'lumotlar bilan to'ldiring. O'zingizga yoqqan boshqa elementlarni ham qo'shishingiz mumkin. Masalan, maktabingizning direktori haqida ma'lumot, maktabingizning qo'shimcha rasmlari va boshqalar.
 
 
-**Amaliy mashg'ulotlar**
+### Mustaqil loyiha: "Mening sevimli mashg'ulotlarim"
 
-Endi o'qituvchingiz bilan birgalikda quyidagi vazifalarni bajaring:
+Ushbu loyihada siz HTML bilimlaringizdan foydalanib, sevimli mashg'ulotlaringiz haqida veb-sahifa yaratasiz. 
 
-* **Vazifa 1: To'liq HTML hujjatini yarating va asosiy teglarni qo'shing.**
-    * Yangi fayl yarating va uni `index.html` deb nomlang.
-    * Kod muharriringizda faylni oching va asosiy HTML tuzilishini yozing: `<!DOCTYPE html>`, `<html lang="uz">`, `<head>`, `<title>`, `<meta charset="UTF-8">` va `<body>` teglarini qo'shing.
-    * `<title>` tegi ichida sahifangiz uchun sarlavha yozing (masalan, "Mening birinchi veb-sahifam").
-    * `<body>` teglari ichida quyidagi elementlarni qo'shing:
-        * `<h1>` tegi bilan asosiy sarlavha (masalan, "Salom, Dunyo!").
-        * `<h2>` tegi bilan kichik sarlavha (masalan, "Bu mening birinchi veb-sahifam").
-        * Ikkita `<p>` tegi bilan ikkita xatboshi. Har bir xatboshida bir nechta jumla yozing.
-    * Faylni saqlang va brauzerda oching. Brauzer oynasida yaratgan sahifangizni ko'rishingiz kerak.
+**1-qadam: Yangi HTML hujjat yaratish**
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mening birinchi veb-sahifam</title>
-    </head>
-    <body>
-        <h1>Salom, Dunyo!</h1>
-        <h2>Bu mening birinchi veb-sahifam</h2>
-        <p>Bu birinchi xatboshi. Bu yerda bir nechta jumlalar yozilgan.</p>
-        <p>Bu ikkinchi xatboshi. Bu yerda ham bir nechta jumlalar yozilgan.</p>
-    </body>
-    </html>
-    ```
+* Matn muharriri yoki kod muharririda yangi fayl yarating va uni `mashgulotlar.html` deb nomlang.
+* Faylga asosiy HTML tuzilishini qo'shing (`<!DOCTYPE html>`, `<html lang="uz">`, `<head>`, `<title>`, `<body>`).
+* `<title>` tegi ichida sahifa sarlavhasini yozing (masalan, "Mening sevimli mashg'ulotlarim").
 
-* **Vazifa 2: Rasm va havolalarni qo'shing.**
-    * Yuqorida yaratgan HTML faylingizni oching.
-    * `<img>` tegi yordamida sahifaga rasm qo'shing. `src` atributida rasmning manzilini ko'rsating. `alt` atributida rasmning qisqacha tavsifini yozing.
-    * `<a>` (anchor) tegi yordamida veb-sahifaga havola qo'shing. `href` atributida havolaning manzilini ko'rsating (masalan, "[https://www.google.com](https://www.google.com)"). Havola matnini teglar orasiga yozing (masalan, "Google").
-    * Faylni saqlang va brauzerda yangilang. Endi sahifangizda rasm va havola ko'rinishi kerak.
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mening birinchi veb-sahifam</title>
-    </head>
-    <body>
-        <h1>Salom, Dunyo!</h1>
-        <h2>Bu mening birinchi veb-sahifam</h2>
-        <p>Bu birinchi xatboshi. Bu yerda bir nechta jumlalar yozilgan.</p>
-        <p>Bu ikkinchi xatboshi. Bu yerda ham bir nechta jumlalar yozilgan.</p>
-        <img src="rasm.jpg" alt="Chiroyli rasm">
-        <a href="https://www.google.com">Google</a>
-    </body>
-    </html>
-    ```
+**2-qadam: Sahifa tarkibini yaratish**
 
-* **Vazifa 3: Ro'yxatlarni qo'shing.**
-    * Yuqoridagi HTML faylingizga tartiblangan va tartibsiz ro'yxatlarni qo'shing.
-    * Tartibsiz ro'yxat uchun `<ul>` va `<li>` teglaridan foydalaning.
-    * Tartiblangan ro'yxat uchun `<ol>` va `<li>` teglaridan foydalaning.
-    * Har bir ro'yxatga kamida 3 ta element qo'shing.
+* Quyidagi elementlarni sahifangizga qo'shing:
+    * `<h1>` tegi bilan sahifa sarlavhasini qo'shing (masalan, "Mening sevimli mashg'ulotlarim").
+    * O'zingiz haqingizda qisqacha ma'lumot beruvchi bir nechta xatboshilar (`<p>`) yozing. 
+    * Har bir sevimli mashg'ulotingiz uchun:
+        * `<div>` tegi yordamida alohida bo'lim yarating.
+        * `<h2>` tegi bilan mashg'ulot nomini sarlavha qiling.
+        * Mashg'ulot haqida ma'lumot beruvchi xatboshilar (`<p>`) yozing.
+        * Mashg'ulot bilan bog'liq rasm qo'shing (`<img>`). Rasm faylining manzilini va rasmning tavsifini tegishli atributlarda ko'rsating.
+    * Mashg'ulotlaringiz haqida qo'shimcha ma'lumot olish uchun foydali havolalar ro'yxatini yarating. Havolalarni yaratish uchun `<a>` tegini ishlating.
+    * Mashg'ulotlaringiz bilan bog'liq biror ro'yxat yarating. Ro'yxatni tartibli yoki tartibsiz (`<ol>` yoki `<ul>`) shaklida taqdim eting.
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mening birinchi veb-sahifam</title>
-    </head>
-    <body>
-        <h1>Salom, Dunyo!</h1>
-        <h2>Bu mening birinchi veb-sahifam</h2>
-        <p>Bu birinchi xatboshi. Bu yerda bir nechta jumlalar yozilgan.</p>
-        <p>Bu ikkinchi xatboshi. Bu yerda ham bir nechta jumlalar yozilgan.</p>
-        <img src="rasm.jpg" alt="Chiroyli rasm">
-        <a href="https://www.google.com">Google</a>
-    
-        <h3>Sevimli ranglarim</h3>
-        <ul>
-            <li>Qizil</li>
-            <li>Yashil</li>
-            <li>Ko'k</li>
-        </ul>
-    
-        <h3>Sevimli mashg'ulotlarim</h3>
-        <ol>
-            <li>Kitob o'qish</li>
-            <li>Musiqa tinglash</li>
-            <li>Sayohat qilish</li>
-        </ol>
-    </body>
-    </html>
-    ```
 
-**Mustaqil mashqlar**
+**Tushuntirish:**
 
-O'rganganlaringizni mustahkamlash uchun quyidagi vazifalarni mustaqil bajarib ko'ring:
+* Masalan, siz kitob o'qishni yaxshi ko'rsangiz, quyidagicha bo'lim yaratishingiz mumkin:
+    * `<div>` tegini oching.
+    * Ichida `<h2>` tegi bilan "Kitob o'qish" deb yozing.
+    * Kitob o'qish haqida bir nechta xatboshilar yozing. Masalan: "Men bo'sh vaqtimda kitob o'qishni yaxshi ko'raman. Kitoblar menga yangi bilimlar olishga va dunyoqarashimni kengaytirishga yordam beradi. Ayniqsa, tarixiy romanlar va fantastika janridagi kitoblarni o'qishni yoqtiraman".
+    * Xatboshilardan keyin kitob o'qish bilan bog'liq rasm qo'shing. Buning uchun `<img>` tegini ishlating. Rasm faylining manzilini `src` atributida, rasmning tavsifini esa `alt` atributida ko'rsating. Masalan, `src="kitob.jpg"` va `alt="Kitob o'qiyotgan odam"`.
+    * `<div>` tegini yoping.
+* Agar sizda bir nechta sevimli kitoblar bo'lsa, ularning ro'yxatini tartibsiz ro'yxat shaklida ko'rsatishingiz mumkin. Buning uchun `<ul>` va `<li>` teglaridan foydalaning.
 
-* **1-vazifa: "Mening sevimli mashg'ulotlarim"**
-    * "Mening sevimli mashg'ulotlarim" (My favorite hobbies / Мои любимые хобби) deb nomlangan veb-sahifa yarating.
-    * Sevimli mashg'ulotlaringiz haqida ma'lumot beruvchi sarlavhalar va xatboshilar yozing.
-    * Har bir mashg'ulot uchun alohida bo'lim (`<div>`) yarating.
-    * Bo'limlarga sarlavhalar (`<h2>` yoki `<h3>`) qo'shing.
-    * Har bir bo'limda mashg'ulot haqida batafsil ma'lumot bering, rasmlar qo'shing va tegishli veb-saytlarga havolalar bering.
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mening sevimli mashg'ulotlarim</title>
-    </head>
-    <body>
-        <h1>Mening sevimli mashg'ulotlarim</h1>
-    
-        <div>
-            <h2>Kitob o'qish</h2>
-            <p>Menga turli xil kitoblar o'qish yoqadi. Ayniqsa fantastika va detektiv janridagi kitoblarni yoqtiraman.</p>
-            <img src="kitob.jpg" alt="Kitob">
-        </div>
-    
-        <div>
-            <h2>Musiqa tinglash</h2>
-            <p>Men turli xil musiqalarni tinglayman. Klassik musiqadan tortib, zamonaviy pop musiqagacha.</p>
-            <a href="https://spotify.com">Spotify</a> da musiqa tinglashni yoqtiraman.
-        </div>
-    
-    </body>
-    </html>
-    ```
+**3-qadam: Sahifani brauzerda ochish**
 
-* **2-vazifa:  "Mening oilam"**
-    * "Mening oilam" (My family / Моя семья) deb nomlangan veb-sahifa yarating.
-    * Oila a'zolaringiz haqida ma'lumot bering.
-    * Har bir oila a'zosi uchun alohida bo'lim (`<div>`) yarating.
-    * Bo'limlarga sarlavhalar (`<h2>` yoki `<h3>`) qo'shing va oila a'zolaringizning ismlarini yozing.
-    * Har bir bo'limda oila a'zolaringiz haqida qisqacha ma'lumot bering, rasmlar qo'shing.
-    * Oila a'zolaringizning sevimli mashg'ulotlari yoki qiziqishlari haqida ro'yxatlar (`<ul>` yoki `<ol>`) yarating.
+* `mashgulotlar.html` faylini saqlagan papkani oching.
+* Faylni ikki marta bosing yoki brauzerda oching.
+* Yaratgan veb-sahifangizni ko'rib chiqing.
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mening oilam</title>
-    </head>
-    <body>
-        <h1>Mening oilam</h1>
-    
-        <div>
-            <h2>Otam</h2>
-            <img src="otam.jpg" alt="Otam">
-            <p>Otamning ismi ... . U ... kasbida ishlaydi.</p>
-        </div>
-    
-        <div>
-            <h2>Onam</h2>
-            <img src="onam.jpg" alt="Onam">
-            <p>Onamning ismi ... . U ... kasbida ishlaydi.</p>
-        </div>
-    
-    </body>
-    </html>
-    ```
-
-* **3-vazifa:  "Mening maktabim"**
-    * "Mening maktabim" (My school / Моя школа) deb nomlangan veb-sahifa yarating.
-    * Maktabingiz haqida ma'lumot bering.
-    * Maktabingizning rasmini qo'shing.
-    * Maktabingizdagi sevimli fanlaringiz ro'yxatini tuzing.
-    * Maktabingizning veb-saytiga havola qo'shing (agar mavjud bo'lsa).
-    * Maktabingiz haqida qo'shimcha ma'lumotlarni (manzili, telefon raqami, email manzili) alohida bo'limda ko'rsating.
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mening maktabim</title>
-    </head>
-    <body>
-        <h1>Mening maktabim</h1>
-        <img src="maktab.jpg" alt="Maktabim">
-        <p>Men ... maktabida o'qiyman. Bu maktab ... da joylashgan.</p>
-    
-        <h2>Sevimli fanlarim</h2>
-        <ol>
-            <li>Matematika</li>
-            <li>Fizika</li>
-            <li>Informatika</li>
-        </ol>
-    
-        <a href="https://maktab.uz">Maktab veb-sayti</a>
-    
-    </body>
-    </html>
-    ```
 </details>
 
-<!-- 2 -->
+
 <details>
-   <summary>Jadvallar (Tables / Таблицы)</summary>
+<summary>
+HTML Jadvallar va Formalar
+</summary>
 
-**Jadvallar (Tables / Таблицы)**
+Veb-sahifalarni yaratishda ma'lumotlarni tartibli va tushunarli ko'rsatish, shuningdek, foydalanuvchilar bilan o'zaro aloqada bo'lish juda muhim. HTML tili bizga bu maqsadlar uchun jadvallar va formalar kabi kuchli vositalarni taqdim etadi.
 
-Jadvallar ma'lumotlarni satr va ustunlarga ajratilgan holda tuzilgan ko'rinishda taqdim etish uchun ishlatiladi. HTML da jadvallarni yaratish uchun quyidagi teglar ishlatiladi:
+### Jadvallar bilan ishlash
 
-* `<table>`: Jadvalni belgilaydi.
-* `<tr>`: Jadvaldagi satrni (table row / строка таблицы) belgilaydi.
-* `<td>`: Jadvaldagi katakchani (table data / ячейка данных) belgilaydi.
-* `<th>`: Jadvaldagi sarlavha katakchasini (table header / ячейка заголовка) belgilaydi (odatda qalin shriftda ko'rsatiladi).
+Jadvallar ma'lumotlarni satr va ustunlarga ajratilgan holda strukturaviy tarzda taqdim etish imkonini beradi. Bu esa ma'lumotlarni oson o'qish, tahlil qilish va tushunishni ta'minlaydi. Jadvallarni kundalik hayotda ham tez-tez uchratamiz: dars jadvali, poyezdlar jadvali, mahsulotlar ro'yxati va boshqalar.
 
-```html
-<table>
-  <tr>
-    <th>Ism</th>
-    <th>Yoshi</th>
-  </tr>
-  <tr>
-    <td>Ali</td>
-    <td>20</td>
-  </tr>
-  <tr>
-    <td>Vali</td>
-    <td>25</td>
-  </tr>
-</table>
-```
+HTMLda jadvallarni yaratish uchun bir nechta teglar qo'llaniladi:
 
-**Formlar (Forms / Формы)**
-
-Formlar foydalanuvchidan ma'lumotlarni olish uchun ishlatiladi. HTML da formlarni yaratish uchun quyidagi teglar ishlatiladi:
-
-* `<form>`: Formani belgilaydi.
-* `<input>`: Turli xil kiritish maydonlarini (input fields / поля ввода) yaratish uchun ishlatiladi (matn, parol, radio tugmalari, checkboxlar va boshqalar).
-* `<label>`: Kiritish maydonlari uchun yorliqlar (labels / метки) yaratish uchun ishlatiladi.
-* `<textarea>`: Ko'p qatorli matn maydonlarini yaratish uchun ishlatiladi.
-* `<select>`: Tanlash ro'yxatini (dropdown list / выпадающий список) yaratish uchun ishlatiladi.
-* `<button>`: Tugmani (button / кнопка) yaratish uchun ishlatiladi.
-
-```html
-<form>
-  <label for="ism">Ismingiz:</label>
-  <input type="text" id="ism" name="ism">
-
-  <label for="email">Emailingiz:</label>
-  <input type="email" id="email" name="email">
-
-  <button type="submit">Yuborish</button>
-</form>
-```
-
-**Amaliy mashg'ulotlar**
-
-Endi o'qituvchingiz bilan birgalikda quyidagi vazifalarni bajaring:
-
-* **Vazifa 4: Jadval yaratish va ma'lumotlarni kiritish**
-
-    * `table` tegi yordamida jadval yarating.
-    * Jadvalga 3 ta ustun va 4 ta qator qo'shing.
-    * Birinchi qatorni sarlavha qatori sifatida belgilang va unga "Ism", "Familiya", "Yoshi" sarlavhalarini qo'shing.
-    * Qolgan qatorlarga o'zingiz bilgan odamlar haqida ma'lumotlarni kiriting (ixtiyoriy).
-    * Jadvalga `border` atributi qo'shib, katakchalar orasidagi chegaralarni ko'rsating.
-    * `cellpadding` va `cellspacing` atributlari yordamida katakchalar orasidagi bo'sh joyni o'zgartirib ko'ring.
-
+* **`<table>`**: Jadvalning asosiy konteyneri. Barcha jadval elementlari shu teg ichida joylashtiriladi.
     ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-      <meta charset="UTF-8">
-      <title>Jadval yaratish</title>
-    </head>
-    <body>
-    
-      <table border="1" cellpadding="10" cellspacing="0">
+    <table>
+      
+    </table>
+    ```
+
+* **`<tr>`**: Jadvaldagi satrni (row) ifodalaydi.
+    ```html
+    <table>
+      <tr>
+          
+      </tr>
+    </table>
+    ```
+
+* **`<td>`**: Jadvaldagi katakchani (data cell) ifodalaydi. Har bir katakcha ma'lumotning bir qismini o'z ichiga oladi.
+    ```html
+    <table>
+      <tr>
+        <td>Olma</td>
+        <td>5000 so'm</td>
+      </tr>
+    </table>
+    ```
+
+* **`<th>`**: Jadvaldagi sarlavha katakchasini (header cell) ifodalaydi. Sarlavha katakchalari odatda qalin shriftda ko'rsatiladi va ustun yoki satr uchun nom vazifasini bajaradi.
+    ```html
+    <table>
+      <tr>
+        <th>Mahsulot</th>
+        <th>Narxi</th>
+      </tr>
+    </table>
+    ```
+
+**Jadvallarni Strukturaviy Tuzish**
+
+Jadvallarni yanada tushunarli va foydalanuvchilarga qulay qilish uchun ularni quyidagi qismlarga ajratish mumkin:
+
+* **`<caption>`**: Jadvalga sarlavha qo'yish uchun ishlatiladi. Sarlavha jadvalning tepasida joylashadi va uning mazmunini qisqacha ifodalaydi. Misol uchun, "O'quvchilar ro'yxati", "Mahsulotlar narxlari" va hokazo.
+    ```html
+    <table>
+      <caption>O'quvchilar ro'yxati</caption>
+      ...
+    </table>
+    ```
+
+* **`<thead>`**: Jadvalning sarlavha qismini belgilaydi. Bu qismda ustun nomlari yoki boshqa sarlavha ma'lumotlari joylashtiriladi. Misol uchun, "Ism", "Familiya", "Yoshi" kabi ustun nomlari.
+    ```html
+    <table>
+      <thead>
         <tr>
           <th>Ism</th>
           <th>Familiya</th>
           <th>Yoshi</th>
         </tr>
+      </thead>
+      ...
+    </table>
+    ```
+
+* **`<tbody>`**: Jadvalning asosiy qismini belgilaydi. Bu qismda jadvalning ma'lumotlari satr va ustunlarga ajratilgan holda joylashtiriladi. Misol uchun, o'quvchilarning ismi, familiyasi va yoshi haqidagi ma'lumotlar.
+    ```html
+    <table>
+      <tbody>
         <tr>
           <td>Ali</td>
           <td>Valiyev</td>
-          <td>25</td>
-        </tr>
-        <tr>
-          <td>Olim</td>
-          <td>Akbarov</td>
-          <td>30</td>
-        </tr>
-        <tr>
-          <td>Fotima</td>
-          <td>Umarova</td>
-          <td>22</td>
-        </tr>
-      </table>
-    
-    </body>
-    </html>
-    ```
-
-* **Vazifa 5:  Anketa formasi yaratish**
-
-    * `<form>` tegi yordamida anketa formasi yarating.
-    * Formada quyidagi maydonlarni yarating:
-        * Ism (`<input type="text">`)
-        * Familiya (`<input type="text">`)
-        * Email (`<input type="email">`)
-        * Telefon raqami (`<input type="tel">`)
-        * Jinsi (`<input type="radio">` tugmalari yordamida "Erkak" va "Ayol" variantlarini yarating)
-        * Manzil (`<textarea>`)
-    * Har bir maydon uchun `<label>` tegi yordamida yorliq qo'shing.
-    * Formada "Yuborish" tugmasi (`<button type="submit">`) bo'lsin.
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-      <meta charset="UTF-8">
-      <title>Anketa formasi</title>
-    </head>
-    <body>
-    
-      <form>
-        <label for="ism">Ism:</label>
-        <input type="text" id="ism" name="ism"><br><br>
-    
-        <label for="familiya">Familiya:</label>
-        <input type="text" id="familiya" name="familiya"><br><br>
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-    
-        <label for="tel">Telefon raqami:</label>
-        <input type="tel" id="tel" name="tel"><br><br>
-    
-        <label for="jinsi">Jinsi:</label>
-        <input type="radio" id="erkak" name="jinsi" value="erkak">
-        <label for="erkak">Erkak</label>
-        <input type="radio" id="ayol" name="jinsi" value="ayol">
-        <label for="ayol">Ayol</label><br><br>
-    
-        <label for="manzil">Manzil:</label>
-        <textarea id="manzil" name="manzil"></textarea><br><br>
-    
-        <button type="submit">Yuborish</button>
-      </form>
-    
-    </body>
-    </html>
-    ```
-
-* **Vazifa 6: Tanlash ro'yxati va tugmalar**
-
-    * `<select>` tegi yordamida tanlash ro'yxati yarating.
-    * Ro'yxatda kamida 3 ta variant (`<option>`) bo'lsin.
-    * Turli xil tugmalar (`<button>`) yarating va ularga turli xil atributlar (`type`, `disabled`) qo'shing.
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-      <meta charset="UTF-8">
-      <title>Tanlash ro'yxati va tugmalar</title>
-    </head>
-    <body>
-    
-      <select>
-        <option value="olma">Olma</option>
-        <option value="banan">Banan</option>
-        <option value="anor">Anor</option>
-      </select>
-      <br><br>
-    
-      <button type="submit">Yuborish</button>
-      <button type="reset">Tozalash</button>
-      <button type="button" disabled>Bosilmaydi</button>
-    
-    </body>
-    </html>
-    ```
-
-**Mustaqil mashqlar**
-
-O'rganganlaringizni mustahkamlash uchun quyidagi vazifalarni mustaqil bajarib ko'ring:
-
-* **1-vazifa:  "Mening sevimli kitoblarim"**
-    * "Mening sevimli kitoblarim" (My favorite books / Мои любимые книги) deb nomlangan veb-sahifa yarating.
-    * Sevimli kitoblaringiz ro'yxatini jadval (`<table>`) ko'rinishida yarating. 
-        * Jadvalda quyidagi ustunlar bo'lsin: Kitob nomi, Muallif, Nashr yili, Janr.
-        * Kamida 5 ta kitob haqida ma'lumot qo'shing.
-    * Har bir kitob uchun alohida qator (`<tr>`) yarating.
-    * Kitob nomlari uchun `<th>` (table header) tegini ishlating.
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-      <meta charset="UTF-8">
-      <title>Mening sevimli kitoblarim</title>
-    </head>
-    <body>
-      <h1>Mening sevimli kitoblarim</h1>
-    
-      <table border="1">
-        <tr>
-          <th>Kitob nomi</th>
-          <th>Muallif</th>
-          <th>Nashr yili</th>
-          <th>Janr</th>
-        </tr>
-        <tr>
-          <td>O'tkan kunlar</td>
-          <td>Abdulla Qodiriy</td>
-          <td>1926</td>
-          <td>Roman</td>
-        </tr>
-        <tr>
-          <td>Mehrobdan chayon</td>
-          <td>Abdulla Qodiriy</td>
-          <td>1929</td>
-          <td>Roman</td>
-        </tr>
-        </table>
-    
-    </body>
-    </html>
-    ```
-
-* **2-vazifa:  "Ro'yxatdan o'tish formasi"**
-    * Foydalanuvchilar ro'yxatdan o'tishi uchun forma yarating.
-    * Formada quyidagi maydonlarni yarating:
-        * Foydalanuvchi nomi (`<input type="text">`)
-        * Email (`<input type="email">`)
-        * Parol (`<input type="password">`)
-        * Parolni tasdiqlash (`<input type="password">`)
-        * Tug'ilgan sana (`<input type="date">`)
-        * Jinsi (`<input type="radio">` tugmalari yordamida)
-        * Qiziqishlar (`<input type="checkbox">` yordamida bir nechta variantlarni tanlash)
-        * "Ro'yxatdan o'tish" tugmasi (`<button type="submit">`)
-    * Har bir maydon uchun tegishli yorliq (`<label>`) qo'shing.
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-      <meta charset="UTF-8">
-      <title>Ro'yxatdan o'tish formasi</title>
-    </head>
-    <body>
-      <h1>Ro'yxatdan o'tish</h1>
-    
-      <form>
-        <label for="username">Foydalanuvchi nomi:</label>
-        <input type="text" id="username" name="username"><br><br>
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-    
-        <button type="submit">Ro'yxatdan o'tish</button>
-      </form>
-    
-    </body>
-    </html>
-    ```
-
-* **3-vazifa:  "Restoran menyusi"**
-    * Restoran menyusi uchun veb-sahifa yarating.
-    * Menyuni jadval (`<table>`) ko'rinishida yarating.
-    * Jadvalda quyidagi ustunlar bo'lsin: Taom nomi, Narxi, Tavsif.
-    * Turli xil taomlarni (masalan, salatlar, sho'rvalar, asosiy taomlar, desertlar) alohida bo'limlarda ko'rsating.
-    * Har bir bo'lim uchun sarlavha (`<h2>` yoki `<h3>`) qo'shing.
-    * Rasmlarni qo'shishni unutmang.
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-      <meta charset="UTF-8">
-      <title>Restoran menyusi</title>
-    </head>
-    <body>
-      <h1>Restoran menyusi</h1>
-    
-      <h2>Salatlar</h2>
-      <table border="1">
-        <tr>
-          <th>Nom</th>
-          <th>Narx</th>
-          <th>Tavsif</th>
-        </tr>
-        <tr>
-          <td>Sezar salati</td>
-          <td>15000 so'm</td>
-          <td>Tovuq go'shti, parmezan pishlog'i va kruto'nlar bilan</td>
-        </tr>
-        </table>
-    
-      <h2>Sho'rvalar</h2>
-      <table border="1">
-        </table>
-    
-      </body>
-    </html>
-    ```
-
-</details>
-
-<details>
-   <summary>HTML Atributlari (HTML Attributes / Атрибуты HTML)</summary>
-
-
-**HTML Atributlari (HTML Attributes / Атрибуты HTML)**
-
-HTML teglar qo'shimcha ma'lumotlarni o'z ichiga olishi mumkin. Bu ma'lumotlar **atributlar** (attributes / атрибуты) yordamida beriladi. Atributlar tegning ochilish qismida yoziladi va `nom="qiymat"` formatida bo'ladi.
-
-Masalan, rasm tegida (`<img>`) `src` atributi rasm faylining manzilini, `alt` atributi esa rasmning tavsifini belgilaydi:
-
-```html
-<img src="rasm.jpg" alt="Chiroyli rasm">
-```
-
-Ba'zi umumiy HTML atributlari:
-
-* `class`: Elementga CSS stillarini qo'llash uchun ishlatiladi.
-* `id`: Elementga noyob identifikator beradi.
-* `style`: Elementga inline stillarni qo'llash uchun ishlatiladi.
-* `href`: Havola tegi (`<a>`) uchun havolaning manzilini belgilaydi.
-* `src`: Rasm tegi (`<img>`) va boshqa media teglar (masalan, `<audio>`, `<video>`) uchun fayl manzilini belgilaydi.
-* `alt`: Rasm tegi (`<img>`) uchun rasmning tavsifini belgilaydi.
-* `width`: Elementning kengligini belgilaydi.
-* `height`: Elementning balandligini belgilaydi.
-* `title`: Element haqida qo'shimcha ma'lumotni ko'rsatish uchun ishlatiladi (masalan, sichqoncha ustiga qo'yilganda paydo bo'ladigan matn).
-
-
-**Amaliy mashg'ulotlar**
-
-Endi o'qituvchingiz bilan birgalikda quyidagi vazifalarni bajaring:
-
-* **Vazifa 7: Rasmlarga atributlar qo'shing va ularni stillashtiring**
-    * Oldingi vazifalarda yaratgan HTML faylingizni oching.
-    * `<img>` tegi yordamida sahifaga rasm qo'shing.
-    * Rasmga `width` va `height` atributlarini qo'shib, uning o'lchamlarini o'zgartiring.
-    * `alt` atributiga rasmning tavsifini yozing.
-    * `style` atributi yordamida rasmga chegara (`border`) qo'shing va rasmni hizalang (`text-align`).
-    * Faylni saqlang va brauzerda yangilang. Rasmning o'lchami, chegarasi va hizalanishi o'zgarganini ko'rishingiz kerak.
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mening birinchi veb-sahifam</title>
-    </head>
-    <body>
-        <img src="rasm.jpg" alt="Tog' manzarasi" width="500" height="300" 
-             style="border: 5px solid black; display: block; margin-left: auto; margin-right: auto;"> 
-    </body>
-    </html>
-    ```
-
-* **Vazifa 8: Havolalarga atributlar qo'shing va ularni stillashtiring**
-    * Sahifaga bir nechta havolalar (`<a>`) qo'shing.
-    * Har bir havolaga `title` atributi qo'shib, havola haqida qo'shimcha ma'lumot bering. Masalan, havola qaysi saytga olib borishini yozing.
-    * `style` atributi yordamida havolalarning rangini va chizilgan chiziqni o'zgartiring.
-    * Faylni saqlang va brauzerda yangilang. Sichqonchani havolaning ustiga qo'yganingizda, `title` atributida yozgan matningiz paydo bo'lishini va stillar qo'llanilganini ko'rishingiz kerak.
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mening birinchi veb-sahifam</title>
-    </head>
-    <body>
-        <a href="https://kun.uz" title="Kun.uz yangiliklar sayti" style="color: red; text-decoration: none;">Kun.uz</a><br>
-        <a href="https://wikipedia.org" title="Vikipediya - erkin ensiklopediya" style="color: green; text-decoration: underline;">Vikipediya</a>
-    </body>
-    </html>
-    ```
-
-* **Vazifa 9: Jadvalga atributlar qo'shing**
-    * Oldingi "Jadvallar" bo'limida yaratilgan jadvalga atributlar qo'shing.
-    * `border` atributi yordamida jadvalga chegara qo'shing.
-    * `cellpadding` va `cellspacing` atributlari yordamida katakchalar orasidagi bo'sh joyni o'zgartiring.
-    * `width` va `height` atributlari yordamida jadvalning o'lchamlarini o'rnating.
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-      <meta charset="UTF-8">
-      <title>Jadval yaratish</title>
-    </head>
-    <body>
-    
-      <table border="1" cellpadding="10" cellspacing="5" width="500" height="200">
-        <tr>
-          <th>Ism</th>
-          <th>Yoshi</th>
-        </tr>
-        <tr>
-          <td>Ali</td>
           <td>20</td>
         </tr>
-        <tr>
-          <td>Vali</td>
-          <td>25</td>
-        </tr>
-      </table>
-    
-    </body>
-    </html>
+        ...
+      </tbody>
+    </table>
     ```
 
-**Mustaqil mashqlar**
-
-O'rganganlaringizni mustahkamlash uchun quyidagi vazifalarni mustaqil bajarib ko'ring:
-
-* **1-vazifa: Shaxsiy veb-saytni atributlar bilan yaxshilang**
-    * "Men haqimda" sahifangizga atributlar qo'shib, uni yanada yaxshilang.
-    * Rasmlarga `width`, `height` va `alt` atributlarini qo'shing.
-    * Havolalarga `title` atributi qo'shing.
-    * Tegishli elementlarga `class` va `id` atributlarini qo'shing.
-
+* **`<tfoot>`**: Jadvalning pastki qismini belgilaydi. Bu qismda jadvalga oid xulosa ma'lumotlari, masalan, jami yoki o'rtacha qiymatlar ko'rsatilishi mumkin. Misol uchun, jadvaldagi barcha o'quvchilarning o'rtacha yoshi.
     ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Men haqimda</title>
-    </head>
-    <body>
-        <h1 id="main-heading">Men haqimda</h1>
-        <img src="mening_rasmim.jpg" alt="Mening rasmim" width="200" height="300">
-        <p>Mening ismim ... . Men ... yoshdaman.</p>
-        <a href="https://sevimli_saytim.uz" title="Sevimli saytim">Sevimli saytimga tashrif buyuring</a>
-    </body>
-    </html>
+    <table>
+      <tfoot>
+        <tr>
+          <td colspan="2">Jami:</td>
+          <td>45</td>
+        </tr>
+      </tfoot>
+    </table>
     ```
 
-* **2-vazifa:  Dars jadvali**
-    * Dars jadvalingizni jadval (`<table>`) ko'rinishida yarating.
-    * Jadvalda quyidagi ustunlar bo'lsin: Dars vaqti, Dushanba, Seshanba, Chorshanba, Payshanba, Juma.
-    * Har bir katakchada dars nomini yozing.
-    * Jadvalga `border`, `cellpadding`, `cellspacing` va `width` atributlarini qo'shing.
+**Katakchalarni Birlashtirish**
 
+Ba'zan jadval katakchalarini bir nechta ustun yoki satrga yoyish kerak bo'ladi. Buning uchun `colspan` va `rowspan` atributlaridan foydalanish mumkin. 
+
+* **`colspan`**: Katakchani gorizontal ravishda, ya'ni bir nechta ustunga yoyadi. Misol uchun, jadvalning birinchi satrida "Ism va Familiya" bitta katakchada joylashishi uchun `colspan="2"` atributidan foydalanish mumkin.
     ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-      <meta charset="UTF-8">
-      <title>Dars jadvali</title>
-    </head>
-    <body>
-      <h1>Dars jadvali</h1>
-    
-      <table border="1" cellpadding="10" cellspacing="0" width="80%">
-        <tr>
-          <th>Dars vaqti</th>
-          <th>Dushanba</th>
-          <th>Seshanba</th>
-          <th>Chorshanba</th>
-          <th>Payshanba</th>
-          <th>Juma</th>
-        </tr>
-        <tr>
-          <td>08:00 - 08:45</td>
-          <td>Matematika</td>
-          <td>Ona tili</td>
-          <td>Ingliz tili</td>
-          <td>Fizika</td>
-          <td>Tarix</td>
-        </tr>
-        <tr>
-          <td>08:50 - 09:35</td>
-          <td>Fizika</td>
-          <td>Adabiyot</td>
-          <td>Kimyo</td>
-          <td>Biologiya</td>
-          <td>Geografiya</td>
-        </tr>
-        </table>
-    
-    </body>
-    </html>
+    <table>
+      <tr>
+        <th colspan="2">Ism va Familiya</th>
+        <th>Yoshi</th>
+      </tr>
+      ...
+    </table>
     ```
 
-* **3-vazifa:  Anketa formasi**
-    * HTML forma (`<form>`) yordamida anketa yarating.
-    * Anketada quyidagi maydonlarni yarating:
-        * Ism (`<input type="text">`). `placeholder` atributidan foydalanib, "Ismingizni kiriting" kabi ko'rsatma bering.
-        * Familiya (`<input type="text">`).
-        * Email (`<input type="email">`).
-        * Telefon raqami (`<input type="tel">`).
-        * Tug'ilgan kun (`<input type="date">`).
-        * Jinsi (`<input type="radio">` tugmalari yordamida "Erkak" va "Ayol" variantlarini yarating).
-        * Sevimli ranglar (`<input type="checkbox">` yordamida bir nechta ranglarni tanlash imkonini bering).
-        * Qiziqishlar (`<textarea>`). `placeholder` atributidan foydalanib, "Qiziqishlaringizni yozing" kabi ko'rsatma bering.
-    * Formada "Yuborish" tugmasi (`<button type="submit">`) bo'lsin.
-
+* **`rowspan`**: Katakchani vertikal ravishda, ya'ni bir nechta satrga yoyadi. Misol uchun, jadvalning birinchi ustunida "1-guruh" nomi ikkita satrga yoyilishi uchun `rowspan="2"` atributidan foydalanish mumkin.
     ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-      <meta charset="UTF-8">
-      <title>Anketa</title>
-    </head>
-    <body>
-      <h1>Anketa</h1>
-    
-      <form>
-        <label for="ism">Ism:</label>
-        <input type="text" id="ism" name="ism" placeholder="Ismingizni kiriting"><br><br>
-    
-        <label for="familiya">Familiya:</label>
-        <input type="text" id="familiya" name="familiya"><br><br>
-    
-        <button type="submit">Yuborish</button>
-      </form>
-    
-    </body>
-    </html>
+    <table>
+      <tr>
+        <th rowspan="2">Guruh</th>
+        <th>Ism</th>
+        <th>Familiya</th>
+      </tr>
+      <tr>
+        <td>Ali</td>
+        <td>Valiyev</td>
+      </tr>
+    </table>
     ```
+
+**Jadvallarni Formatlash**
+
+Jadvallarni vizual jihatdan jozibador qilish va ma'lumotlarni yanada tushunarli qilish uchun CSS stillaridan foydalanish mumkin. CSS yordamida jadvallarning chegaralarini, fon rangini, shriftlarini va boshqa xususiyatlarini o'zgartirish mumkin.
+
+
+### Formalar bilan ishlash
+
+Formalar foydalanuvchilar bilan o'zaro aloqada bo'lishning asosiy vositalaridan biridir. Ular orqali foydalanuvchilar ma'lumotlarni kiritishlari, so'rovlar yuborishlari, fikr-mulohazalarini bildirishlari va boshqa ko'p narsalarni qilishlari mumkin.
+
+HTMLda formalarni yaratish uchun `<form>` tegi ishlatiladi. Formada turli xil elementlar bo'lishi mumkin:
+
+* **`<form>`**: Formani belgilaydi. Formadagi barcha elementlar shu teg ichida joylashtiriladi.
+    ```html
+    <form>
+        
+    </form>
+    ```
+
+* **`<input>`**: Turli xil ma'lumotlarni kiritish uchun ishlatiladi. `type` atributi yordamida input maydonining turini belgilash mumkin. Eng ko'p ishlatiladigan turlari:
+    * `text`: Matn kiritish uchun. Misol uchun, ism, familiya, manzil va hokazo.
+        ```html
+        <input type="text" name="ism" placeholder="Ismingizni kiriting">
+        ```
+    * `password`: Parolni maxfiy kiritish uchun.
+        ```html
+        <input type="password" name="parol" placeholder="Parolni kiriting">
+        ```
+    * `email`: Email manzilini kiritish uchun.
+        ```html
+        <input type="email" name="email" placeholder="Emailingizni kiriting">
+        ```
+    * `number`: Raqam kiritish uchun. Misol uchun, yosh, telefon raqami va hokazo.
+        ```html
+        <input type="number" name="yosh" min="18" max="100">
+        ```
+    * `date`: Sanani tanlash uchun.
+        ```html
+        <input type="date" name="tug'ilgan_kun">
+        ```
+    * `radio`: Bir nechta variantdan birini tanlash uchun. Misol uchun, jinsni tanlashda.
+        ```html
+        <input type="radio" name="jins" value="erkak"> Erkak
+        <input type="radio" name="jins" value="ayol"> Ayol
+        ```
+    * `checkbox`: Bir nechta variantni tanlash uchun. Misol uchun, qiziqishlarni tanlashda.
+        ```html
+        <input type="checkbox" name="qiziqishlar" value="sport"> Sport
+        <input type="checkbox" name="qiziqishlar" value="musiqa"> Musiqa
+        ```
+    * `file`: Faylni yuklash uchun. Misol uchun, rasm, hujjat va hokazo.
+        ```html
+        <input type="file" name="fayl">
+        ```
+    * `submit`: Formani yuborish uchun.
+        ```html
+        <input type="submit" value="Yuborish">
+        ```
+    * `reset`: Formani tozalash uchun.
+        ```html
+        <input type="reset" value="Tozalash">
+        ```
+    * `hidden`: Foydalanuvchiga ko'rinmaydigan ma'lumotlarni yuborish uchun.
+        ```html
+        <input type="hidden" name="user_id" value="123">
+        ```
+
+* **`<textarea>`**: Ko'p qatorli matn kiritish uchun ishlatiladi. Misol uchun, xabar yoki sharh yozishda.
+    ```html
+    <textarea name="xabar" rows="5" cols="40"></textarea>
+    ```
+
+* **`<select>`**: Bir nechta variantdan birini tanlash uchun ishlatiladi. `<option>` tegi yordamida variantlarni belgilash mumkin. Misol uchun, shaharni tanlashda.
+    ```html
+    <select name="shahar">
+      <option value="toshkent">Toshkent</option>
+      <option value="samarqand">Samarqand</option>
+      <option value="buxoro">Buxoro</option>
+    </select>
+    ```
+
+* **`<label>`**: Input maydonlariga yorliq qo'yish uchun ishlatiladi.
+    ```html
+    <label for="ism">Ismingiz:</label>
+    <input type="text" id="ism" name="ism">
+    ```
+
+**Formalarni Yuborish**
+
+Formalarni yuborish uchun `action` va `method` atributlaridan foydalaniladi.
+
+* **`action`**: Formani qaysi manzilga yuborish kerakligini belgilaydi. Odatda bu serverdagi skript faylining manzili bo'ladi.
+* **`method`**: Formani qanday usulda yuborish kerakligini belgilaydi. Eng ko'p ishlatiladigan usullari:
+    * `GET`: Ma'lumotlar URL manziliga qo'shiladi.
+    * `POST`: Ma'lumotlar alohida so'rov bilan yuboriladi.
+
+Umid qilamanki, bu batafsil ma'lumot va kod namunalari jadvallar va formalarni chuqurroq tushunishga yordam berdi. Ularni to'g'ri ishlatish orqali veb-sahifalarni yanada foydali va interaktiv qilish mumkin.
+
+
+Xop bo'ladi, loyihani to'liq taqdim etaman va forma qismini bosqichlarga ajrataman.
+
+### O'qituvchi boshchiligidagi loyiha: "Kutubxona katalogi"
+
+Bu loyihada biz HTML bilimlarimizdan foydalanib, kutubxona katalogi jadvalini va yangi kitob qo'shish uchun formani yaratuvchi veb-sahifa yaratamiz.
+
+**1-qadam: Yangi HTML hujjat yaratish**
+
+* Matn muharriri yoki kod muharririda yangi fayl yarating (masalan, Notepad, Sublime Text, VS Code).
+* Faylni `kutubxona.html` deb nomlang va saqlang.
+* Faylga quyidagi asosiy HTML tuzilishini qo'shing:
+
+```html
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Kutubxona katalogi</title>
+</head>
+<body>
+
+</body>
+</html>
+```
+
+**2-qadam: Jadvalni yaratish**
+
+* `<body>` teglari ichida `<table>` tegini qo'shing.
+* Jadvalga sarlavha qo'shing (`<caption>`). Masalan, "Kutubxona katalogi".
+* Jadval sarlavhasini yaratish uchun `<thead>` tegini, so'ngra `<tr>` tegini va har bir ustun uchun `<th>` tegini qo'shing. Masalan, "№", "Kitob nomi", "Muallifi", "Nashr yili" va "Mavjudligi".
+
+```html
+<table>
+  <caption>Kutubxona katalogi</caption>
+  <thead>
+    <tr>
+      <th>№</th>
+      <th>Kitob nomi</th>
+      <th>Muallifi</th>
+      <th>Nashr yili</th>
+      <th>Mavjudligi</th>
+    </tr>
+  </thead>
+  
+</table>
+```
+
+**3-qadam: Jadvalga ma'lumotlarni qo'shish**
+
+* Jadvalning asosiy qismini yaratish uchun `<tbody>` tegini qo'shing.
+* Har bir kitob uchun `<tr>` tegini va har bir ma'lumot uchun `<td>` tegini qo'shing.
+* Birinchi ustunda kitobning tartib raqamini ko'rsating.
+* Ikkinchi ustunda kitob nomini ko'rsating.
+* Uchinchi ustunda kitob muallifini ko'rsating.
+* To'rtinchi ustunda kitob nashr etilgan yilni ko'rsating.
+* Beshinchi ustunda kitobning mavjudligini ko'rsating ("Ha" yoki "Yo'q").
+
+```html
+<tbody>
+  <tr>
+    <td>1</td>
+    <td>Alpomish</td>
+    <td>Xalq og'zaki ijodi</td>
+    <td>1980</td>
+    <td>Ha</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>O'tkan kunlar</td>
+    <td>Abdulla Qodiriy</td>
+    <td>1925</td>
+    <td>Ha</td>
+  </tr>
+  </tbody>
+```
+
+**4-qadam: Jadvalga qo'shimcha elementlar qo'shish**
+
+* Jadvalning pastki qismini yaratish uchun `<tfoot>` tegini qo'shing.
+* `<tfoot>` ichida `<tr>` va `<td>` teglaridan foydalanib, jadvalga oid xulosa ma'lumotlarini qo'shing. Masalan, "Jami kitoblar soni:".
+* `colspan` atributidan foydalanib, "Jami kitoblar soni:" katakchasini bir nechta ustunga yoying.
+
+```html
+<tfoot>
+  <tr>
+    <td colspan="4">Jami kitoblar soni:</td>
+    <td>2</td>
+  </tr>
+</tfoot>
+```
+
+**5-qadam: Formani yaratish**
+
+* Jadvaldan keyin `<form>` tegini qo'shing.
+* Formaga sarlavha qo'shing (`<h2>`). Masalan, "Yangi kitob qo'shish".
+
+```html
+<h2>Yangi kitob qo'shish</h2>
+<form>
+
+</form>
+```
+
+**6-qadam: Input maydonlarini qo'shish**
+
+* Kitob nomi uchun matn maydoni (`<input type="text">`) qo'shing.
+* Muallifi uchun matn maydoni (`<input type="text">`) qo'shing.
+* Nashr yili uchun raqam maydoni (`<input type="number">`) qo'shing.
+* Mavjudligi uchun radio tugmalar (`<input type="radio">`) qo'shing. "Ha" va "Yo'q" variantlarini yarating.
+
+```html
+<label for="kitob_nomi">Kitob nomi:</label><br>
+<input type="text" id="kitob_nomi" name="kitob_nomi"><br><br>
+<label for="muallifi">Muallifi:</label><br>
+<input type="text" id="muallifi" name="muallifi"><br><br>
+<label for="nashr_yili">Nashr yili:</label><br>
+<input type="number" id="nashr_yili" name="nashr_yili"><br><br>
+<label for="mavjudligi">Mavjudligi:</label><br>
+<input type="radio" id="ha" name="mavjudligi" value="ha">
+<label for="ha">Ha</label><br>
+<input type="radio" id="yoq" name="mavjudligi" value="yoq">
+<label for="yoq">Yo'q</label><br><br>
+```
+
+**7-qadam: Yuborish tugmasini qo'shish**
+
+* Formaga yuborish tugmasini (`<input type="submit">`) qo'shing.
+
+```html
+<input type="submit" value="Qo'shish">
+```
+
+**8-qadam: Sahifani brauzerda ochish**
+
+* `kutubxona.html` faylini saqlagan papkani oching.
+* Faylni ikki marta bosing yoki brauzerda oching.
+* Yaratgan veb-sahifangizni ko'rib chiqing.
+
+**Tushuntirish:**
+
+Bu loyihada biz HTMLning jadval va forma elementlaridan foydalanib, kutubxona katalogi jadvalini va yangi kitob qo'shish uchun formani yaratdik. Formada turli xil input turlaridan foydalandik: matn maydoni, raqam maydoni va radio tugmalar.
+
+Ushbu loyihani o'zingiz xohlagan kitoblar ro'yxati bilan to'ldiring. Formadagi "Qo'shish" tugmasi hozircha hech qanday funksiyani bajarmaydi, chunki biz hali JavaScriptni o'rganmadik. Keyingi darslarda JavaScript yordamida formani qanday qilib ishga tushirishni o'rganamiz.
+
+
+### Mustaqil loyiha: "Mening kundalik ishlarim"
+
+Ushbu loyihada siz HTML bilimlaringizdan foydalanib, kundalik ishlaringizni rejalashtiruvchi veb-sahifa yaratasiz. Sahifada jadval va forma bo'lishi kerak.
+
+**1-qadam: Yangi HTML hujjat yaratish**
+
+* Matn muharriri yoki kod muharririda yangi fayl yarating va uni `kundalik.html` deb nomlang.
+* Faylga asosiy HTML tuzilishini qo'shing (`<!DOCTYPE html>`, `<html lang="uz">`, `<head>`, `<title>`, `<body>`).
+* `<title>` tegi ichida sahifa sarlavhasini yozing (masalan, "Mening kundalik ishlarim").
+
+
+**2-qadam: Sahifa tarkibini yaratish**
+
+* Quyidagi elementlarni sahifangizga qo'shing:
+    * `<h1>` tegi bilan sahifa sarlavhasini qo'shing (masalan, "Mening kundalik ishlarim").
+    * Kundalik ishlaringizni rejalashtirish uchun jadval yarating (`<table>`). Jadvalda quyidagi ustunlar bo'lishi kerak:
+        * "Vaqt"
+        * "Dushanba"
+        * "Seshanba"
+        * "Chorshanba"
+        * "Payshanba"
+        * "Juma"
+        * "Shanba"
+        * "Yakshanba"
+    * Jadvalga kamida 5 ta satr qo'shing va har bir satrda vaqt oralig'ini (masalan, "08:00 - 09:00") va haftaning har bir kuni uchun rejalashtirilgan ishlarni yozing.
+    * Jadvaldan keyin yangi ish qo'shish uchun forma yarating (`<form>`). Formada quyidagi input maydonlari bo'lishi kerak:
+        * Kunni tanlash uchun ochiladigan ro'yxat (`<select>`). Haftaning barcha kunlarini ro'yxatga qo'shing.
+        * Vaqtni kiritish uchun matn maydoni (`<input type="text">`).
+        * Ishni kiritish uchun matn maydoni (`<input type="text">`).
+    * Formaga yuborish tugmasini (`<input type="submit">`) qo'shing.
+
+
+**Tushuntirish:**
+
+* **Jadvalni yaratish:**
+    * Jadval yaratish uchun `<table>` tegini ishlatasiz.
+    * Jadvalni sarlavha (`<thead>`), asosiy qism (`<tbody>`) va pastki qism (`<tfoot>`) ga ajratish uchun tegishli teglarni ishlating.
+    * Jadval sarlavhasida (`<thead>`) haftaning kunlarini ustunlar sifatida ko'rsatish uchun `<th>` tegini ishlating.
+    * Jadvalning asosiy qismida (`<tbody>`) har bir satr (`<tr>`) uchun vaqt oralig'ini va haftaning har bir kuni uchun rejalashtirilgan ishlarni katakchalar (`<td>`) ga yozing.
+    * Jadvalning pastki qismida (`<tfoot>`) agar kerak bo'lsa, qo'shimcha ma'lumotlarni (masalan, "Jami ishlar soni") ko'rsatishingiz mumkin.
+
+* **Formani yaratish:**
+    * Formani yaratish uchun `<form>` tegini ishlatasiz.
+    * Formada input maydonlariga yorliqlar qo'yish uchun `<label>` tegini ishlating.
+    * Kunni tanlash uchun `<select>` tegini va uning ichida haftaning har bir kuni uchun `<option>` tegini ishlating.
+    * Vaqtni va ishni kiritish uchun `<input type="text">` maydonlarini ishlating.
+    * Formaga yuborish tugmasini qo'shish uchun `<input type="submit">` tegini ishlating.
+
+* **Eslatma:** Formadagi "Yuborish" tugmasi hozircha hech qanday funksiyani bajarmaydi, chunki biz hali JavaScriptni o'rganmadik. Keyingi darslarda JavaScript yordamida formani qanday qilib ishga tushirishni o'rganamiz.
+
+
+**3-qadam: Sahifani brauzerda ochish**
+
+* `kundalik.html` faylini saqlagan papkani oching.
+* Faylni ikki marta bosing yoki brauzerda oching.
+* Yaratgan veb-sahifangizni ko'rib chiqing.
+
+
 </details>
 
-
 <details>
-   <summary>Semantik teglar (Semantic Tags / Семантические теги)</summary>
+<summary>
+HTML Semantik Teglar va Atributlar
+</summary>
 
-**Semantik teglar (Semantic Tags / Семантические теги)**
+Veb-sahifalarni yaratishda nafaqat kontentni ko'rsatish, balki uni ma'no jihatidan ham to'g'ri tuzish muhim ahamiyatga ega. Buning uchun HTML bizga semantik teglar va atributlarni taqdim etadi. Semantik teglar veb-sahifaning tuzilishini va mazmunini aniqroq ifodalashga yordam beradi, atributlar esa teglarga qo'shimcha ma'lumotlarni qo'shish imkonini beradi. Bu esa brauzerlar, qidiruv tizimlari va ekran o'quvchi dasturlar uchun sahifaning mazmunini yaxshiroq tushunish imkonini beradi, shuningdek, veb-sahifalarni yanada qulay va optimallashtirilgan qiladi.
 
-Oldingi darslarda biz HTML ning asosiy teglarini o'rgandik. Endi esa semantik teglar haqida bilib olamiz. 
+### Semantik Teglar
 
-Semantik teglar HTML5 da kiritilgan bo'lib, veb-sahifaning tuzilishini yanada aniqroq va mazmunli qilish uchun ishlatiladi. Ular brauzerga va qidiruv tizimlariga sahifaning turli qismlarining maqsadini tushunishga yordam beradi. Bu esa sahifaning SEO (Search Engine Optimization / Поисковая оптимизация) uchun ham foydali.
+Semantik teglar sahifaning turli qismlarini ma'no jihatidan ajratish uchun ishlatiladi. Ba'zi asosiy semantik teglar:
 
-Ba'zi semantik teglar:
+* **`<header>`**: Sahifa yoki bo'limning sarlavha qismini belgilaydi. Odatda sayt nomi, navigatsiya menyusi va boshqa kirish ma'lumotlari joylashtiriladi.
+    ```html
+    <header>
+      <h1>Sayt nomi</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Bosh sahifa</a></li>
+          <li><a href="#">Biz haqimizda</a></li>
+          <li><a href="#">Aloqa</a></li>
+        </ul>
+      </nav>
+    </header>
+    ```
 
-* `<header>`: Sahifaning sarlavha qismini belgilaydi. Odatda sayt nomi, logotipi, navigatsiya menyusi va boshqa kirish ma'lumotlarini o'z ichiga oladi.
-* `<nav>`: Navigatsiya menyusini belgilaydi.
-* `<main>`: Sahifaning asosiy mazmunini belgilaydi.
-* `<article>`: Mustaqil tarkibni (masalan, blog posti, yangiliklar maqolasi) belgilaydi.
-* `<aside>`: Asosiy mazmunga tegishli bo'lmagan yon tarkibni (masalan, yon panel, reklama) belgilaydi.
-* `<footer>`: Sahifaning pastki qismini belgilaydi. Odatda mualliflik huquqi, aloqa ma'lumotlari va boshqa qo'shimcha ma'lumotlarni o'z ichiga oladi.
+* **`<nav>`**: Navigatsiya havolalarini o'z ichiga oladi. Odatda menyu yaratish uchun ishlatiladi.
+    ```html
+    <nav>
+      <ul>
+        <li><a href="#">Bosh sahifa</a></li>
+        <li><a href="#">Biz haqimizda</a></li>
+        <li><a href="#">Aloqa</a></li>
+      </ul>
+    </nav>
+    ```
+
+* **`<main>`**: Sahifaning asosiy kontentini belgilaydi. Har bir sahifada faqat bitta `<main>` tegi bo'lishi kerak.
+    ```html
+    <main>
+      <article>
+        <h2>Maqola sarlavhasi</h2>
+        <p>Maqola matni...</p>
+      </article>
+    </main>
+    ```
+
+* **`<article>`**: Mustaqil kontentni belgilaydi. Masalan, blog posti, yangiliklar maqolasi yoki forumdagi xabar.
+    ```html
+    <article>
+      <h2>Maqola sarlavhasi</h2>
+      <p>Maqola matni...</p>
+    </article>
+    ```
+
+* **`<aside>`**: Asosiy kontentga bevosita aloqador bo'lmagan kontentni belgilaydi. Masalan, yon panel, reklama yoki tegishli havolalar.
+    ```html
+    <aside>
+      <h2>Tegishli havolalar</h2>
+      <ul>
+        <li><a href="#">Havola 1</a></li>
+        <li><a href="#">Havola 2</a></li>
+      </ul>
+    </aside>
+    ```
+
+* **`<footer>`**: Sahifa yoki bo'limning pastki qismini belgilaydi. Odatda mualliflik huquqi, aloqa ma'lumotlari va boshqa qo'shimcha ma'lumotlar joylashtiriladi.
+    ```html
+    <footer>
+      <p>&copy; 2024 Sayt nomi</p>
+    </footer>
+    ```
+
+* **`<section>`**: Sahifaning mantiqiy bo'limini belgilaydi. Masalan, "Kirish", "Xizmatlar", "Aloqa" kabi bo'limlar.
+    ```html
+    <section>
+      <h2>Xizmatlar</h2>
+      <p>Bizning xizmatlarimiz ro'yxati...</p>
+    </section>
+    ```
+
+### Atributlar
+
+Atributlar HTML teglariga qo'shimcha ma'lumot berish uchun ishlatiladi. Ular tegning ochilish qismida yoziladi va `atribut="qiymat"` formatida bo'ladi.
+
+Ba'zi asosiy atributlar:
+
+* **`class`**: Elementga CSS stillarini qo'llash uchun ishlatiladi. Bir nechta elementga bir xil stillarni qo'llash uchun ishlatiladi.
+    ```html
+    <p class="qizil-matn">Bu xatboshi qizil rangda bo'ladi.</p>
+    ```
+
+* **`id`**: Elementga noyob identifikator berish uchun ishlatiladi. Sahifada faqat bitta elementda ma'lum bir `id` bo'lishi mumkin. JavaScript orqali elementlarga murojaat qilish uchun ishlatiladi.
+    ```html
+    <div id="asosiy-kontent">Bu asosiy kontent.</div>
+    ```
+
+* **`title`**: Element haqida qo'shimcha ma'lumot berish uchun ishlatiladi. Foydalanuvchi sichqoncha kursorini element ustiga olib borganda, bu ma'lumot tooltip shaklida ko'rsatiladi.
+    ```html
+    <a href="#" title="Kun.uz saytiga o'tish">Kun.uz</a>
+    ```
+
+* **`lang`**: Elementning tilini belgilaydi. Masalan, `<p lang="uz">` o'zbek tilidagi xatboshini belgilaydi.
+    ```html
+    <p lang="uz">Bu xatboshi o'zbek tilida.</p>
+    ```
+
+* **`data-*`**: Elementga maxsus ma'lumotlarni saqlash uchun ishlatiladi. JavaScript orqali bu ma'lumotlarga murojaat qilish mumkin.
+    ```html
+    <div data-user-id="123">Foydalanuvchi ma'lumotlari</div>
+    ```
+
+Semantik teglar va atributlarni to'g'ri ishlatish orqali veb-sahifalarni yanada tushunarli, qulay va optimallashtirilgan qilish mumkin.
+
+### O'qituvchi boshchiligidagi loyiha: "Shaxsiy blog"
+
+Ushbu loyihada biz birgalikda HTML bilimlarimizdan foydalanib, semantik teglar yordamida shaxsiy blog sahifasini yaratamiz. Men har bir qadamni tushuntirib beraman va siz meni kuzatib, kodni yozasiz.
+
+**1-qadam: Yangi HTML hujjat yaratish**
+
+* Matn muharriri yoki kod muharririda yangi fayl yarating (masalan, Notepad, Sublime Text, VS Code).
+* Faylni `blog.html` deb nomlang va saqlang.
+* Faylga quyidagi asosiy HTML tuzilishini qo'shing:
+
+```html
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Mening blogim</title>
+</head>
+<body>
+
+</body>
+</html>
+```
+
+**2-qadam: Sahifa sarlavhasini yaratish**
+
+* `<body>` teglari ichida `<header>` tegini qo'shing.
+* `<header>` tegi ichida `<h1>` tegi bilan blogingiz nomini yozing. Masalan, "Mening blogim".
+* Blogingiz haqida qisqacha ma'lumot beruvchi xatboshini (`<p>`) qo'shing.
 
 ```html
 <header>
-  <h1>Veb-sayt sarlavhasi</h1>
-  <nav>
-    <ul>
-      <li><a href="#">Bosh sahifa</a></li>
-      <li><a href="#">Biz haqimizda</a></li>
-      <li><a href="#">Aloqa</a></li>
-    </ul>
-  </nav>
+  <h1>Mening blogim</h1>
+  <p>Bu mening shaxsiy blogim, bu yerda men o'z fikrlarim, tajribalarim va qiziqishlarim bilan o'rtoqlashaman.</p>
 </header>
+```
 
+**3-qadam: Navigatsiya menyusini yaratish**
+
+* `<header>` tegi ichida `<nav>` tegini qo'shing.
+* `<nav>` tegi ichida tartibsiz ro'yxat (`<ul>`) yarating.
+* Ro'yxat elementlari (`<li>`) sifatida blogingizdagi turli bo'limlarga havolalar (`<a>`) qo'shing. Masalan, "Bosh sahifa", "Maqolalar", "Loyihalar", "Aloqa".
+
+```html
+<nav>
+  <ul>
+    <li><a href="#">Bosh sahifa</a></li>
+    <li><a href="#">Maqolalar</a></li>
+    <li><a href="#">Loyihalar</a></li>
+    <li><a href="#">Aloqa</a></li>
+  </ul>
+</nav>
+```
+
+**4-qadam: Asosiy kontentni yaratish**
+
+* `<header>` tegi dan keyin `<main>` tegini qo'shing.
+* `<main>` tegi ichida `<article>` tegini qo'shing.
+* `<article>` tegi ichida maqola sarlavhasini (`<h2>`) va maqola matnini (`<p>`) yozing.
+
+```html
 <main>
   <article>
-    <h2>Maqola sarlavhasi</h2>
-    <p>Maqola matni...</p>
+    <h2>Mening birinchi maqolam</h2>
+    <p>Bu mening blogimdagi birinchi maqolam. Bu yerda men ... haqida yozmoqchiman.</p>
   </article>
-
-  <aside>
-    <h3>Yon panel</h3>
-    <p>Qo'shimcha ma'lumot...</p>
-  </aside>
 </main>
+```
 
+**5-qadam: Yon panelni yaratish**
+
+* `<main>` tegi dan keyin `<aside>` tegini qo'shing.
+* `<aside>` tegi ichida tegishli havolalar yoki boshqa qo'shimcha ma'lumotlarni joylashtiring.
+
+```html
+<aside>
+  <h2>Tegishli havolalar</h2>
+  <ul>
+    <li><a href="#">Havola 1</a></li>
+    <li><a href="#">Havola 2</a></li>
+  </ul>
+</aside>
+```
+
+**6-qadam: Sahifa pastki qismini yaratish**
+
+* `<aside>` tegi dan keyin `<footer>` tegini qo'shing.
+* `<footer>` tegi ichida mualliflik huquqi haqida ma'lumotni (`<p>`) yozing.
+
+```html
 <footer>
-  <p>Mualliflik huquqi &copy; 2024</p>
+  <p>&copy; 2024 Mening blogim</p>
 </footer>
 ```
 
-**Amaliy mashg'ulotlar**
+**7-qadam: Sahifani brauzerda ochish**
 
-Endi o'qituvchingiz bilan birgalikda quyidagi vazifani bajaring:
+* `blog.html` faylini saqlagan papkani oching.
+* Faylni ikki marta bosing yoki brauzerda oching.
+* Yaratgan veb-sahifangizni ko'rib chiqing.
 
-* **Vazifa 10: Semantik teglar bilan veb-sahifani tuzing.**
-    * `<header>`, `<nav>`, `<main>`, `<article>`, `<aside>` va `<footer>` teglaridan foydalanib, veb-sahifani tuzing.
-    * Har bir tegga tegishli tarkibni joylashtiring.
-    * Faylni saqlang va brauzerda yangilang. Veb-sahifaning tuzilishi semantik teglar yordamida aniqroq bo'lganini ko'rishingiz kerak.
+**Tushuntirish:**
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mening birinchi veb-sahifam</title>
-    </head>
-    <body>
-        <header>
-          <h1>Saytimga xush kelibsiz!</h1>
-          <nav>
-            <ul>
-              <li><a href="#">Bosh sahifa</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Aloqa</a></li>
-            </ul>
-          </nav>
-        </header>
-        
-        <main>
-          <article>
-            <h2>Mening birinchi maqolam</h2>
-            <p>Bu mening birinchi blog postim.</p>
-          </article>
-        
-          <aside>
-            <h3>So'nggi yangiliklar</h3>
-            <p>Tez kunda yangi maqolalar!</p>
-          </aside>
-        </main>
-        
-        <footer>
-          <p>Mualliflik huquqi &copy; 2024</p>
-        </footer>
-    </body>
-    </html>
-    ```
+Bu loyihada biz HTMLning semantik teglaridan foydalanib, shaxsiy blog sahifasini yaratdik. `<header>`, `<nav>`, `<main>`, `<article>`, `<aside>` va `<footer>` teglaridan foydalanib, sahifaning tuzilishini va mazmunini aniqroq ifodaladik.
 
-**Mustaqil mashqlar**
+Ushbu loyihani o'zingizning blogingiz ma'lumotlari bilan to'ldiring. Maqolalar, loyihalar va boshqa bo'limlarga o'zingizning kontentingizni qo'shing.
 
-O'rganganlaringizni mustahkamlash uchun quyidagi vazifalarni mustaqil bajarib ko'ring:
 
-* **1-vazifa:  Shaxsiy veb-saytni semantik teglar bilan yaxshilang**
-    * Oldingi darslarda yaratgan "Men haqimda" sahifasini semantik teglar yordamida yaxshilang.
-    * Sahifada `<header>`, `<nav>`, `<main>` va `<footer>` teglaridan foydalaning.
-    * Navigatsiya menyusida (`<nav>`) boshqa sahifalarga (masalan, "Bosh sahifa", "Blog", "Aloqa") havolalar qo'shing.
-    * Asosiy ma'lumotni `<main>` tegi ichiga joylashtiring.
+### Mustaqil loyiha: "Mening sevimli shaxrim"
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Men haqimda</title>
-    </head>
-    <body>
-    
-        <header>
-            <h1>Men haqimda</h1>
-            <nav>
-            <ul>
-                <li><a href="#">Bosh sahifa</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Aloqa</a></li>
-            </ul>
-            </nav>
-        </header>
-    
-        <main>
-            <img src="mening_rasmim.jpg" alt="Mening rasmim" width="200" height="300">
-            <p>Mening ismim ... . Men ... yoshdaman.</p>
-            <a href="https://sevimli_saytim.uz" title="Sevimli saytim">Sevimli saytimga tashrif buyuring</a>
-        </main>
-    
-        <footer>
-            <p>&copy; 2024 Mening saytim</p>
-        </footer>
-    
-    </body>
-    </html>
-    ```
+Ushbu loyihada siz HTML bilimlaringizdan foydalanib, sevimli shahringiz haqida veb-sahifa yaratasiz. Sahifada semantik teglar va atributlardan foydalaning.
 
-* **2-vazifa:  Blog postini semantik teglar bilan yarating**
-    * Blog postiga o'xshash veb-sahifani yarating.
-    * Sahifada `<header>`, `<nav>`, `<main>`, `<article>`, `<aside>` va `<footer>` teglaridan foydalaning.
-    * Blog postingiz sarlavhasi uchun asosiy sarlavhadan (`<h1>`) foydalaning.
-    * Blog posti mazmuni uchun bir nechta xatboshilar yozing.
-    * Matnni sarlavhalar (`<h2>` yoki `<h3>`) yordamida bo'limlarga ajrating.
-    * Blog postingizga tegishli rasm qo'shing.
-    * Blog postingiz oxirida o'zingiz haqingizda qisqacha ma'lumot va ijtimoiy tarmoqlaringizga havolalarni qo'shing.
+**1-qadam: Yangi HTML hujjat yaratish**
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Blog Post</title>
-    </head>
-    <body>
-        <header>
-            <h1>Mening blogim</h1>
-            <nav>
-            <ul>
-                <li><a href="#">Bosh sahifa</a></li>
-                <li><a href="#">Maqolalar</a></li>
-                <li><a href="#">Aloqa</a></li>
-            </ul>
-            </nav>
-        </header>
-    
-        <main>
-            <article>
-                <h2>Maqola sarlavhasi</h2>
-                <p>Maqola matni...</p>
-            </article>
-        
-            <aside>
-                <h3>Muallif haqida</h3>
-                <p>Qo'shimcha ma'lumot...</p>
-            </aside>
-        </main>
-    
-        <footer>
-            <p>Mualliflik huquqi &copy; 2024</p>
-        </footer>
-    
-    </body>
-    </html>
-    ```
+* Matn muharriri yoki kod muharririda yangi fayl yarating va uni `shahar.html` deb nomlang.
+* Faylga asosiy HTML tuzilishini qo'shing (`<!DOCTYPE html>`, `<html lang="uz">`, `<head>`, `<title>`, `<body>`).
+* `<title>` tegi ichida sahifa sarlavhasini yozing (masalan, "Mening sevimli shaxrim").
 
-* **3-vazifa:  Mahsulot sahifasini semantik teglar bilan yarating**
-    * Onlayn do'kon uchun mahsulot sahifasini yarating.
-    * Sahifada `<header>`, `<nav>`, `<main>`, `<article>`, `<aside>` va `<footer>` teglaridan foydalaning.
-    * Mahsulot nomini sarlavha (`<h1>`) sifatida yozing.
-    * Mahsulot rasmini va tavsifini qo'shing.
-    * Narxini va "Sotib olish" tugmasini qo'shing.
-    * Yon panelda (`<aside>`) mahsulot haqida qo'shimcha ma'lumot yoki boshqa mahsulotlarni tavsiya qiling.
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="uz">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mahsulot</title>
-    </head>
-    <body>
-        <header>
-            <h1>Onlayn do'kon</h1>
-            <nav>
-            <ul>
-                <li><a href="#">Bosh sahifa</a></li>
-                <li><a href="#">Katalog</a></li>
-                <li><a href="#">Aloqa</a></li>
-            </ul>
-            </nav>
-        </header>
-    
-        <main>
-            <article>
-                <h1>Mahsulot nomi</h1>
-                <img src="mahsulot.jpg" alt="Mahsulot">
-                <p>Mahsulot tavsifi...</p>
-                <p>Narxi: 10000 so'm</p>
-                <button>Sotib olish</button>
-            </article>
-        
-            <aside>
-                <h3>Tavsiya etilgan mahsulotlar</h3>
-                <ul>
-                    <li>Mahsulot 1</li>
-                    <li>Mahsulot 2</li>
-                </ul>
-            </aside>
-        </main>
-    
-        <footer>
-            <p>Mualliflik huquqi &copy; 2024</p>
-        </footer>
-    
-    </body>
-    </html>
-    ```
+**2-qadam: Sahifa tarkibini yaratish**
+
+* Quyidagi elementlarni sahifangizga qo'shing:
+    * Sahifa sarlavhasi uchun `<header>` tegini ishlating. Sarlavhada shahar nomi (`<h1>`) va shahar haqida qisqacha ma'lumot (`<p>`) bo'lishi kerak.
+    * Navigatsiya menyusi uchun `<nav>` tegini ishlating. Menyuda shaharning turli joylari haqida ma'lumot beruvchi bo'limlarga havolalar (`<a>`) bo'lishi kerak. Masalan, "Tarixi", "Diqqatga sazovor joylar", "Madaniyati", "Rasmlar".
+    * Sahifaning asosiy kontenti uchun `<main>` tegini ishlating. Asosiy kontentda shahar haqida batafsil ma'lumot beruvchi bo'limlar (`<section>`) bo'lishi kerak. Har bir bo'limda sarlavha (`<h2>`) va matn (`<p>`) bo'lishi kerak.
+    * Qo'shimcha ma'lumotlar uchun `<aside>` tegini ishlating. Qo'shimcha ma'lumotlarda shahar haqida qiziqarli faktlar, statistik ma'lumotlar yoki shahar bilan bog'liq mashhur shaxslar haqida ma'lumotlar bo'lishi mumkin.
+    * Sahifa pastki qismi uchun `<footer>` tegini ishlating. Pastki qismda mualliflik huquqi haqida ma'lumot va shaharning rasmiy veb-saytiga havola bo'lishi mumkin.
+    * Shaharning rasmlarini qo'shing (`<img>`). Rasmlarga tavsif (`alt`) atributini qo'shishni unutmang.
+    * Tegishli atributlardan foydalaning. Masalan, `lang` atributidan foydalanib, sahifaning tilini belgilang.
+
+
+**Tushuntirish:**
+
+* Semantik teglarni to'g'ri ishlatishga e'tibor bering. Har bir teg o'z maqsadiga muvofiq ishlatilishi kerak.
+* Sahifaning tuzilishini mantiqiy qismlarga ajrating. Masalan, shahar tarixi, diqqatga sazovor joylari, madaniyati va boshqalar uchun alohida bo'limlar yarating.
+* Atributlardan foydalanib, teglarga qo'shimcha ma'lumotlarni qo'shing. Masalan, `class` atributidan foydalanib, CSS stillarini qo'llashingiz mumkin.
+* Rasmlarga tavsif (`alt`) atributini qo'shishni unutmang. Bu atribut rasm ko'rsatilmasa (masalan, internet aloqasi yo'q bo'lsa) yoki ko'zi ojiz foydalanuvchilar uchun ekran o'quvchi dasturlar tomonidan ishlatiladi.
+
+
+**3-qadam: Sahifani brauzerda ochish**
+
+* `shahar.html` faylini saqlagan papkani oching.
+* Faylni ikki marta bosing yoki brauzerda oching.
+* Yaratgan veb-sahifangizni ko'rib chiqing.
 </details>
