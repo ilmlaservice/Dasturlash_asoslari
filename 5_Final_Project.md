@@ -1,3 +1,46 @@
+# Yakuniy Loyiha: "Onlayn Auksion"
+
+Ushbu loyiha sizning HTML, CSS, JavaScript va Python bo'yicha bilimlaringizni sinab ko'rish va mustahkamlash uchun mo'ljallangan. Siz oldingi barcha darslarda o'rgangan bilimlaringizni birlashtirib, to'liq funksional onlayn auksion veb-ilovasini yaratasiz. 
+
+**Loyiha nima haqida?**
+
+Bu loyihada siz onlayn auksion platformasini yaratasiz. Foydalanuvchilar bu platformada ro'yxatdan o'tishlari, mahsulotlarni qo'yishlari (sotuvga qo'yishlari), boshqa foydalanuvchilarning mahsulotlariga takliflar berishlari va boshqa amallarni bajarishi mumkin bo'ladi. 
+
+**Loyihani qanday qismlarga ajratish mumkin?**
+
+Loyihani ikki asosiy qismga ajratish mumkin:
+
+* **Frontend:** Foydalanuvchi ko'radigan va o'zaro aloqada bo'ladigan qismi. Bu qism HTML, CSS va JavaScript yordamida yaratiladi.
+* **Backend:** Foydalanuvchi ko'rmaydigan, lekin veb-saytning ishlashini ta'minlaydigan qismi. Bu qism Python, Flask va SQLite yordamida yaratiladi.
+
+**Frontend nima vazifani bajaradi?**
+
+Frontend quyidagi vazifalarni bajaradi:
+
+* Foydalanuvchilarga ro'yxatdan o'tish va tizimga kirish imkonini beradi.
+* Mahsulotlar ro'yxatini ko'rsatadi.
+* Har bir mahsulot uchun alohida sahifa ko'rsatadi, unda mahsulot haqida batafsil ma'lumotlar va takliflar tarixi bo'ladi.
+* Foydalanuvchilarga mahsulotlarga takliflar berish imkonini beradi.
+* Foydalanuvchilarga o'z mahsulotlarini qo'shish va boshqarish imkonini beradi.
+
+**Backend nima vazifani bajaradi?**
+
+Backend quyidagi vazifalarni bajaradi:
+
+* Ma'lumotlar bazasini yaratadi va boshqaradi. Ma'lumotlar bazasida foydalanuvchilar, mahsulotlar va takliflar haqidagi ma'lumotlar saqlanadi.
+* API (Application Programming Interface) yaratadi. API - bu frontend va backend o'rtasida ma'lumot almashish imkonini beruvchi interfeys. Frontend API orqali ma'lumotlar bazasiga murojaat qiladi va ma'lumotlarni oladi yoki yangilaydi.
+
+**Loyihani yaratishda nimalarga e'tibor berish kerak?**
+
+* Kodni toza va tushunarli qilib yozing.
+* Kodga izoh (comment) lar qo'shing.
+* Turli xil xatoliklarni qayta ishlashni qo'shing.
+* Foydalanuvchi tajribasini (user experience) yaxshilashga harakat qiling.
+
+Bu loyiha sizning HTML, CSS, JavaScript va Python bilimlaringizni sinab ko'rish va mustahkamlash uchun ajoyib imkoniyatdir. Omad tilaymiz!
+
+**Quyida siz bajaradigan qadamlar bosqichma-bosqich berilgan.**
+
 <details>
 <summary>
 1-qadam: Ma'lumotlar bazasini yaratish
@@ -405,7 +448,6 @@ Bu bosqich foydalanuvchilarga auksion buyumlariga takliflar berishga imkon beris
 
 
 </details>
-
 
 
 <details>
