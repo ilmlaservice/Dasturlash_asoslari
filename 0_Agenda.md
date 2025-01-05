@@ -98,5 +98,3 @@
 
 * **Yakuniy loyiha (Final Project / Финальный проект)**
     * Loyiha topshirig'i: Talabalar kurs davomida o'rgangan barcha tushunchalarni, jumladan, front-end, back-end, ma'lumotlar bazalari va versiyalarni boshqarishni birlashtirgan holda katta va keng qamrovli loyiha ustida ishlaydilar. 
-
-O'zgarish faqat JavaScript qismida bo'ldi. Endi `switch` operatori funksiyalardan oldin keladi.
